@@ -1,0 +1,16 @@
+{
+    "name": "fedbot",
+    "version": "0.0.0",
+
+    "description": "The Nature FEDs campfire friend",
+
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rowanmanning/fedbot.git"
+    },
+
+    "dependencies": {
+        "hubot": "~2.6",
+        "hubot-scripts": "~2.5"
+    }
+}
