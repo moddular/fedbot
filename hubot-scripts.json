@@ -1,1 +1,8 @@
-[]
+[
+    "ackbar.coffee",
+    "advice.coffee",
+    "applause.coffee",
+    "ascii.coffee",
+    "cowsay.coffee",
+    "javascript-sandbox.coffee"
+]
