@@ -4,6 +4,8 @@ FEDbot
 
 The Nature FEDs campfire friend.
 
+![FEDbot](https://raw.github.com/rowanmanning/fedbot/master/images/fedbot.png)
+
 
 Running Locally
 ---------------
