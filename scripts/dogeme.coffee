@@ -2,42 +2,32 @@
 #   Wow. Such Doge
 #
 # Dependencies:
-#   "htmlparser": "1.7.6"
-#   "soupselect": "0.2.0"
+#   None
 #
 # Configuration:
 #   None
 #
 # Commands:
 #   hubot doge me - Wow. Such Doge
+#   hubot doge bomb N - Many Doges. Such exploshun
 #
 # Author:
 #   rowanmanning
 
-Select     = require("soupselect").select
-HtmlParser = require "htmlparser"
-
 module.exports = (robot) ->
+
   robot.respond /doge me/i, (msg) ->
-    getRandomDoge msg, (url) ->
-      msg.send url
+    msg.http("http://dogeme.rowanmanning.com/random")
+      .get() (err, res, body) ->
+        msg.send JSON.parse(body).doge.url
 
-getRandomDoge = (msg, done) ->
-  msg.http("http://shibe-doge.tumblr.com/random")
-    .get() (err, res, body) ->
-      getImageFromPage msg, res.headers.location, (location) ->
-        done location
+  robot.respond /doge bomb( (\d+))?/i, (msg) ->
+    count = msg.match[2] || 5
+    msg.http("http://dogeme.rowanmanning.com/bomb?count=" + count)
+      .get() (err, res, body) ->
+        msg.send doge.url for doge in JSON.parse(body).doges
 
-getImageFromPage = (msg, location, done) ->
-  msg.http(location)
-    .get() (err, res, body) ->
-      handler = new HtmlParser.DefaultHandler()
-      parser  = new HtmlParser.Parser handler
-
-      parser.parseComplete body
-      img = Select handler.dom, "#contents .post .image img"
-
-      if img[0]
-        done img[0].attribs.src
-      else
-        done "http://i0.kym-cdn.com/photos/images/newsfeed/000/581/296/c09.jpg"
+  robot.respond /how many doges?/i, (msg) ->
+    msg.http("http://dogeme.rowanmanning.com/count")
+      .get() (err, res, body) ->
+        msg.send "There are #{JSON.parse(body).doge_count} doges."
