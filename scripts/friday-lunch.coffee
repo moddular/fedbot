@@ -32,7 +32,7 @@ module.exports = (robot) ->
 
   chooseOption = (msg) ->
     date = new Date()
-    if date.getDay() != 2
+    if date.getDay() != 5
       return "It's not Friday yet"
     today = date.toISOString().split("T")[0];
     prefix = msg.random(prefixes)
