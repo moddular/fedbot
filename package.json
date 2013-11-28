@@ -13,6 +13,7 @@
     "dependencies": {
         "htmlparser": "~1.7",
         "hubot": "~2.6",
+        "hubot-dogeme": "~1.0",
         "hubot-scripts": "~2.5",
         "sandbox": "~0.8",
         "soupselect": "~0.2"
