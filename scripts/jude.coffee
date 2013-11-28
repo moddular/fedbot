@@ -8,6 +8,7 @@
 module.exports = (robot) ->
 
   images = [
+  	"http://i.imgur.com/zxzPlyP.png",
     "http://www.gyford.com/images/jude.jpg",
     "http://kil.gr/sandbox/secret/fedbot/RVPjude.jpg",
     "http://kil.gr/sandbox/secret/fedbot/jude.jpg",
