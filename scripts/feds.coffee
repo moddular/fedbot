@@ -14,6 +14,8 @@ module.exports = (robot) ->
 		"http://kil.gr/sandbox/secret/fedbot/RVPjude.jpg",
 		"http://kil.gr/sandbox/secret/fedbot/jude.jpg",
 		"http://kil.gr/sandbox/secret/fedbot/judepad.jpg",
+		"http://kil.gr/sandbox/secret/fedbot/tourist.jpg",
+		"http://kil.gr/sandbox/secret/fedbot/judehoff.gif",
 		"http://kil.gr/sandbox/secret/fedbot/sexybeast.jpg"
 	]
 
