@@ -3,7 +3,10 @@
 #
 # Commands:
 #   hubot do you like me? - Check whether hubot likes you
+#   hubot who is your favourite? - See who hubot likes best
 #
+
+_ = require 'underscore'
 
 module.exports = (robot) ->
 
@@ -60,3 +63,14 @@ module.exports = (robot) ->
   robot.respond /(do )?you like me\??/i, (msg) ->
     label = rating.label msg
     msg.reply msg.random responses[label]
+
+  robot.respond /who('?s| is) your favou?rite\??/i, (msg) ->
+
+    users = _.values robot.brain.users()
+    users = _.sortBy(users, 'fedbotRating').reverse()
+    users = (user.name for user in users when user.fedbotRating == users[0].fedbotRating)
+
+    if users.length > 1
+      msg.send "It's a tie between " + users.join(", ")
+    else
+      msg.send "My favourite is " + users[0]
