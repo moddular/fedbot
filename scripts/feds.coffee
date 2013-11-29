@@ -4,7 +4,6 @@
 # Commands:
 #   hubot jude me - random jude image
 #   what would jude say - random jude quote
-#   cheese - cheese gif
 #
 
 module.exports = (robot) ->
