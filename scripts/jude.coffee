@@ -17,7 +17,7 @@ module.exports = (robot) ->
   ]
 
   quotes = [
-    "Have I told you about my "low hanging fruit"?",
+    "Have I told you about my \"low hanging fruit\"?",
 	"Double Jack and diet please",
 	"MNGH!!!",
 	"Not in this morning. ill",
