@@ -16,5 +16,5 @@ module.exports = (robot) ->
     "http://kil.gr/sandbox/secret/fedbot/sexybeast.jpg"
   ]
 
-  robot.hear /jude doge/i, (msg) ->
+  robot.hear /jude me/i, (msg) ->
     msg.send msg.random images
