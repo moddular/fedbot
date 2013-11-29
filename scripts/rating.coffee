@@ -67,6 +67,7 @@ module.exports = (robot) ->
   robot.respond /who('?s| is) your favou?rite\??/i, (msg) ->
 
     users = _.values robot.brain.users()
+    users = (user for user in users when typeof user.fedbotRating == "number")
     users = _.sortBy(users, 'fedbotRating').reverse()
     users = (user.name for user in users when user.fedbotRating == users[0].fedbotRating)
 
