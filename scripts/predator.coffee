@@ -13,7 +13,8 @@ module.exports = (robot) ->
     "http://images5.fanpop.com/image/photos/28700000/Wolf-mask-predator-28762278-1574-1200.jpg",
     "http://1.bp.blogspot.com/-60MdqGCHEvA/Tl409JA3DuI/AAAAAAAAAC8/8e3Q4tDvrow/s640/Predator.jpg",
     "http://static.comicvine.com/uploads/original/10/108875/3208245-9034223807-preda.jpg",
-    "http://images4.fanpop.com/image/photos/14700000/Predator-predators-2010-movie-14721646-1200-800.jpg"
+    "http://images4.fanpop.com/image/photos/14700000/Predator-predators-2010-movie-14721646-1200-800.jpg",
+    "http://i.imgur.com/bdW4hXx.jpg"
   ]
 
   robot.hear /adam|predator/i, (msg) ->
