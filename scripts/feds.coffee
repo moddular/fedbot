@@ -16,7 +16,8 @@ module.exports = (robot) ->
 		"http://kil.gr/sandbox/secret/fedbot/judepad.jpg",
 		"http://kil.gr/sandbox/secret/fedbot/tourist.jpg",
 		"http://i.imgur.com/Tfq7Bi7.gif",
-		"http://kil.gr/sandbox/secret/fedbot/sexybeast.jpg"
+		"http://kil.gr/sandbox/secret/fedbot/sexybeast.jpg",
+		"http://kil.gr/sandbox/secret/fedbot/hey-jude.jpg"
 	]
 
 	judeQuotes = [
@@ -45,3 +46,6 @@ module.exports = (robot) ->
 
 	robot.hear /cheese/i, (msg) ->
 		msg.send smellMyCheese
+
+	robot.hear /judehoff/i, (msg) ->
+		msg.send judeImages[5]
