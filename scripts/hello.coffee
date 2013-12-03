@@ -49,7 +49,7 @@ module.exports = (robot) ->
   action = (msg) ->
     label = rating.label msg
     response = msg.random responses[label]
-    msg.reply response.replace('%', msg.message.user.name)
+    msg.send response.replace('%', msg.message.user.name)
 
   robot.hear hello, action
   robot.respond helloCommand, action

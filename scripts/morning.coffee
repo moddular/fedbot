@@ -52,7 +52,7 @@ module.exports = (robot) ->
     rating.increase msg, 1
     label = rating.label msg
     response = msg.random responses[label]
-    msg.reply response.replace('%', msg.message.user.name)
+    msg.send response.replace('%', msg.message.user.name)
 
   robot.hear morning, action
   robot.respond morningCommand, action
