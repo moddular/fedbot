@@ -12,9 +12,9 @@ module.exports = (robot) ->
 
   label = (msg) ->
     rating = getUser(msg).fedbotRating
-    if rating <= -10
+    if rating <= -8
       "hate"
-    else if rating >= 10
+    else if rating >= 8
       "love"
     else if rating < 0
       "dislike"
