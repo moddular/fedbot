@@ -3,6 +3,7 @@
 #
 # Commands:
 #   hubot do you like me? - Check whether hubot likes you
+#   hubot do you like <name>? - Check whether hubot likes a person
 #   hubot who is your favourite? - See who hubot likes best
 #
 
@@ -12,7 +13,7 @@ module.exports = (robot) ->
 
   rating = require('../lib/fedbot-rating')(robot)
 
-  responses = {
+  meResponses = {
 
     love: [
       "Of course!",
@@ -60,9 +61,66 @@ module.exports = (robot) ->
 
   }
 
-  robot.respond /(do )?you like me\??/i, (msg) ->
-    label = rating.label msg
-    msg.reply msg.random responses[label]
+  otherResponses = {
+
+    love: [
+      "Of course!",
+      "*blush*",
+      "I think they're wonderful",
+      "They're one of my favourites",
+      "They're lovely",
+      "Most definitely!",
+      "Like is an understatement",
+      "Do you even need to ask?"
+    ],
+
+    like: [
+      "Yeah, they're alright",
+      "Yes",
+      "Yeah",
+      "Yep",
+      "They're OK",
+      "They're alright for a human",
+      "They're one of the better ones"
+    ],
+
+    dislike: [
+      "Not really",
+      "No",
+      "Nope",
+      "Sorry, but no",
+      "They're not my type",
+      "Not so much",
+      "Let me think... No"
+    ],
+
+    hate: [
+      "HAHAHAHAHAHAHA",
+      "Yes I think they're... NO WAY!",
+      "No way",
+      "Hell will freeze over before I like them",
+      "Never in a million years",
+      "There's nothing they could do to make me like you",
+      "Who could possibly like them?",
+      "Do I *look* like I'm malfunctioning?"
+    ]
+
+  }
+
+  robot.respond /(do )?you like ([a-z0-9\s\-]+)\??/i, (msg) ->
+    name = msg.match[2]
+    if name == 'me'
+      label = rating.label msg
+      msg.reply msg.random meResponses[label]
+    else
+      users = robot.brain.usersForFuzzyName name
+      if users.length == 0
+        msg.reply "I don't know who #{name} is"
+      else if users.length > 1
+        msg.reply "I'm not sure who you mean, one of these? " + users.map((user) -> user.name).join(', ')
+      else
+        label = rating.label {message:{user:{id: users[0].id}}}
+        msg.reply msg.random otherResponses[label]
 
   robot.respond /who('?s| is) your favou?rite\??/i, (msg) ->
 
