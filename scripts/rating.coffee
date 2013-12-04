@@ -145,4 +145,4 @@ module.exports = (robot) ->
     if users.length > 1
       msg.send "It's a tie between " + users.join(", ")
     else
-      msg.send "My favourite is " + users[0]
+      msg.send "My least favourite is " + users[0]
