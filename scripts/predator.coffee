@@ -16,5 +16,10 @@ module.exports = (robot) ->
     "http://images4.fanpop.com/image/photos/14700000/Predator-predators-2010-movie-14721646-1200-800.jpg"
   ]
 
-  robot.hear /adam|predator/i, (msg) ->
+  predators = "http://img.photobucket.com/albums/v164/X-SOLDIER/NewPred_vs_ClassicPred.jpg"
+
+  robot.hear /(adam(?!\sand\sperry))|predator/i, (msg) ->
     msg.send msg.random images
+
+  robot.hear /adam and perry/i, (msg) ->
+    msg.send predators
