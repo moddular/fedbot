@@ -56,4 +56,4 @@ module.exports = (robot) ->
     robot.brain.get "codeReviewTable"
 
   robot.respond /code review table/i, (msg) ->
-    msg.send outputPair pair for pair in getPairsForToday()
+    msg.send (outputPair pair for pair in getPairsForToday()).join("\n")
