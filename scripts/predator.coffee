@@ -1,5 +1,5 @@
 # Description:
-#   Show picture of predator when adam is mentioned
+#   Show picture of predator when it is mentioned
 #
 # Commands:
 #   None
@@ -20,8 +20,8 @@ module.exports = (robot) ->
 
   predators = "http://kil.gr/sandbox/secret/fedbot/predators.jpg"
 
-  robot.hear /(adam|tavvy(?!\sand\sperry))|predator/i, (msg) ->
+  robot.hear /\bpredator\b/i, (msg) ->
     msg.send msg.random images
 
-  robot.hear /adam and perry/i, (msg) ->
+  robot.hear /\badam (and|&) perry\b/i, (msg) ->
     msg.send predators
