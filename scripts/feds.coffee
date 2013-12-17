@@ -18,7 +18,8 @@ module.exports = (robot) ->
 		"http://kil.gr/sandbox/secret/fedbot/sexybeast.jpg",
 		"http://kil.gr/sandbox/secret/fedbot/kim-jong-jude.jpg",
 		"http://kil.gr/sandbox/secret/fedbot/hey-jude.jpg",
-		"http://i.imgur.com/5Y3vocd.png"
+		"http://i.imgur.com/5Y3vocd.png",
+		"http://i.imgur.com/ED67k6V.jpg"
 	]
 
 	judeQuotes = [
