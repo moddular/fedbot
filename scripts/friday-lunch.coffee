@@ -13,6 +13,7 @@ module.exports = (robot) ->
     "curry",
     "Canal 125",
     "The Big Chill House",
+    "Honest Burger",
     "somewhere different"
   ]
 
