@@ -1,5 +1,5 @@
 # Description:
-#   Tell people not to mention the *other* robot
+#   Alert the FEDs when strangers enter the room
 #
 # Commands:
 #   None
@@ -7,7 +7,7 @@
 
 module.exports = (robot) ->
 
-  nonStalkers = [
+  nonStrangers = [
     "Adam Tavener",
     "Alex Kilgour",
     "Andrew Walker",
@@ -42,5 +42,5 @@ module.exports = (robot) ->
   ]
 
   robot.enter (msg) ->
-    if msg.message.user.name not in nonStalkers
-      msg.send "STALKER ALERT: #{msg.message.user.name} is not a FED. " + msg.random(responses)
+    if msg.message.user.name not in nonStrangers
+      msg.send "STRANGER DANGER: #{msg.message.user.name} is not a FED. " + msg.random(responses)
