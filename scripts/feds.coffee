@@ -19,7 +19,8 @@ module.exports = (robot) ->
 		"http://kil.gr/sandbox/secret/fedbot/kim-jong-jude.jpg",
 		"http://kil.gr/sandbox/secret/fedbot/hey-jude.jpg",
 		"http://i.imgur.com/5Y3vocd.png",
-		"http://i.imgur.com/ED67k6V.jpg"
+		"http://i.imgur.com/ED67k6V.jpg",
+		"http://i.imgur.com/zEEPSwd.jpg"
 	]
 
 	judeQuotes = [
@@ -54,3 +55,6 @@ module.exports = (robot) ->
 
 	robot.hear /our glorious leader/i, (msg) ->
 		msg.send judeImages[7]
+
+	robot.hear /\bdevil(ish|ishly|\b)/i, (msg) ->
+		msg.send "http://i.imgur.com/zEEPSwd.jpg"
