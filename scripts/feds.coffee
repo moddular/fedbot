@@ -36,7 +36,19 @@ module.exports = (robot) ->
 		"Can't make it. Shin splints",
 		"Stay away from me when I'm in, I'm a sweaty mischief",
 		"I am providing absolutely no value whatsoever atm. Packing up, going home.",
-		"Cold, headache, low blood sugar. Not on top form."
+		"Cold, headache, low blood sugar. Not on top form.",
+		"That is not the Legacy architecture. It's *a* legacy architecture.",
+		"Understanding regular expressions aids you greatly as a developer.",
+		"I've found it INSANELY wonderful, and I'm completely in love with it ... Actually ... it's less that I'm in love with *it*, and more that I'm in love with *your use of it*.",
+		"Uranus is larger than Venus. I've seen it through the naked eye.",
+		"What a wonderful week. I am most impressed by the great things that so many of you did. (I'm not high, this comes from the heart of my bottom).",
+		"For future reference - please only ever use lowercase for branch names.",
+		"My hands hurt, my trochanteric bursitis hurts, I've borked my knee - which hurts, my neuropathy hurts, my shin splints hurt, my feet hurt, I've sprained my index finger (that hurts), I'm too warm, I have a cold, I can't concentrate, and I only had 3 hours sleep last night.",
+		"Not my fault!",
+		"New rule: NO ONE IS ALLOWED TO TAKE ELECTRONIC DEVICES TO PUBS.",
+		"I [...] propose Friday 13th... because nothing could possibly go wrong on that date. Count me in.",
+		"I have an MRI at the NHNN, where they're going to INJECT me with a POISON.",
+		"THIS ISN'T THE FUTURE I WAS PROMISED. WHERE ARE THE HOVER CARS AND THE ROBOT SERVANTS?"
 	]
 
 	smellMyCheese = "http://kil.gr/sandbox/secret/fedbot/perrycheese.gif"
