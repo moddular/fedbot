@@ -1,8 +1,8 @@
 # Description:
-#   Help out with Friday lunch decisions
+#   Help out with lunch decisions
 #
 # Commands:
-#   hubot what should we have for friday lunch? - Get help with Friday lunch decisions 
+#   hubot what should we have for lunch? - Get help with lunch decisions 
 #
 
 module.exports = (robot) ->
@@ -14,7 +14,12 @@ module.exports = (robot) ->
     "Canal 125",
     "The Big Chill House",
     "Honest Burger",
-    "somewhere different"
+    "somewhere different",
+    "Thai",
+    "The refectory",
+    "Pret",
+    "Wasabi",
+    "KERB"
   ]
 
   prefixes = [
@@ -33,24 +38,22 @@ module.exports = (robot) ->
 
   chooseOption = (msg) ->
     date = new Date()
-    if date.getDay() != 5
-      return "It's not Friday yet"
     today = date.toISOString().split("T")[0];
     prefix = msg.random(prefixes)
-    if robot.brain.get("fridayLunchLastChecked") == today
+    if robot.brain.get("lunchLastChecked") == today
       repeat = msg.random(repeats)
-      response = robot.brain.get("fridayLunchLastResponse")
+      response = robot.brain.get("lunchLastResponse")
       return "#{repeat} – #{prefix} #{response}?"
     else
       response = msg.random(options)
-      robot.brain.set "fridayLunchLastChecked", today
-      robot.brain.set "fridayLunchLastResponse", response
+      robot.brain.set "lunchLastChecked", today
+      robot.brain.set "lunchLastResponse", response
       return "#{prefix} #{response}?"
 
-  robot.respond /.*friday lunch.*/i, (msg) ->
+  robot.respond /(what|where) (should|shall) (we|i) (get|go|have) for lunch\??/i, (msg) ->
     msg.send chooseOption(msg)
 
   robot.respond /CTFLO/i, (msg) ->
-    robot.brain.remove "fridayLunchLastChecked"
-    robot.brain.remove "fridayLunchLastResponse"
-    msg.reply "[clearing the Friday lunch option]"
+    robot.brain.remove "lunchLastChecked"
+    robot.brain.remove "lunchLastResponse"
+    msg.reply "[clearing the lunch option]"
