@@ -10,16 +10,17 @@ module.exports = (robot) ->
   options = [
     "The King Charles",
     "The Parcel Yard",
-    "curry",
+    "Indian Lounge",
     "Canal 125",
     "The Big Chill House",
     "Honest Burger",
     "somewhere different",
-    "Thai",
-    "The refectory",
+    "Thai-An",
+    "the Refectory",
     "Pret",
     "Wasabi",
-    "KERB"
+    "KERB",
+    "Gran Sasso"
   ]
 
   prefixes = [
