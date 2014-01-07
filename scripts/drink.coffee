@@ -67,7 +67,7 @@ module.exports = (robot) ->
       robot.brain.set "drinkLastResponse", response
       return "#{prefix} #{response}?"
 
-  sendMessage = (message) ->
+  sendMessage = (msg) ->
     msg.send chooseOption(msg)
 
   robot.respond /where (should|shall) (we|i) (get|go for) (a drink|drinks|a pint|pints)\??/i, sendMessage
