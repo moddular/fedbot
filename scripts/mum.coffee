@@ -27,5 +27,6 @@ module.exports = (robot) ->
     "your mum's so stupid she bought tickets to Xbox Live",
   ]
 
-  robot.hear /\bm[ou]m(\b|m[ay]\b)/i, (msg) ->
-    msg.send msg.random jokes
+  robot.hear /\byour m[ou]m(m[ay])?(s|'s| is)?\b/i, (msg) ->
+    if /stupid|dumb|fat|ugly/i.test(msg.message.text)
+      msg.send msg.random jokes
