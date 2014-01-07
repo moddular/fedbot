@@ -9,8 +9,34 @@
 module.exports = (robot) ->
 
   options = [
-    "The King Charles",
-    "The Parcel Yard"
+    "King Charles I",
+    "the Parcel Yard",
+    "Lord John Russell",
+    "The Boot",
+    "the Lincoln Lounge",
+    "Star Of King's",
+    "The Fellow",
+    "McGlynn's",
+    "Miller's",
+    "the Lion",
+    "the Lamb",
+    "the Perseverance",
+    "the Queen's Larder",
+    "The Old Nick",
+    "the Wilmington Arms",
+    "Bree Louise",
+    "the Euston Flyer",
+    "Jeremy Bentham",
+    "the Royal George",
+    "The Driver",
+    "the Euston Tap",
+    "the Exmouth Arms",
+    "Prince Arthur",
+    "Crown & Anchor",
+    "the Norfolk Arms",
+    "the Skinners Arms",
+    "the Queen's Head",
+    "Marquis Cornwallis"
   ]
 
   prefixes = [
@@ -41,11 +67,12 @@ module.exports = (robot) ->
       robot.brain.set "drinkLastResponse", response
       return "#{prefix} #{response}?"
 
-  robot.respond /where (should|shall) (we|i) (get|go for) (a drink|drinks|a pint|pints)\??/i, (msg) ->
+  sendMessage = (message) ->
     msg.send chooseOption(msg)
 
-  robot.respond /which pub (should|shall) (we|i) go to\??/i, (msg) ->
-    msg.send chooseOption(msg)
+  robot.respond /where (should|shall) (we|i) (get|go for) (a drink|drinks|a pint|pints)\??/i, sendMessage
+  robot.respond /which pub (should|shall) (we|i) go to\??/i, sendMessage
+  robot.respond /libation me/i, sendMessage
 
   robot.respond /CTFDO/i, (msg) ->
     robot.brain.remove "drinkLastChecked"
