@@ -7,7 +7,7 @@
 
 module.exports = (robot) ->
 
-  jokes = [
+  starterJokes = [
     "your mum's so fat they put speed bumps at the buffet",
     "your mum's so fat that when she was diagnosed with a flesh-eating disease, the doctor gave her ten years to live",
     "your mum's so fat instead of an STD she gave me cholesterol",
@@ -27,6 +27,11 @@ module.exports = (robot) ->
     "your mum's so stupid she bought tickets to Xbox Live",
   ]
 
-  robot.hear /\byour m[ou]m(m[ay])?(s|'s| is)?\b/i, (msg) ->
-    if /stupid|dumb|fat|ugly/i.test(msg.message.text)
-      msg.send msg.random jokes
+  robot.hear /^your m[ou]m(m[ay])?(s|'s| is)?\b/i, (msg) ->
+    if /stupid|dumb|fat|thick|ugly/i.test(msg.message.text)
+      mumJokes = robot.brain.get("mumJokes") || starterJokes
+      msg.send msg.random mumJokes
+      if (msg.message.text not in mumJokes)
+        mumJokes.push msg.message.text
+        robot.brain.set "mumJokes", mumJokes
+      console.log(mumJokes)
