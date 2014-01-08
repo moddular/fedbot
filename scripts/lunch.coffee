@@ -2,10 +2,13 @@
 #   Help out with lunch decisions
 #
 # Commands:
-#   hubot what should we have for lunch? - Get help with lunch decisions 
+#   hubot what should we have for lunch? - Get help with lunch decisions
+#   hubot new lunch option - Get a new lunch suggestion
 #
 
 module.exports = (robot) ->
+
+  rating = require('../lib/fedbot-rating')(robot)
 
   options = [
     "The King Charles",
@@ -54,7 +57,9 @@ module.exports = (robot) ->
   robot.respond /(what|where) (should|shall) (we|i) (get|go|have) for lunch\??/i, (msg) ->
     msg.send chooseOption(msg)
 
-  robot.respond /CTFLO/i, (msg) ->
+  robot.respond /new lunch option/i, (msg) ->
+    rating.decrease msg, 1
     robot.brain.remove "lunchLastChecked"
     robot.brain.remove "lunchLastResponse"
-    msg.reply "[clearing the lunch option]"
+    msg.reply "Why ask me if you're not going to take my advice? Fine."
+    msg.send chooseOption(msg)

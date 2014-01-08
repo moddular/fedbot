@@ -4,9 +4,12 @@
 # Commands:
 #   hubot where should we go for a drink? - Get help with pub decisions
 #   hubot which pub should we go to? - Get help with pub decisions
+#   hubot new pub option - Get a new pub suggestion
 #
 
 module.exports = (robot) ->
+
+  rating = require('../lib/fedbot-rating')(robot)
 
   options = [
     "King Charles I",
@@ -74,7 +77,9 @@ module.exports = (robot) ->
   robot.respond /which pub (should|shall) (we|i) go to\??/i, sendMessage
   robot.respond /libation me/i, sendMessage
 
-  robot.respond /CTFDO/i, (msg) ->
+  robot.respond /new pub option/i, (msg) ->
+    rating.decrease msg, 1
     robot.brain.remove "drinkLastChecked"
     robot.brain.remove "drinkLastResponse"
-    msg.reply "[clearing the drink option]"
+    msg.reply "Why ask me if you're not going to take my advice? Fine."
+    msg.send chooseOption(msg)
