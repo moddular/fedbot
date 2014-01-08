@@ -11,5 +11,5 @@ module.exports = (robot) ->
     "http://i.imgur.com/pKJyCWG.gif"
   ]
 
-  robot.hear /\b(wtf|what the (fuck|flip|frig|f\*\*\*|f))\b/i, (msg) ->
+  robot.hear /\b(wtf|what the (fuck|flip|frig|f\*\*(\*|k)|f))\b/i, (msg) ->
     msg.send msg.random responses
