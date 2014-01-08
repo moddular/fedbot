@@ -152,5 +152,5 @@ module.exports = (robot) ->
     users = _.values robot.brain.users()
     users = (user for user in users when typeof user.fedbotRating == "number")
     users = _.sortBy(users, 'fedbotRating').reverse()
-    users = (user.name for user in users)
+    users = (user.name for user in users when user.name isnt "FEDbot")
     msg.send users.join "\n"
