@@ -14,7 +14,11 @@ module.exports = (robot) ->
     "http://e.asset.soup.io/asset/3147/2254_580c_390.png",
     "http://replygif.net/i/153.gif",
     "http://www.cutecatgifs.com/wp-content/uploads/2013/05/facepalm.gif",
-    "http://cdn.gifbay.com/2013/12/cat_facepalm-107822.gif"
+    "http://cdn.gifbay.com/2013/12/cat_facepalm-107822.gif",
+    "http://replygif.net/i/639.gif",
+    "http://replygif.net/i/792.gif",
+    "http://replygif.net/i/661.gif",
+    "http://replygif.net/i/586.gif",
   ]
 
   robot.hear /\b(facepalm)\b/i, (msg) ->
