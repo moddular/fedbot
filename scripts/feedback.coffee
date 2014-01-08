@@ -7,13 +7,16 @@
 
 module.exports = (robot) ->
 
-  rating = require('../lib/fedbot-rating')(robot)
+  rating = require("../lib/fedbot-rating")(robot)
 
-  insults = ///
-    fedbot('?s|\sis)
-    (.*)
+  quantityModifiers = "(very|really|extremely|quite|enormously|incredibly|massively|definitely|pretty)"
+
+  # General bad feedback
+  badFeedback = ///
     (
-        stupid
+      \bfedbot('?s|\sis)\s
+      (#{quantityModifiers}\s)?
+      ( stupid
       | dumb
       | rubbish
       | shit
@@ -22,23 +25,21 @@ module.exports = (robot) ->
       | bad
       | malfunctioning
       | crap
+      )
+    |
+      i\s(dislike|hate)\sfedbot
     )
-  ///i
+  \b///i
+  robot.hear badFeedback, (msg) ->
+    rating.decrease msg, 1
+    msg.reply ":("
 
-  dislikes = ///
+  # General good feedback
+  goodFeedback = ///
     (
-        dislike
-      | hate
-    )
-    (.*)
-    fedbot
-  ///i
-
-  compliments = ///
-    fedbot('?s|\sis)
-    (.*)
-    (
-        clever
+      \bfedbot('?s|\sis)\s
+      (#{quantityModifiers}\s)?
+      ( clever
       | wonderful
       | lovely
       | nice
@@ -49,34 +50,11 @@ module.exports = (robot) ->
       | sexy
       | excellent
       | awesome
+      )
+    |
+      i\s(like|love)\sfedbot
     )
-  ///i
-
-  likes = ///
-    (
-        like
-      | love
-    )
-    (.*)
-    fedbot
-  ///i
-
-  robot.hear insults, (msg) ->
-    if !/not|isn'?t/.test msg.message.text
-      rating.decrease msg, 1
-      msg.reply ":("
-
-  robot.hear dislikes, (msg) ->
-    if !/not|don'?t/.test msg.message.text
-      rating.decrease msg, 1
-      msg.reply ":("
-
-  robot.hear compliments, (msg) ->
-    if !/not|isn'?t/.test msg.message.text
-      rating.increase msg, 1
-      msg.reply ":)"
-
-  robot.hear likes, (msg) ->
-    if !/not|don'?t/.test msg.message.text
-      rating.increase msg, 1
-      msg.reply ":)"
+  \b///i
+  robot.hear goodFeedback, (msg) ->
+    rating.increase msg, 1
+    msg.reply ":)"
