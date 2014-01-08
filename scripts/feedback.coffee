@@ -64,3 +64,10 @@ module.exports = (robot) ->
   robot.hear goodFeedback, (msg) ->
     rating.increase msg, 1
     msg.reply ":)"
+
+  # Shhh
+  quietWords = "(be quiet|shh+|hush|shut up|shut the [a-z]+ up)"
+  robot.hear ///fedbot\s#{quietWords}|#{quietWords}\sfedbot///i, (msg) ->
+    rating.decrease msg, 1
+    quietWord = if msg.match[1] then msg.match[1] else msg.match[2]
+    msg.reply "No, you #{quietWord}"
