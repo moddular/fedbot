@@ -16,6 +16,12 @@ Install Node.js and clone this repo somewhere. Install the dependencies with:
 $ npm install
 ```
 
+You'll also need [Redis](http://redis.io/) installed (`brew install redis` is the easiest way on a Mac). Redis should also be running:
+
+```sh
+$ redis-server
+```
+
 Now you can start FEDbot with:
 
 ```sh
