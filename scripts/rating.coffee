@@ -6,6 +6,7 @@
 #   hubot do you like <name>? - Check whether hubot likes a person
 #   hubot who is your favourite? - See who hubot likes best
 #   hubot who is your least favourite? - See who hubot likes least
+#   hubot sort us in order of preference - List users from most to least favourite
 #
 
 _ = require 'underscore'
@@ -146,3 +147,10 @@ module.exports = (robot) ->
       msg.send "It's a tie between " + users.join(", ")
     else
       msg.send "My least favourite is " + users[0]
+
+  robot.respond /sort us in order of preference/i, (msg) ->
+    users = _.values robot.brain.users()
+    users = (user for user in users when typeof user.fedbotRating == "number")
+    users = _.sortBy(users, 'fedbotRating').reverse()
+    users = (user.name for user in users)
+    msg.send users.join "\n"
