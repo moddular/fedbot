@@ -25,6 +25,10 @@ module.exports = (robot) ->
       | bad
       | malfunctioning
       | crap
+      | annoying
+      | awful
+      | nasty
+      | thick
       )
     |
       i\s(dislike|hate)\sfedbot
@@ -50,6 +54,8 @@ module.exports = (robot) ->
       | sexy
       | excellent
       | awesome
+      | funny
+      | intelligent
       )
     |
       i\s(like|love)\sfedbot
