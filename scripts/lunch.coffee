@@ -54,7 +54,7 @@ module.exports = (robot) ->
       robot.brain.set "lunchLastResponse", response
       return "#{prefix} #{response}?"
 
-  robot.respond /(what|where) (should|shall) (we|i) (get|go|have) for lunch\??/i, (msg) ->
+  robot.respond /(what|where) (should|shall) (we|i) (get|go for|have for) lunch\??/i, (msg) ->
     msg.send chooseOption(msg)
 
   robot.respond /new lunch option/i, (msg) ->
