@@ -1,5 +1,5 @@
 # Description:
-#   FED based shit
+#   Jude based shit
 #
 # Commands:
 #   hubot jude me - random jude image
@@ -51,16 +51,11 @@ module.exports = (robot) ->
 		"THIS ISN'T THE FUTURE I WAS PROMISED. WHERE ARE THE HOVER CARS AND THE ROBOT SERVANTS?"
 	]
 
-	smellMyCheese = "http://kil.gr/sandbox/secret/fedbot/perrycheese.gif"
-
 	robot.respond /jude me/i, (msg) ->
 		msg.send msg.random judeImages
 
 	robot.hear /what would jude say|wwjs/i, (msg) ->
 		msg.send msg.random judeQuotes
-
-	robot.hear /cheese/i, (msg) ->
-		msg.send smellMyCheese
 
 	robot.hear /judehoff/i, (msg) ->
 		msg.send judeImages[5]

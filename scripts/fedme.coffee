@@ -31,3 +31,23 @@ module.exports = (robot) ->
     msg.http("http://fedme.rowanmanning.com/count")
       .get() (err, res, body) ->
         msg.send "There are #{JSON.parse(body).fed_count} feds."
+
+  # extras
+  
+  robot.hear /\bfried eggs?\b/i, (msg) ->
+    msg.send "http://i.imgur.com/34Qq17u.jpg"
+
+  robot.hear /\bcheese\b/i, (msg) ->
+    msg.send "http://i.imgur.com/nkQyVr4.gif"
+
+  robot.hear /\bbunny\b/i, (msg) ->
+    msg.send "http://i.imgur.com/Tcymylr.jpg"
+
+  robot.hear /\b(jude?oge|jude doge|tramadol)\b/i, (msg) ->
+    msg.send "http://i.imgur.com/5Y3vocd.png"
+
+  robot.hear /\bh[au]ng\s?over\b/i, (msg) ->
+    msg.send "http://i.imgur.com/fzpsMDJ.jpg"
+
+  robot.hear /\b(12|twelve)\s?pints?\b/i, (msg) ->
+    msg.send "http://i.imgur.com/8DrBegi.jpg"
