@@ -40,7 +40,7 @@ module.exports = (robot) ->
   robot.hear /\bcheese\b/i, (msg) ->
     msg.send "http://i.imgur.com/nkQyVr4.gif"
 
-  robot.hear /\bbunny\b/i, (msg) ->
+  robot.hear /\bbunn(y|ies)\b/i, (msg) ->
     msg.send "http://i.imgur.com/Tcymylr.jpg"
 
   robot.hear /\b(jude?oge|jude doge|tramadol)\b/i, (msg) ->
