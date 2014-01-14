@@ -48,7 +48,10 @@ module.exports = (robot) ->
 		"New rule: NO ONE IS ALLOWED TO TAKE ELECTRONIC DEVICES TO PUBS.",
 		"I [...] propose Friday 13th... because nothing could possibly go wrong on that date. Count me in.",
 		"I have an MRI at the NHNN, where they're going to INJECT me with a POISON.",
-		"THIS ISN'T THE FUTURE I WAS PROMISED. WHERE ARE THE HOVER CARS AND THE ROBOT SERVANTS?"
+		"THIS ISN'T THE FUTURE I WAS PROMISED. WHERE ARE THE HOVER CARS AND THE ROBOT SERVANTS?",
+		"... no bad thing, because OOCSS is awesome.",
+		"OOCSS means you'll never have to.",
+		"I want someone who either has experience using OOCSS, or will be open-minded enough to fall in love"
 	]
 
 	robot.respond /jude me/i, (msg) ->
