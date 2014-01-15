@@ -9,7 +9,7 @@
 
 module.exports = (robot) ->
 
-  robot.hear /pun|dan+/i, (msg) ->
+  robot.hear /\b(pun|dan)\b/i, (msg) ->
     search = escape(msg.match[1])
     msg.http('http://www.reddit.com/r/AdviceAnimals/search.json?q=lame+pun+raccoon&sort=new&restrict_sr=on&t=all')
       .get() (err, res, body) ->
