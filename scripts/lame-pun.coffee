@@ -22,7 +22,8 @@ module.exports = (robot) ->
         urls = [ ]
         for child in result.data.children
           if /\.(gif|jpeg|jpg|png)$/.test child.data.url
-            urls.push(child.data.url)
+            if child.data.ups > 8
+              urls.push(child.data.url)
 
         rnd = Math.floor(Math.random()*urls.length)
         msg.send urls[rnd]
