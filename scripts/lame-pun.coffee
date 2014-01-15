@@ -22,7 +22,7 @@ module.exports = (robot) ->
         urls = [ ]
         for child in result.data.children
           if /\.(gif|jpeg|jpg|png)$/.test child.data.url
-            if child.data.ups > 8
+            if child.data.ups > child.data.downs
               urls.push(child.data.url)
 
         rnd = Math.floor(Math.random()*urls.length)
