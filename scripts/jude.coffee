@@ -51,7 +51,8 @@ module.exports = (robot) ->
 		"THIS ISN'T THE FUTURE I WAS PROMISED. WHERE ARE THE HOVER CARS AND THE ROBOT SERVANTS?",
 		"... no bad thing, because OOCSS is awesome.",
 		"OOCSS means you'll never have to.",
-		"I want someone who either has experience using OOCSS, or will be open-minded enough to fall in love"
+		"I want someone who either has experience using OOCSS, or will be open-minded enough to fall in love",
+		"Jesus. I am sweating like a paedo at band camp."
 	]
 
 	robot.respond /jude me/i, (msg) ->
