@@ -9,9 +9,9 @@
 
 module.exports = (robot) ->
 
-  robot.hear /pun|dan+/i, (msg) ->
+  robot.hear /\b(pun)\b/i, (msg) ->
     search = escape(msg.match[1])
-    msg.http('http://www.reddit.com/r/AdviceAnimals/search.json?q=lame+pun+raccoon&sort=new&restrict_sr=on&t=all')
+    msg.http('http://www.reddit.com/r/AdviceAnimals/search.json?q=lame+pun+raccoon&sort=new&restrict_sr=on&t=all&limit=50')
       .get() (err, res, body) ->
         result = JSON.parse(body)
 
