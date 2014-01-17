@@ -82,4 +82,4 @@ module.exports = (robot) ->
     robot.brain.remove "drinkLastChecked"
     robot.brain.remove "drinkLastResponse"
     msg.reply "Why ask me if you're not going to take my advice? Fine."
-    msg.send chooseOption(msg)
+    setTimeout (-> msg.send chooseOption(msg)), 100
