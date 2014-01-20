@@ -56,6 +56,8 @@ module.exports = (robot) ->
     msg.send "We are FEDs:\n" + getNonStrangers().join("\n")
 
   robot.respond /([a-z0-9\s\-]+) is one of us/i, (msg) ->
+    if msg.message.user.name == "Perry Harlock"
+      return msg.reply "Now Perry, you know you're not responsible enough to do that!"
     name = msg.match[1]
     users = robot.brain.usersForFuzzyName name
     if users.length == 0
@@ -72,6 +74,8 @@ module.exports = (robot) ->
         msg.reply "I know, #{users[0].name} is already one of us..."
 
   robot.respond /([a-z0-9\s\-]+) is not one of us/i, (msg) ->
+    if msg.message.user.name == "Perry Harlock"
+      return msg.reply "Now Perry, you know you're not responsible enough to do that!"
     name = msg.match[1]
     users = robot.brain.usersForFuzzyName name
     if users.length == 0
