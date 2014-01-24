@@ -52,7 +52,8 @@ module.exports = (robot) ->
 		"... no bad thing, because OOCSS is awesome.",
 		"OOCSS means you'll never have to.",
 		"I want someone who either has experience using OOCSS, or will be open-minded enough to fall in love",
-		"Jesus. I am sweating like a paedo at band camp."
+		"Jesus. I am sweating like a paedo at band camp.",
+		"Don't touch anything within 3 metres of my desk (including Nick)"
 	]
 
 	robot.respond /jude me/i, (msg) ->
