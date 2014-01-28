@@ -19,6 +19,7 @@ module.exports = (robot) ->
     "http://replygif.net/i/792.gif",
     "http://replygif.net/i/661.gif",
     "http://replygif.net/i/586.gif",
+    "https://i.chzbgr.com/maxW500/8017583104/h7D54A519.gif"
   ]
 
   robot.hear /\b(facepalm)\b/i, (msg) ->
