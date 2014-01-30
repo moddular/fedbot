@@ -68,7 +68,7 @@ module.exports = (robot) ->
     answer = formatAnswer msg.match[1]
     if currentPoll
       if answer in currentPoll.answers
-        currentPoll.votes[msg.message.user.id] = msg.match[1]
+        currentPoll.votes[msg.message.user.id] = answer
         msg.reply 'Your vote (' + answer + ') has been registered.'
       else
         msg.reply 'That\'s not a valid answer, please pick from: ' + currentPoll.answers.join(', ') + '.'
