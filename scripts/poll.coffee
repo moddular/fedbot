@@ -49,7 +49,7 @@ module.exports = (robot) ->
   getResultsMessage = (poll) ->
     if poll
       resultsTable = ("#{answer.answer}: #{answer.count} votes" for answer in getVoteCountsArray(poll)).join('\n');
-      'The results for the poll (' + poll.answers.join(', ') + '):\n' + resultsTable
+      'The results for the poll:\n' + resultsTable
     else
       'No results are available.'
 
