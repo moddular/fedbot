@@ -61,6 +61,7 @@ module.exports = (robot) ->
         answers: formatAnswers(msg.match[1]),
         votes: {}
       robot.brain.set 'currentPoll', newPoll
+      msg.reply 'Poll created! (' + newPoll.answers.join(', ') + ')'
 
   robot.respond /vote (.+)/i, (msg) ->
     currentPoll = getCurrentPoll()
