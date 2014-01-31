@@ -24,7 +24,6 @@ module.exports = (robot) ->
     "Krista Fuentes",
     "Laura Porter",
     "Nick Call",
-    "Perry Harlock",
     "Phil Booth",
     "Rowan Manning"
   ]
