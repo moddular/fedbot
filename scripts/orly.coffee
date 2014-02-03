@@ -17,5 +17,5 @@ module.exports = (robot) ->
     "http://images2.fanpop.com/image/photos/13500000/O-Rly-owls-13509350-282-282.jpg"
   ]
 
-  robot.hear /\b(o)\b(rly)\b/i, (msg) ->
+  robot.hear /\bo\s?rly\b/i, (msg) ->
     msg.send msg.random responses
