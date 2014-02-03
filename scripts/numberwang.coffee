@@ -5,13 +5,12 @@
 #   None
 #
 
+randomBetween = require('../lib/random').randomBetween
+
 module.exports = (robot) ->
 
   isWangerNumbRound = false
   lastWinner = null
-
-  randomBetween = (min, max) ->
-    Math.floor(Math.random() * (max - min + 1)) + min
 
   robot.hear /\b\d+\b/i, (msg) ->
     if not /https?:\/\//i.test(msg.message.text)
