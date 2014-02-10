@@ -20,5 +20,5 @@ module.exports = (robot) ->
   ]
 
   robot.hear /shit|crap|rubbish|awful|terrible|fucking|fuck|muppets|bloody|!!+/i, (msg) ->
-    if randomBetween(1, 3) is 1 and /jose/i.test(msg.message.user.name)
+    if randomBetween(1, 5) is 1 and /jose/i.test(msg.message.user.name)
       msg.send msg.random responses
