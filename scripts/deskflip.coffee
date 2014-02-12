@@ -9,7 +9,7 @@
 
 module.exports = (robot) ->
 
-  robot.hear /\b(deskflip|tableflip)\b/i, (msg) ->
+  robot.hear /\b(desk|table)\s?flip\b/i, (msg) ->
     search = escape(msg.match[1])
     msg.http('http://api.tumblr.com/v2/blog/tableflipgifs.tumblr.com/posts/?api_key=QnPKLySe5CRuDzp89qYw0XtXVboNo77fHTUituK3vZUKfCUQkY')
       .get() (err, res, body) ->
