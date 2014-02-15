@@ -25,14 +25,20 @@ module.exports = (robot) ->
 
         for child in result.response.posts
           if child.title.length > 0 && child.body.length > 0
-            urls.push({name: child.title, image: child.body})
+
+            bodySrcBits = child.body.split '"'
+
+            for arrayPiece in bodySrcBits
+              imageSrcIndex = arrayPiece.indexOf ".gif", 0
+              if imageSrcIndex > 0
+                urls.push({name: child.title, image: arrayPiece}) 
 
         if result.response.posts.length == robot.brain.data.devop_counter
           robot.brain.data.devop_counter = 0
 
         if urls[robot.brain.data.devop_counter].name.length > 0
 
-          msg.send "#{urls[robot.brain.data.devop_counter].image} <p>#{urls[robot.brain.data.devop_counter].name}</p>"
+          msg.send "#{urls[robot.brain.data.devop_counter].image} #{urls[robot.brain.data.devop_counter].name}"
           robot.brain.data.devop_counter += 1
           return
 
