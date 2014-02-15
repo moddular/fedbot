@@ -38,7 +38,8 @@ module.exports = (robot) ->
 
         if urls[robot.brain.data.devop_counter].name.length > 0
 
-          msg.send "#{urls[robot.brain.data.devop_counter].image} #{urls[robot.brain.data.devop_counter].name}"
+          msg.send "#{urls[robot.brain.data.devop_counter].image}"
+          msg.send " #{urls[robot.brain.data.devop_counter].name}"
           robot.brain.data.devop_counter += 1
           return
 
