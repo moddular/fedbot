@@ -25,16 +25,31 @@ module.exports = (robot) ->
 
         for child in result.response.posts
           if child.title.length > 0 && child.body.length > 0
-            urls.push({name: child.title, image: child.body})
 
+            # tumblr gives you HTML instead of just an image if it's a text post, so let's split it up 
+            bodySrcBits = child.body.split '"'
+
+            # ... then we can look for a gif to add to our message object
+            for arrayPiece in bodySrcBits
+              imageSrcIndex = arrayPiece.indexOf ".gif", 0
+              if imageSrcIndex > 0
+                urls.push({name: child.title, image: arrayPiece}) 
+
+        # RESET! RESET!
         if result.response.posts.length == robot.brain.data.devop_counter
           robot.brain.data.devop_counter = 0
 
         if urls[robot.brain.data.devop_counter].name.length > 0
 
-          msg.send "#{urls[robot.brain.data.devop_counter].image} <p>#{urls[robot.brain.data.devop_counter].name}</p>"
+          # it'd be nice to send this as HTML but Campfire doesn't like that, so.
+          msg.send "#{urls[robot.brain.data.devop_counter].image}"
+          msg.send "#{urls[robot.brain.data.devop_counter].name}: "
+          # fedbot will also send these in reverse order, so the name goes last so that it goes first
+          # <myheadisfulloffuck.jpg>
+
           robot.brain.data.devop_counter += 1
           return
 
+        # go back to the start
         msg.send urls[0].name
         robot.brain.data.devop_counter = 1
