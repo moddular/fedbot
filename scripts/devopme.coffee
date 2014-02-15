@@ -42,8 +42,10 @@ module.exports = (robot) ->
         if urls[robot.brain.data.devop_counter].name.length > 0
 
           # it'd be nice to send this as HTML but Campfire doesn't like that, so.
-          msg.send "#{urls[robot.brain.data.devop_counter].name}: "
           msg.send "#{urls[robot.brain.data.devop_counter].image}"
+          msg.send "#{urls[robot.brain.data.devop_counter].name}: "
+          # fedbot will also send these in reverse order, so the name goes last so that it goes first
+          # <myheadisfulloffuck.jpg>
 
           robot.brain.data.devop_counter += 1
           return
