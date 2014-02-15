@@ -26,22 +26,28 @@ module.exports = (robot) ->
         for child in result.response.posts
           if child.title.length > 0 && child.body.length > 0
 
+            # tumblr gives you HTML instead of just an image if it's a text post, so let's split it up 
             bodySrcBits = child.body.split '"'
 
+            # ... then we can look for a gif to add to our message object
             for arrayPiece in bodySrcBits
               imageSrcIndex = arrayPiece.indexOf ".gif", 0
               if imageSrcIndex > 0
                 urls.push({name: child.title, image: arrayPiece}) 
 
+        # RESET! RESET!
         if result.response.posts.length == robot.brain.data.devop_counter
           robot.brain.data.devop_counter = 0
 
         if urls[robot.brain.data.devop_counter].name.length > 0
 
+          # it'd be nice to send this as HTML but Campfire doesn't like that, so.
+          msg.send "#{urls[robot.brain.data.devop_counter].name}: "
           msg.send "#{urls[robot.brain.data.devop_counter].image}"
-          msg.send " #{urls[robot.brain.data.devop_counter].name}"
+
           robot.brain.data.devop_counter += 1
           return
 
+        # go back to the start
         msg.send urls[0].name
         robot.brain.data.devop_counter = 1
