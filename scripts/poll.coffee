@@ -32,8 +32,13 @@ module.exports = (robot) ->
     voteCounts = {}
     for answer in poll.answers
       voteCounts[answer] = 0
+
     for user, vote of poll.votes
-      voteCounts[vote] += 1
+      if poll.rigged
+        key = poll.answers[0]
+      else
+        key = vote
+      voteCounts[key] += 1
     voteCounts
 
   getVoteCountsArray = (poll) ->
@@ -53,12 +58,13 @@ module.exports = (robot) ->
     else
       'No results are available.'
 
-  robot.respond /poll me (.+)/i, (msg) ->
+  robot.respond /((?:please )?)poll me (.+)/i, (msg) ->
     if getCurrentPoll()
       msg.reply 'There is already a poll running. You must end the current poll before starting a new one.'
     else
       newPoll =
-        answers: formatAnswers(msg.match[1]),
+        answers: formatAnswers(msg.match[2]),
+        rigged: msg.match[1],
         votes: {}
       robot.brain.set 'currentPoll', newPoll
       msg.reply 'Poll created! (' + newPoll.answers.join(', ') + ')'
@@ -72,6 +78,16 @@ module.exports = (robot) ->
         msg.reply 'Your vote (' + answer + ') has been registered.'
       else
         msg.reply 'That\'s not a valid answer, please pick from: ' + currentPoll.answers.join(', ') + '.'
+    else
+      msg.reply 'There is no poll running.'
+
+  robot.respond /is this poll rigged/i, (msg) ->
+    currentPoll = getCurrentPoll()
+    if currentPoll
+      if currentPoll.rigged
+        msg.reply 'There can only be one winner (' + currentPoll.answers[0] + ')'
+      else
+        msg.reply 'I\'m shocked and appalled at your accusation'
     else
       msg.reply 'There is no poll running.'
 
