@@ -6,6 +6,7 @@
 #   hubot vote <answer> - Vote for an answer
 #   hubot poll results - Get results for the current/last poll
 #   hubot poll end - End the current poll
+#   hubot is this poll rigged? - Check if the poll is rigged
 #
 # Author:
 #   rowanmanning
@@ -81,7 +82,7 @@ module.exports = (robot) ->
     else
       msg.reply 'There is no poll running.'
 
-  robot.respond /is this poll rigged/i, (msg) ->
+  robot.respond /is (this|the) poll rigged\??/i, (msg) ->
     currentPoll = getCurrentPoll()
     if currentPoll
       if currentPoll.rigged
