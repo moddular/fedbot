@@ -4,7 +4,7 @@ _ = require 'underscore'
 module.exports = (robot, name, images) ->
 
   meRegExp = new RegExp "#{name} me", 'i'
-  bombRegExp = new RegExp "#{name} bomb( (\d+))?", 'i'
+  bombRegExp = new RegExp "#{name} bomb( (\\d+))?", 'i'
 
   robot.respond meRegExp, (msg) ->
     msg.send msg.random images
