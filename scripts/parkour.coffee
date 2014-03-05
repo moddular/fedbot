@@ -5,8 +5,6 @@
 #   hubot parkour me - Get a random Parkour FAIL
 #   hubot parkour bomb N - Get N Parkour FAILs
 
-me = require '../lib/me'
-
 module.exports = (robot) ->
   require('../lib/me')(robot, 'parkour', [
     'http://31.media.tumblr.com/26586d01ece7cad5b97d3448395c33e3/tumblr_mryb3r8chX1sb6a5qo1_400.gif',

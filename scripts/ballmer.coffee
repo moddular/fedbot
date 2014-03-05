@@ -5,8 +5,6 @@
 #   hubot ballmer me - Get a random Ballmer image
 #   hubot ballmer bomb N - Get N Ballmer images
 
-me = require '../lib/me'
-
 module.exports = (robot) ->
   require('../lib/me')(robot, 'ballmer', [
     "http://cdn.gifbay.com/2013/09/steve_ballmer-88323.gif",
