@@ -3,7 +3,9 @@
 #
 # Commands:
 #   hubot ballmer me - Get a random Ballmer image
-#
+#   hubot ballmer bomb N - Get N Ballmer images
+
+_ = require 'underscore'
 
 module.exports = (robot) ->
 
@@ -21,3 +23,8 @@ module.exports = (robot) ->
 
   robot.respond /ballmer me/i, (msg) ->
     msg.send msg.random images
+
+  robot.respond /ballmer bomb( (\d+))?/i, (msg) ->
+    count = msg.match[2] || 5
+    bomb = _.sample images, count
+    msg.send image for image in bomb
