@@ -5,11 +5,10 @@
 #   hubot parkour me - Get a random Parkour FAIL
 #   hubot parkour bomb N - Get N Parkour FAILs
 
-_ = require 'underscore'
+me = require '../lib/me'
 
 module.exports = (robot) ->
-
-  images = [
+  require('../lib/me')(robot, 'parkour', [
     'http://31.media.tumblr.com/26586d01ece7cad5b97d3448395c33e3/tumblr_mryb3r8chX1sb6a5qo1_400.gif',
     'http://ao-upload-prod.s3.amazonaws.com/wp-content/uploads/2014/01/yZAhR.gif',
     'http://cdn.arwrath.com/3/36903.gif',
@@ -31,12 +30,4 @@ module.exports = (robot) ->
     'http://wac.450f.edgecastcdn.net/80450F/thefw.com/files/2013/06/e6uv1.gif',
     'http://www.nerdnirvana.org/autopost/uploads/2012/01/parkour%20showoffs.gif',
     'http://www.pbh2.com/wordpress/wp-content/uploads/2013/10/fail-gif-backflip-fail.gif',
-  ]
-
-  robot.respond /parkour me/i, (msg) ->
-    msg.send msg.random images
-
-  robot.respond /parkour bomb( (\d+))?/i, (msg) ->
-    count = msg.match[2] || 5
-    bomb = _.sample images, count
-    msg.send image for image in bomb
+  ])
