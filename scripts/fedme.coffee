@@ -41,7 +41,8 @@ module.exports = (robot) ->
     msg.send "http://i.imgur.com/nkQyVr4.gif"
 
   robot.hear /\bbunn(y|ies)\b/i, (msg) ->
-    msg.send "http://i.imgur.com/Tcymylr.jpg"
+    if /\bjose\b/i.test msg.message.text
+      msg.send "http://i.imgur.com/Tcymylr.jpg"
 
   robot.hear /\b(jude?oge|jude doge|tramadol)\b/i, (msg) ->
     msg.send "http://i.imgur.com/5Y3vocd.png"
