@@ -7,6 +7,7 @@
 module.exports = (robot) ->
 
   judeQuotes = [
+    "Phew, back to reality. That was hardcore. I was off my face. The world was spinning, I was twitching and hallucinating.",
     "Have I told you about my 'low hanging fruit'?",
     "Double Jack and diet please",
     "MNGH!!!",
