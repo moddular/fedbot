@@ -6,6 +6,8 @@
 #   hubot animate me <query> - The same thing as `image me`, except adds a few parameters to try to return an animated GIF instead.
 #   hubot mustache me <url> - Adds a mustache to the specified URL.
 #   hubot mustache me <query> - Searches Google Images for the specified query and mustaches it.
+#   hubot benny hill me <url> - Adds Benny Hill music to the specified URL.
+#   hubot benny hill me <query> - Searches Google Images for the specified query and Benny Hill's it.
 
 module.exports = (robot) ->
   robot.respond /(image|img)( me)? (.*)/i, (msg) ->
@@ -31,6 +33,14 @@ module.exports = (robot) ->
       imageMe msg, imagery, false, true, (url) ->
         msg.send "#{mustachify}#{url}"
 
+  robot.respond /benny\s?hill me (.*)/i, (msg) ->
+    imagery = msg.match[1]
+    if imagery.match /^https?:\/\//i
+      msg.send getBennyHillUrl(imagery)
+    else
+      imageMe msg, imagery, true, false, (url) ->
+        msg.send getBennyHillUrl(url)
+
 imageMe = (msg, query, animated, faces, cb) ->
   cb = animated if typeof animated == 'function'
   cb = faces if typeof faces == 'function'
@@ -46,3 +56,6 @@ imageMe = (msg, query, animated, faces, cb) ->
         image  = msg.random images
         cb "#{image.unescapedUrl}#.png"
 
+getBennyHillUrl = (gif) ->
+  gif = encodeURIComponent gif
+  "http://bennyhill.me/?gif=#{gif}&-="
