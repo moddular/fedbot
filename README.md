@@ -2,9 +2,9 @@
 FEDbot
 ======
 
-The Nature FEDs campfire friend.
+The FED's campfire friend.
 
-![FEDbot](https://raw.github.com/rowanmanning/fedbot/master/images/fedbot.png)
+![FEDbot](https://raw.github.com/thefeds/fedbot/master/images/fedbot.png)
 
 
 Running Locally
