@@ -121,7 +121,7 @@ module.exports = (robot) ->
       else if users.length > 1
         msg.reply "I'm not sure who you mean, one of these? " + users.map((user) -> user.name).join(', ')
       else
-        label = rating.label {message:{user:{id: users[0].id}}}
+        label = rating.label {message: {user: {id: users[0].id}}}
         msg.reply msg.random otherResponses[label]
 
   robot.respond /who('?s| is) your favou?rite\??/i, (msg) ->

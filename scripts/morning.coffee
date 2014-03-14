@@ -46,7 +46,7 @@ module.exports = (robot) ->
   }
 
   morning = new RegExp("mornin.+#{robot.name}", "i")
-  morningCommand = new RegExp(".*mornin.*", "i");
+  morningCommand = new RegExp(".*mornin.*", "i")
 
   action = (msg) ->
     rating.increase msg, 1

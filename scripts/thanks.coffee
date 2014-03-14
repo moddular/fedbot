@@ -58,7 +58,7 @@ module.exports = (robot) ->
   }
 
   thanks = new RegExp("(thank(s| ?you)|cheers) #{robot.name}", "i")
-  thanksCommand = new RegExp("(thank(s| ?you)|cheers)", "i");
+  thanksCommand = new RegExp("(thank(s| ?you)|cheers)", "i")
 
   action = (msg) ->
     rating.increase msg, 1

@@ -25,5 +25,5 @@ module.exports = (robot) ->
             if child.data.ups > child.data.downs
               urls.push(child.data.url)
 
-        rnd = Math.floor(Math.random()*urls.length)
+        rnd = Math.floor(Math.random() * urls.length)
         msg.send urls[rnd]

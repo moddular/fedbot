@@ -1,8 +1,8 @@
 # Description:
-#   Delivers a random deskflipping image from tableflipgifs.tumblr.com. Uses an API key but does not require full authentication. 
+#   Delivers a random deskflipping image from tableflipgifs.tumblr.com. Uses an API key but does not require full authentication.
 #
 # Commands:
-#   deskflip - For when you're so annoyed you want to flip your desk. 
+#   deskflip - For when you're so annoyed you want to flip your desk.
 #
 # Author:
 #   hollsk
@@ -26,5 +26,5 @@ module.exports = (robot) ->
             for photo in child.photos
               urls.push(photo.original_size.url)
 
-        rnd = Math.floor(Math.random()*urls.length)
+        rnd = Math.floor(Math.random() * urls.length)
         msg.send urls[rnd]

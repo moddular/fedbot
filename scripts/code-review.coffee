@@ -35,7 +35,7 @@ feds = [
 
 module.exports = (robot) ->
 
-  generatePairs = () ->
+  generatePairs = ->
     picks = _.sample(feds, feds.length)
     ([fed, picks[i]] for fed, i in feds)
 
@@ -45,10 +45,10 @@ module.exports = (robot) ->
     else
       "#{pair[0]}'s code is being reviewed by #{pair[1]} today"
 
-  getDateToday = () ->
-    (new Date()).toISOString().split("T")[0];
+  getDateToday = ->
+    (new Date()).toISOString().split("T")[0]
 
-  getPairsForToday = () ->
+  getPairsForToday = ->
     today = getDateToday()
     if robot.brain.get("lastCodeReviewGenerationDate") != today
       robot.brain.set "lastCodeReviewGenerationDate", today

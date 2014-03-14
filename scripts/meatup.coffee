@@ -1,4 +1,4 @@
-# Description: 
+# Description:
 #   Get information on the next MEATup.
 #
 # Commands:

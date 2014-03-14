@@ -44,7 +44,7 @@ module.exports = (robot) ->
   }
 
   hello = new RegExp("^(hi|hiya|hello|hey|heya) #{robot.name}", "i")
-  helloCommand = new RegExp("(hi|hiya|hello|hey|heya)(\s.*)?", "i");
+  helloCommand = new RegExp("(hi|hiya|hello|hey|heya)(\s.*)?", "i")
 
   action = (msg) ->
     label = rating.label msg

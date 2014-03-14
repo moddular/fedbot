@@ -42,7 +42,7 @@ module.exports = (robot) ->
 
   chooseOption = (msg) ->
     date = new Date()
-    today = date.toISOString().split("T")[0];
+    today = date.toISOString().split("T")[0]
     prefix = msg.random(prefixes)
     if robot.brain.get("lunchLastChecked") == today
       repeat = msg.random(repeats)

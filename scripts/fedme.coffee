@@ -33,7 +33,7 @@ module.exports = (robot) ->
         msg.send "There are #{JSON.parse(body).fed_count} feds."
 
   # extras
-  
+
   robot.hear /\bfried eggs?\b/i, (msg) ->
     msg.send "http://i.imgur.com/34Qq17u.jpg"
 

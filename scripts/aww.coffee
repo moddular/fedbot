@@ -23,5 +23,5 @@ module.exports = (robot) ->
           if /\.(gif|jpeg|jpg|png)$/.test child.data.url
             urls.push(child.data.url)
 
-        rnd = Math.floor(Math.random()*urls.length)
+        rnd = Math.floor(Math.random() * urls.length)
         msg.send urls[rnd]
