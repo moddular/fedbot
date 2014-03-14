@@ -9,14 +9,10 @@
 
 module.exports = (robot) ->
 
-  robot.hear /a owl/i, (msg) ->
-    if /a owl\?/i.test(msg.message.text)
-      msg.send "a owl"
+  robot.hear /\ba ([aeiou][a-z]+|hour)(\?)?/i, (msg) ->
+    word = msg.match[1]
+    isQuestion = !!msg.match[2]
+    if isQuestion
+      msg.send "a #{word}"
     else
-      msg.send "a owl?"
-
-  robot.hear /a hour/i, (msg) ->
-    if /a hour\?/i.test(msg.message.text)
-      msg.send "a hour"
-    else
-      msg.send "a hour?"
+      msg.send "a #{word}?"
