@@ -9,7 +9,7 @@ module.exports = (robot) ->
   robot.respond /PING$/i, (msg) ->
     msg.send "PONG"
 
-  robot.respond /are you alive\??$/i, (msg) ->
+  robot.respond /are you (alive|ok)\??$/i, (msg) ->
     msg.send "Yes, why?"
 
   robot.respond /DIE$/i, (msg) ->
