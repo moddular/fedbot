@@ -12,4 +12,5 @@ lint:
 	@echo "Linting CoffeeScript..."
 	@./node_modules/.bin/coffeelint \
 		-f ./test/coffeelint.json \
-		./{lib,scripts}/*
+		./lib/* \
+		./scripts/*
