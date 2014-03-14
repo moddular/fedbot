@@ -2,7 +2,7 @@
 FEDbot
 ======
 
-The FED's campfire friend.
+The FED's campfire friend. [![Build Status][travis-img]][travis]
 
 ![FEDbot](https://raw.github.com/thefeds/fedbot/master/images/fedbot.png)
 
@@ -35,3 +35,8 @@ $ PORT=3000 bin/fedbot
 ```
 
 If you want to write new scripts, read the [Hubot documentation](https://github.com/github/hubot/blob/master/docs/scripting.md#readme).
+
+
+
+[travis]: https://travis-ci.org/thefeds/fedbot
+[travis-img]: https://travis-ci.org/thefeds/fedbot.png?branch=master
