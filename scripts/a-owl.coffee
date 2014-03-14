@@ -9,7 +9,7 @@
 
 module.exports = (robot) ->
 
-  robot.hear /\ba ([aeiou][a-z]+|hour)(\?)?/i, (msg) ->
+  robot.hear /\ba ([aeiou][a-z\-]+|hour)(\?)?/i, (msg) ->
     word = msg.match[1]
     isQuestion = !!msg.match[2]
     if isQuestion
