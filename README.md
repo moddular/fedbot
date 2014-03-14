@@ -2,7 +2,8 @@
 FEDbot
 ======
 
-The FED's campfire friend. [![Build Status][travis-img]][travis]
+The FED's campfire friend.  
+[![Codeship Status](https://www.codeship.io/projects/9515a080-8da7-0131-ce77-322a2a3ca3d5/status?branch=master)](https://www.codeship.io/projects/16055)
 
 ![FEDbot](https://raw.github.com/thefeds/fedbot/master/images/fedbot.png)
 
