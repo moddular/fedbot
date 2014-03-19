@@ -35,5 +35,5 @@ module.exports = (robot) ->
   robot.hear /\bdevil(ish|ishly|\b)/i, (msg) ->
     msg.send 'http://i.imgur.com/zEEPSwd.jpg'
 
-  robot.hear /\bhench|ripped|buff\b/i, (msg) ->
+  robot.hear /\bhench|ripped|buff|bulk up\b/i, (msg) ->
     msg.send 'http://i.imgur.com/MQq4jd4.png'
