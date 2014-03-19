@@ -27,7 +27,7 @@ module.exports = (robot) ->
     msg.send 'http://i.imgur.com/Tfq7Bi7.gif'
 
   robot.hear /judehulk/i, (msg) ->
-    msg.send 'http://i.imgur.com/MQq4jd4.png'
+    msg.send 'http://i.imgur.com/83ywTHA.png'
 
   robot.hear /our glorious leader/i, (msg) ->
     msg.send 'http://kil.gr/sandbox/secret/fedbot/kim-jong-jude.jpg'
