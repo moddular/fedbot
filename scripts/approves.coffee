@@ -34,5 +34,5 @@ module.exports = (robot) ->
     "http://clutch.mtv.com//wp-content/uploads/clutch/2012/04/tumblr_m106qgTIZS1r3zat8.gif"
   ]
 
-  robot.hear /\bapprov(e|es|al)\b/i, (msg) ->
+  robot.hear /\b(approv(es?|al)|endorse(s|ment)?)\b/i, (msg) ->
     msg.send msg.random responses
