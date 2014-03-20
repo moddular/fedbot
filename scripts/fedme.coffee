@@ -1,38 +1,66 @@
 # Description:
 #   Get all your FED images
 #
-# Dependencies:
-#   None
-#
-# Configuration:
-#   None
-#
 # Commands:
 #   hubot fed me - Get a random FED image
-#   hubot fed bomb N - Get N random fed images
+#   hubot fed bomb N - Get N random FED images
 #
 # Author:
 #   rowanmanning
 
 module.exports = (robot) ->
 
-  robot.respond /fed me/i, (msg) ->
-    msg.http("http://fedme.rowanmanning.com/random")
-      .get() (err, res, body) ->
-        msg.send JSON.parse(body).fed
+  require('../lib/me')(robot, 'fed', [
 
-  robot.respond /fed bomb( (\d+))?/i, (msg) ->
-    count = msg.match[2] || 5
-    msg.http("http://fedme.rowanmanning.com/bomb?count=" + count)
-      .get() (err, res, body) ->
-        msg.send fed for fed in JSON.parse(body).feds
+    # Group
+    'http://i.imgur.com/aZNXXDQ.jpg', # Christmas Party #1
+    'http://i.imgur.com/s5fHyVW.jpg', # Christmas Party #2
+    'http://i.imgur.com/UZyrj3N.jpg', # Christmas Party #3
+    'http://i.imgur.com/zRclqdO.jpg', # Christmas Party #4
 
-  robot.respond /how many feds?/i, (msg) ->
-    msg.http("http://fedme.rowanmanning.com/count")
-      .get() (err, res, body) ->
-        msg.send "There are #{JSON.parse(body).fed_count} feds."
+    # Adam
+    'http://i.imgur.com/bdW4hXx.jpg', # Predator
+    'http://i.imgur.com/8DrBegi.jpg', # Doge
 
-  # extras
+    # Andrew
+    'http://i.imgur.com/pPGuifS.jpg', # Pink Hair
+    'http://i.imgur.com/wKnaB4C.jpg', # Blue Hair
+
+    # Glynn
+    'http://i.imgur.com/hO44HNU.jpg', # Broken Bunny Ears
+
+    # Jose
+    'http://i.imgur.com/1IpgJ8j.jpg', # Thoughtful Jose
+    'http://i.imgur.com/Tcymylr.jpg', # Bunny
+
+    # Jude
+    'http://i.imgur.com/Tfq7Bi7.gif', # Judehoff
+    'http://i.imgur.com/L4zFfLZ.jpg', # Tanned
+    'http://i.imgur.com/WtLNSUa.jpg', # Suit
+    'http://i.imgur.com/hNPNfav.jpg', # Carrier Bag
+    'http://i.imgur.com/5Y3vocd.png', # Doge,
+    'http://i.imgur.com/zEEPSwd.jpg', # Jude-as-Devil
+
+    # Laura
+    'http://i.imgur.com/34Qq17u.jpg', # Egg Eyes
+
+    # Nick
+    'http://i.imgur.com/khW3ahU.jpg', # Boa and Shades
+
+    # Perry
+    'http://i.imgur.com/16VJ5wf.gif', # Blah Blah Blah
+    'http://i.imgur.com/nkQyVr4.gif', # Cheese
+    'http://i.imgur.com/iggvxTH.jpg', # Blue Hair
+    'http://i.imgur.com/fzpsMDJ.jpg', # Doge
+
+    # Phil
+    'http://i.imgur.com/8TEzjoT.jpg', # D. Wain Portrait
+
+    # Rowan
+    'http://i.imgur.com/873UUyQ.jpg', # Blurry Shades
+    'http://i.imgur.com/1cup7HH.jpg', # Pink Hat
+
+  ])
 
   robot.hear /\bfried eggs?\b/i, (msg) ->
     msg.send "http://i.imgur.com/34Qq17u.jpg"
