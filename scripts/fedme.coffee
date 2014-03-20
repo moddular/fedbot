@@ -40,6 +40,7 @@ module.exports = (robot) ->
     'http://i.imgur.com/hNPNfav.jpg', # Carrier Bag
     'http://i.imgur.com/5Y3vocd.png', # Doge,
     'http://i.imgur.com/zEEPSwd.jpg', # Jude-as-Devil
+    'http://i.imgur.com/KTeb28x.jpg', # Hench
 
     # Laura
     'http://i.imgur.com/34Qq17u.jpg', # Egg Eyes
