@@ -44,6 +44,7 @@ module.exports = (robot) ->
 
     # Laura
     'http://i.imgur.com/34Qq17u.jpg', # Egg Eyes
+    'http://i.imgur.com/EN8Iptr.jpg', # Hench
 
     # Nick
     'http://i.imgur.com/khW3ahU.jpg', # Boa and Shades
