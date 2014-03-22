@@ -1,24 +1,22 @@
 {
-    "name": "fedbot",
-    "version": "0.0.0",
-    "private": true,
-
-    "description": "The Nature FEDs campfire friend",
-
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/rowanmanning/fedbot.git"
-    },
-
-    "dependencies": {
-        "htmlparser": "~1.7",
-        "hubot": "~2.6",
-        "hubot-dogeme": "~1.0",
-        "hubot-scripts": "~2.5",
-        "moment": "~2.5",
-        "rsvp": "~1.2",
-        "sandbox": "~0.8",
-        "soupselect": "~0.2",
-        "underscore": "~1.5"
-    }
+  "name": "fedbot",
+  "version": "0.0.0",
+  "private": true,
+  "description": "The Nature FEDs campfire friend",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rowanmanning/fedbot.git"
+  },
+  "dependencies": {
+    "htmlparser": "~1.7",
+    "hubot": "~2.6",
+    "hubot-dogeme": "~1.0",
+    "hubot-scripts": "~2.5",
+    "moment": "~2.5",
+    "rsvp": "~1.2",
+    "sandbox": "~0.8",
+    "soupselect": "~0.2",
+    "underscore": "~1.5",
+    "cheerio": "^0.13.1"
+  }
 }
