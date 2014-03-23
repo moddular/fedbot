@@ -19,7 +19,7 @@ module.exports = (robot) ->
   # this is subject to change if they redesign the page
   kerb_dom_selector = '#rota .rota_panel > ul > li'
 
-  robot.respond /\b(what'?s on kerb\??)||kerb\b/i, (msg) ->
+  robot.respond /\b(what'?s on kerb\??)\b/i, (msg) ->
     getKerbWeek msg, (schedule) ->
       msg.send "On KERB KX this week: \n" + schedule
 
