@@ -25,28 +25,28 @@ module.exports = (robot) ->
 
   getKerbWeek = (msg, cb) ->
     robot.http('http://www.kerbfood.com/kings-cross/')
-        .get() (err, res, body) ->
-            if err
-                cb "Something went wrong, the http request failed with #{err}"
-            if res.statusCode isnt 200
-                cb "Something went wrong, the response was not 200"
-            $ = Cheerio.load(body)
-            rotaListItems = $(kerb_dom_selector)
-            str = ''
-            rotaListItems.each (i, day) ->
-                str += '\n======================================================\n'
-                str += $(day).attr('rel')
-                str += '\n===========================\n'
-                str += getTraders($, day)
-                str += '\n======================================================\n'
-                return $('<div/>').text(str)
-            cb str
+      .get() (err, res, body) ->
+        if err
+          cb "Something went wrong, the http request failed with #{err}"
+        if res.statusCode isnt 200
+          cb "Something went wrong, the response was not 200"
+        $ = Cheerio.load(body)
+        rotaListItems = $(kerb_dom_selector)
+        str = ''
+        rotaListItems.each (i, day) ->
+          str += '\n======================================================\n'
+          str += $(day).attr('rel')
+          str += '\n===========================\n'
+          str += getTraders($, day)
+          str += '\n======================================================\n'
+          return $('<div/>').text(str)
+        cb str
 
     getTraders = ($, day) ->
-        traders = []
-        $(day).find('h4').each (i, elem) ->
-            str = $(elem).text()
-            str += ' === '
-            str += $(elem).next('p').text()
-            traders.push(str)
-        return traders.join('\n')
+      traders = []
+      $(day).find('h4').each (i, elem) ->
+        str = $(elem).text()
+        str += ' === '
+        str += $(elem).next('p').text()
+        traders.push(str)
+      return traders.join('\n')
