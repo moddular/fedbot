@@ -8,32 +8,56 @@ The FED's campfire friend.
 ![FEDbot](https://raw.github.com/thefeds/fedbot/master/images/fedbot.png)
 
 
-Running Locally
----------------
+Setup
+-----
 
 Install Node.js and clone this repo somewhere. Install the dependencies with:
 
 ```sh
-$ npm install
+npm install
 ```
 
-You'll also need [Redis](http://redis.io/) installed (`brew install redis` is the easiest way on a Mac). Redis should also be running:
+You can optionally install/run [Redis](http://redis.io/) (`brew install redis` is the easiest way on a Mac) in order to retain state between restarts.
+
+
+Running In Your Own Campfire
+----------------------------
+
+To run FEDbot in your own Campfire, [set up a free account](https://signup.37signals.com/campfire/free) and install [Foreman](http://ddollar.github.io/foreman/). Run the following to copy the sample environment file:
 
 ```sh
-$ redis-server
+cp .env.sample .env
 ```
 
-Now you can start FEDbot with:
+Now fill out your `.env` file based on [this guide](https://github.com/github/hubot/blob/master/docs/adapters/campfire.md#configuring).
+
+Lastly, to start FEDbot and bring him into your Campfire room, run the following:
 
 ```sh
-$ bin/fedbot
+foreman start
+```
+
+Now you can chat to FEDbot in Campfire.
+
+
+Running Locally
+---------------
+
+To run FEDbot locally:
+
+```sh
+bin/fedbot
 ```
 
 This will let you chat to FEDbot by yourself on the command line. If you get `EADDRINUSE` errors, you may need to change the port FEDbot uses (default is 8080). Try this:
 
 ```sh
-$ PORT=3000 bin/fedbot
+PORT=3000 bin/fedbot
 ```
+
+
+Scripting
+---------
 
 If you want to write new scripts, read the [Hubot documentation](https://github.com/github/hubot/blob/master/docs/scripting.md#readme).
 
