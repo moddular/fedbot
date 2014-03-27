@@ -83,3 +83,6 @@ module.exports = (robot) ->
 
   robot.hear /\b(12|twelve)\s?pints?\b/i, (msg) ->
     msg.send "http://i.imgur.com/8DrBegi.jpg"
+
+  robot.hear /\b13\d\d[\s\-]stars?\b/i, (msg) ->
+    msg.send 'http://i.imgur.com/sxGC6Sh.jpg'
