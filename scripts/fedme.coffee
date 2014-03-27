@@ -61,6 +61,7 @@ module.exports = (robot) ->
     # Rowan
     'http://i.imgur.com/873UUyQ.jpg', # Blurry Shades
     'http://i.imgur.com/1cup7HH.jpg', # Pink Hat
+    'http://i.imgur.com/sxGC6Sh.jpg', # Starred up
 
   ])
 
