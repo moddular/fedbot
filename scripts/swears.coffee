@@ -15,6 +15,10 @@ badSwears = ///
   | shit(e|ting|ter|ty|test|s)?
   | piss(ing|er|ed|s)?
   | cunt(ing|s)?
+  | assholes?
+  | arseholes?
+  | wankers?
+  | twats?
   )
 \b
 ///i
@@ -22,12 +26,13 @@ badSwears = ///
 moderateSwears = ///
 \b
   ( bollock(ing|ed|s)?
-  | wank(ing|er|ed|s)?
-  | twat(ting|ted|s)?
+  | wank(ing|ed|s)?
+  | twat(ting|ted)
   | dick(s|heads?)?
   | cock(ing|s)?
-  | ass(es|holes?)?
-  | arse(s|holes?)?
+  | asses?
+  | arses?
+  | bastard(ing|s)?
   )
 \b
 ///i
