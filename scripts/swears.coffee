@@ -25,7 +25,7 @@ badSwears = ///
 
 moderateSwears = ///
 \b
-  ( bollock(ing|ed|s)?
+  ( bollo(ck|x)(ing|ed|s)?
   | wank(ing|ed|s)?
   | twat(ting|ted)
   | dick(s|heads?)?
@@ -41,6 +41,7 @@ lightSwears = ///
 \b
   ( damn
   | crap(ped|ping|per|py|s)?
+  | sod(ding|s)?
   )
 \b
 ///i
