@@ -5,6 +5,8 @@
 #   none
 #
 
+randomBetween = require('../lib/random').randomBetween
+
 module.exports = (robot) ->
 
   burger = "http://whatgifs.com/wp-content/uploads/2011/11/funny-gifs-no-more-junk-food.gif"
@@ -30,7 +32,8 @@ module.exports = (robot) ->
   responses.push(burger, fried_chicken, noodles)
 
   robot.hear /\b(lunch)\b/i, (msg) ->
-    msg.send msg.random responses
+    if randomBetween(1, 4) is 1
+      msg.send msg.random responses
 
   robot.hear /\b(burger|macdonalds)\b/i, (msg) ->
     msg.send burger
