@@ -62,8 +62,14 @@ module.exports = (robot) ->
     'http://i.imgur.com/873UUyQ.jpg', # Blurry Shades
     'http://i.imgur.com/1cup7HH.jpg', # Pink Hat
     'http://i.imgur.com/sxGC6Sh.jpg', # Starred up
+    'http://i.imgur.com/N1jvRz1.jpg' # 1300 stars
 
   ])
+
+  stars = [
+    'http://i.imgur.com/sxGC6Sh.jpg',
+    'http://i.imgur.com/N1jvRz1.jpg'
+  ]
 
   robot.hear /\bfried eggs?\b/i, (msg) ->
     msg.send "http://i.imgur.com/34Qq17u.jpg"
@@ -85,4 +91,4 @@ module.exports = (robot) ->
     msg.send "http://i.imgur.com/8DrBegi.jpg"
 
   robot.hear /\b13\d\d[\s\-]stars?\b/i, (msg) ->
-    msg.send 'http://i.imgur.com/sxGC6Sh.jpg'
+    msg.send msg.random stars
