@@ -22,6 +22,9 @@ module.exports = (robot) ->
     'http://i.imgur.com/bdW4hXx.jpg', # Predator
     'http://i.imgur.com/8DrBegi.jpg', # Doge
 
+    # Alex
+    'http://i.imgur.com/2g54UQM.jpg', # Hot Tub
+
     # Andrew
     'http://i.imgur.com/pPGuifS.jpg', # Pink Hair
     'http://i.imgur.com/wKnaB4C.jpg', # Blue Hair
@@ -92,3 +95,6 @@ module.exports = (robot) ->
 
   robot.hear /\b13\d\d[\s\-]stars?\b/i, (msg) ->
     msg.send msg.random stars
+
+  robot.hear /\b(hot[\s-]?tub|jacuzzi|savil+e)\b/i, (msg) ->
+    msg.send 'http://i.imgur.com/2g54UQM.jpg'
