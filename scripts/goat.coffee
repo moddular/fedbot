@@ -6,7 +6,7 @@
 #   hubot goat bomb N - Get N Rams
 
 module.exports = (robot) ->
-  require('../lib/me')(robot, 'goat', [
+  require('../lib/me-static')(robot, 'goat', [
     'http://media-cache-ec0.pinimg.com/736x/30/7e/0e/307e0e974bbf03604af4bca7859dd9aa.jpg',
     'http://media-cache-ec0.pinimg.com/736x/2d/58/02/2d5802fc1c7faca10b69beb14cfaea2f.jpg',
     'http://media-cache-ec0.pinimg.com/736x/20/75/eb/2075eb853fb798ec450a389070d8668c.jpg',

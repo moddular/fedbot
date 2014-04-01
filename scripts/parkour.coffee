@@ -6,7 +6,7 @@
 #   hubot parkour bomb N - Get N Parkour FAILs
 
 module.exports = (robot) ->
-  require('../lib/me')(robot, 'parkour', [
+  require('../lib/me-static')(robot, 'parkour', [
     'http://31.media.tumblr.com/26586d01ece7cad5b97d3448395c33e3/tumblr_mryb3r8chX1sb6a5qo1_400.gif',
     'http://ao-upload-prod.s3.amazonaws.com/wp-content/uploads/2014/01/yZAhR.gif',
     'http://cdn.arwrath.com/3/36903.gif',

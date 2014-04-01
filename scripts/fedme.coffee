@@ -10,7 +10,7 @@
 
 module.exports = (robot) ->
 
-  require('../lib/me')(robot, 'fed', [
+  require('../lib/me-static')(robot, 'fed', [
 
     # Group
     'http://i.imgur.com/aZNXXDQ.jpg', # Christmas Party #1
