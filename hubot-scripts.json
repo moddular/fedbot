@@ -4,6 +4,7 @@
     "animal.coffee",
     "applause.coffee",
     "ascii.coffee",
+    "bang-bang.coffee",
     "cowsay.coffee",
     "javascript-sandbox.coffee",
     "redis-brain.coffee"
