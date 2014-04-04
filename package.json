@@ -17,6 +17,7 @@
         "hubot-dogeme": "~1.0",
         "hubot-scripts": "~2.5",
         "moment": "~2.5",
+        "numeral": "~1.5",
         "rsvp": "~1.2",
         "sandbox": "~0.8",
         "soupselect": "~0.2",
