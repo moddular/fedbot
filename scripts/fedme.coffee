@@ -10,6 +10,8 @@
 
 module.exports = (robot) ->
 
+  request = require 'request'
+
   require('../lib/me-static')(robot, 'fed', [
 
     # Group
@@ -98,3 +100,24 @@ module.exports = (robot) ->
 
   robot.hear /\b(hot[\s-]?tub|jacuzzi|savil+e)\b/i, (msg) ->
     msg.send 'http://i.imgur.com/2g54UQM.jpg'
+
+  robot.hear /\b1300?\b/i, (msg) ->
+    callback = undefined
+    options = undefined
+    total = 0
+    callback = (error, response, body) ->
+      body = JSON.parse(body)
+      if not error and response.statusCode is 200
+        i = 0
+
+        while body.length > i
+          total = total + body[i].stargazers_count
+          i++
+        msg.send "Come on " + msg.message.user.name + " Rowan actually has " + total + " stars"
+
+    options =
+      url: "https://api.github.com/users/rowanmanning/repos"
+      headers:
+        "User-Agent": "request"
+
+    request options, callback
