@@ -89,7 +89,7 @@ module.exports = (robot) ->
   robot.hear /\b13\d\d[\s\-]stars?\b/i, (msg) ->
     msg.send 'http://i.imgur.com/sxGC6Sh.jpg'
 
-  robot.hear /\b1300?\b/i, (msg) ->
+  robot.hear /\b1300\b/i, (msg) ->
     callback = undefined
     options = undefined
     total = 0
