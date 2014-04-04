@@ -101,7 +101,7 @@ module.exports = (robot) ->
   robot.hear /\b(hot[\s-]?tub|jacuzzi|savil+e)\b/i, (msg) ->
     msg.send 'http://i.imgur.com/2g54UQM.jpg'
 
-  robot.hear /\b1300?\b/i, (msg) ->
+  robot.hear /\b1300\b/i, (msg) ->
     callback = undefined
     options = undefined
     total = 0
