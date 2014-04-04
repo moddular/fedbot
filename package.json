@@ -20,7 +20,8 @@
         "rsvp": "~1.2",
         "sandbox": "~0.8",
         "soupselect": "~0.2",
-        "underscore": "~1.5"
+        "underscore": "~1.5",
+        "request": "~2"
     },
     "devDependencies": {
         "coffeelint": "~1.1"
