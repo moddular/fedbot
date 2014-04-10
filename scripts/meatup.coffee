@@ -12,27 +12,27 @@ module.exports = (robot) ->
     msg.send getNextMeatupDate(moment())
 
 getNextMeatupDate = (now) ->
-  secondThursOfThisMonth = getSecondThursdayOfMonth(now)
-  secondThursOfNextMonth = getSecondThursdayOfMonth(getFirstOfMonth(now).add('months', 1))
+  secondTuesOfThisMonth = getSecondTuesdayOfMonth(now)
+  secondTuesOfNextMonth = getSecondTuesdayOfMonth(getFirstOfMonth(now).add('months', 1))
   meatupDate = formatDate(
-    if now.unix() < secondThursOfThisMonth.unix()
-    then secondThursOfThisMonth
-    else secondThursOfNextMonth
+    if now.unix() < secondTuesOfThisMonth.unix()
+    then secondTuesOfThisMonth
+    else secondTuesOfNextMonth
   )
   "The next MEATup will be on #{meatupDate}!"
 
 getFirstOfMonth = (date) ->
   date.clone().date(1)
 
-getFirstThursdayOfMonth = (date) ->
+getFirstTuesdayOfMonth = (date) ->
   date = getFirstOfMonth(date)
-  if date.day() > 4
-    date.day(11)
+  if date.day() > 2
+    date.day(9)
   else
-    date.day(4)
+    date.day(2)
 
-getSecondThursdayOfMonth = (date) ->
-  getFirstThursdayOfMonth(date).day(11)
+getSecondTuesdayOfMonth = (date) ->
+  getFirstTuesdayOfMonth(date).day(9)
 
 formatDate = (date) ->
   date.format('dddd Do MMMM')
