@@ -59,6 +59,7 @@ module.exports = (robot) ->
     'http://i.imgur.com/nkQyVr4.gif', # Cheese
     'http://i.imgur.com/iggvxTH.jpg', # Blue Hair
     'http://i.imgur.com/fzpsMDJ.jpg', # Doge
+    'http://i.imgur.com/oWVz6NR.jpg', # Head-Wound
 
     # Phil
     'http://i.imgur.com/8TEzjoT.jpg', # D. Wain Portrait
