@@ -41,7 +41,8 @@ module.exports = (robot) ->
     "Don't touch anything within 3 metres of my desk (including Nick)",
     "Oi! Not my fault!\n\n... at least, mostly not my fault.\n\nOr - in other words - partially my fault.\n\nOK. My fault.",
     "There are Krispy Kreme donuts on my desk. Stop me eating them.",
-    "I am very much looking forward to my first day."
+    "I am very much looking forward to my first day.",
+    "I almost had a little chubby on during that meeting",
   ]
 
   robot.hear /what would jude say|wwjs/i, (msg) ->
