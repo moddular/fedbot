@@ -31,7 +31,7 @@ module.exports = (robot) ->
     robot.brain.set "nonStrangers", nonStrangers
     nonStrangers
 
-  # someone is activitying... 
+  # someone is activitying...
   activitiesSolo = [
     "stealing",
     "punching",
@@ -48,7 +48,7 @@ module.exports = (robot) ->
     "dancing",
     "fighting",
     "arguing"
-  ]  
+  ]
 
   celebrities = [
     "Stephen Hawking",
@@ -109,37 +109,36 @@ module.exports = (robot) ->
     dice = Math.floor(Math.random() * 6) + 1
 
     if dice is 1
-        gossip = thisFed + " has been " + msg.random activitiesSolo
-        gossip = gossip + " " + msg.random celebrities
-        gossip = gossip + " in " + msg.random locations
+      gossip = thisFed + " has been " + msg.random activitiesSolo
+      gossip = gossip + " " + msg.random celebrities
+      gossip = gossip + " in " + msg.random locations
 
     if dice is 2
-        gossip = thisFed + " is " + msg.random activitiesADeux
-        gossip = gossip + " with " + msg.random celebrities
+      gossip = thisFed + " is " + msg.random activitiesADeux
+      gossip = gossip + " with " + msg.random celebrities
 
     if dice is 3
-        gossip = thisFed + " was " + msg.random activitiesADeux
-        gossip = gossip + " in " + msg.random locations
-        gossip = gossip + " with " + msg.random objects
+      gossip = thisFed + " was " + msg.random activitiesADeux
+      gossip = gossip + " in " + msg.random locations
+      gossip = gossip + " with " + msg.random objects
 
     if dice is 4
-        gossip = msg.random celebrities
-        gossip = gossip + " told the papers that " + thisFed + " was " + msg.random activitiesSolo
-        gossip = gossip + " " +msg.random objects
-        gossip = gossip + " in " + msg.random locations
-        gossip = gossip + " because of " + msg.random excusesDueToFate
-                
+      gossip = msg.random celebrities
+      gossip = gossip + " told the papers that " + thisFed + " was " + msg.random activitiesSolo
+      gossip = gossip + " " + msg.random objects
+      gossip = gossip + " in " + msg.random locations
+      gossip = gossip + " because of " + msg.random excusesDueToFate
+
     if dice is 5
-        gossip = "apparently " + msg.random objects
-        gossip = gossip + " was the reason " + thisFed
-        gossip = gossip + " was "  + msg.random activitiesADeux
-        gossip = gossip + " with " + msg.random celebrities
+      gossip = "apparently " + msg.random objects
+      gossip = gossip + " was the reason " + thisFed
+      gossip = gossip + " was "  + msg.random activitiesADeux
+      gossip = gossip + " with " + msg.random celebrities
 
     if dice is 6
-        gossip = thisFed + " and " + msg.random celebrities       
-        gossip = gossip + " were "  + msg.random activitiesADeux
-        gossip = gossip + " with " + msg.random objects        
-
+      gossip = thisFed + " and " + msg.random celebrities
+      gossip = gossip + " were "  + msg.random activitiesADeux
+      gossip = gossip + " with " + msg.random objects
 
     msg.send gossip
 
