@@ -43,6 +43,7 @@ module.exports = (robot) ->
     "There are Krispy Kreme donuts on my desk. Stop me eating them.",
     "I am very much looking forward to my first day.",
     "I almost had a little chubby on during that meeting",
+    "Yeah, I'll make it a bit less penisy."
   ]
 
   robot.hear /what would jude say|wwjs/i, (msg) ->
