@@ -18,5 +18,5 @@ module.exports = (robot) ->
     'Ask Jose'
   ]
 
-  robot.respond /what'?s the definition of done\??/i, (msg) ->
+  robot.respond /what('?s| is) the definition of done\??/i, (msg) ->
     msg.send msg.random responses
