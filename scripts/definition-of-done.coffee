@@ -8,12 +8,14 @@
 module.exports = (robot) ->
 
   responses = [
-    "Nobody knows...",
-    "Don't ask me!",
-    "*shrugs*",
-    "Who the hell knows?",
-    "Does not compute...",
-    "I don't know"
+    'Nobody knows...'
+    'Don\'t ask me!'
+    '*shrugs*'
+    'Who the hell knows?'
+    'Does not compute...'
+    'I don\'t know'
+    'Beats me'
+    'Ask Jose'
   ]
 
   robot.respond /what'?s the definition of done\??/i, (msg) ->
