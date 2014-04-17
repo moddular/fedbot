@@ -2,7 +2,7 @@
 #   Spill the beans on some piece of salacious gossip
 #
 # Commands:
-#   fedbot gossip me
+#   hubot gossip me - Spill the beans on some piece of salacious gossip
 #
 
 module.exports = (robot) ->

@@ -2,7 +2,7 @@
 #   Hubot delivers a pic from Reddit's /r/aww_gifs frontpage
 #
 # Commands:
-#   aww - Display a GIF from /r/aww_gifs
+#   hubot aww - Display a GIF from /r/aww_gifs
 #
 # Author:
 #   rowanmanning (modified eliperkins script)

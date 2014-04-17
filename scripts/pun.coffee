@@ -1,9 +1,6 @@
 # Description:
 #   Delivers a pic from Reddit's /r/AdviceAnimals search
 #
-# Commands:
-#   pun - Display a lame pun raccoon from /r/AdviceAnimals
-#
 # Author:
 #   hollsk (modified eliperkins script)
 
