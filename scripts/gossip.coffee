@@ -115,7 +115,8 @@ module.exports = (robot) ->
      "the Lincoln",
      "the Star of Kings",
      "Central Station",
-     "Perry's mum's house"
+     "Perry's mum's house",
+     "Joseph Fritzl's basement"
   ]
 
 
