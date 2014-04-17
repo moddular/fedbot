@@ -54,7 +54,8 @@ module.exports = (robot) ->
     "fighting",
     "arguing",
     "colluding",
-    "plotting"
+    "plotting",
+    "cottaging"
   ]
 
   celebrities = [
@@ -68,7 +69,8 @@ module.exports = (robot) ->
     "Kerry Katona",
     "the Chuckle Brothers",
     "WHO",
-    "a badly-stuffed animal"
+    "a badly-stuffed animal",
+    "Paris Hilton"
   ]
 
   # someone had a ... with someone
@@ -89,7 +91,8 @@ module.exports = (robot) ->
     "shit beer",
     "too many meetings",
     "COPS tickets",
-    "OOCSS"
+    "OOCSS",
+    "Jude on a stick"
   ]
 
   objects = [
@@ -99,7 +102,9 @@ module.exports = (robot) ->
      "a stuffed fox",
      "one of the moles",
      "Jude's baseball bat",
-     "Shunter"
+     "Shunter",
+     "a Greggs sausage roll",
+     "a slate from the Star of Kings"
   ]
 
   locations = [
@@ -108,7 +113,9 @@ module.exports = (robot) ->
      "the Refectory",
      "the canal",
      "the Lincoln",
-     "the Star of Kings"
+     "the Star of Kings",
+     "Central Station",
+     "Perry's mum's house"
   ]
 
 
