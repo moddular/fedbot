@@ -118,7 +118,7 @@ module.exports = (robot) ->
      "Central Station",
      "Perry's mum's house",
      "Joseph Fritzl's basement",
-     "up the oxo tower"
+     "the OXO tower"
   ]
 
 
