@@ -5,6 +5,7 @@
 #   none
 #
 
+createImageListPage = require '../lib/http-image-list'
 randomBetween = require('../lib/random').randomBetween
 
 module.exports = (robot) ->
@@ -43,3 +44,11 @@ module.exports = (robot) ->
 
   robot.hear /\b(katsu|noodles)\b/i, (msg) ->
     msg.send noodles
+
+  createImageListPage(
+    robot,
+    '/lunch',
+    'Lunch images',
+    'A list of all the lunch images:',
+    responses
+  )

@@ -4,7 +4,10 @@
 # Commands:
 #   None
 
+createImageListPage = require '../lib/http-image-list'
+
 module.exports = (robot) ->
+
   responses = [
     'http://assets.sbnation.com/assets/2434529/post-2164-Deal-with-it-Chuck-Norris-y3FZ_medium.gif',
     'http://awesomegifs.com/wp-content/uploads/The-Dude-Deal-With-It.gif',
@@ -44,5 +47,14 @@ module.exports = (robot) ->
     'http://www.reactionface.info/sites/default/files/images/1311948481105.gif',
     'http://www.reactiongifs.com/wp-content/uploads/2013/06/deal-with-it2.gif',
   ]
+
   robot.hear /\bdeal\s?wi(d|th?)\s?it\b/i, (msg) ->
     msg.send msg.random responses
+
+  createImageListPage(
+    robot,
+    '/deal-with-it',
+    'Deal with it images',
+    'A list of all the deal with it images:',
+    responses
+  )

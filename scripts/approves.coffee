@@ -5,6 +5,8 @@
 #   None
 #
 
+createImageListPage = require '../lib/http-image-list'
+
 module.exports = (robot) ->
 
   responses = [
@@ -36,3 +38,11 @@ module.exports = (robot) ->
 
   robot.hear /\b(approv(es?|al)|endorse(s|ment)?)\b/i, (msg) ->
     msg.send msg.random responses
+
+  createImageListPage(
+    robot,
+    '/approves',
+    'Approval images',
+    'A list of all the approval images:',
+    responses
+  )
