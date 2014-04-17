@@ -12,5 +12,5 @@ module.exports = (robot) ->
     robot: robot,
     name: 'ride',
     tumblr: 'animals-riding-animals.tumblr.com',
-    selector: '#content .photo-url img'
+    selector: '#posts .image img'
   })
