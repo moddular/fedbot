@@ -25,7 +25,7 @@ module.exports = (robot) ->
     routes = robot.router.routes.get.map((route) ->
       if route.path isnt '/'
         "<li><a href='#{route.path}'>#{route.path}</a></li>"
-    ).join('')
+    ).sort().join('')
     res.end """
       <!DOCTYPE html>
       <html>
