@@ -104,7 +104,8 @@ module.exports = (robot) ->
      "Jude's baseball bat",
      "Shunter",
      "a Greggs sausage roll",
-     "a slate from the Star of Kings"
+     "a slate from the Star of Kings",
+     "a penis beaker"
   ]
 
   locations = [
@@ -116,7 +117,8 @@ module.exports = (robot) ->
      "the Star of Kings",
      "Central Station",
      "Perry's mum's house",
-     "Joseph Fritzl's basement"
+     "Joseph Fritzl's basement",
+     "up the oxo tower"
   ]
 
 
