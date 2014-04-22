@@ -13,6 +13,7 @@ module.exports = (robot) ->
     '"I\'m still sick and so will be WFH today. Where I can cough and splutter to my hearts content." - Adam Tavener'
     '"Dale is old enough to do his mum." - Perry Harlock'
     '"Perry and Alex are the only confirmed non-jaffas here, for all we know the rest of us are firing blanks." - Phil Booth'
+    '"I know a tramp in Tonbridge who will come up if I buy him food." - Perry Harlock'
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
