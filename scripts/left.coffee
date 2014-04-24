@@ -1,11 +1,5 @@
 # Description:
-#   Alert the FEDs when strangers enter the room
-#
-# Commands:
-#   hubot who are we? - Check who FEDbot considers to be trusted
-#   hubot <name> is one of us - Add a person to the safe list
-#   hubot <name> is not one of us - Remove a person from the safe list
-#
+#   People who are leaving/have left
 
 randomBetween = require('../lib/random').randomBetween
 
