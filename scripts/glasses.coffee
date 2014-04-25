@@ -12,5 +12,5 @@ module.exports = (robot) ->
     robot: robot,
     name: 'glass',
     tumblr: 'animalswithglasses.tumblr.com',
-    selector: '#main .typePhoto img'
+    selector: '#main article img'
   })
