@@ -2,16 +2,14 @@
 #   Get all your oompa loompa images
 #
 # Commands:
-#   fedbot oompa loompa me - Get a random oompa loompa image
+#   hubot oompa loompa me - Get a random oompa loompa image
+#   hubot oompa loompa bomb N - Get N oompa loompa images
 #
 ## Author:
 #   perryharlock
 
-createImageListPage = require '../lib/http-image-list'
-
 module.exports = (robot) ->
-
-  images = [
+  require('../lib/me-static')(robot, 'oompa loompa', [
     "http://i.imgur.com/XrbkNVe.jpg", # Adam
     "http://i.imgur.com/JvJxPlz.jpg", # Lisa
     "http://i.imgur.com/Mrd5Apn.jpg", # Jude
@@ -27,16 +25,5 @@ module.exports = (robot) ->
     "http://i.imgur.com/EKWVfQ6.jpg", # Dan
     "http://i.imgur.com/3G6yPST.png", # Perry
     "http://i.imgur.com/yuzcaIv.jpg", # Jansher
-    "http://i.imgur.com/V95JnR9.jpg"  # Luke
-  ]
-
-  robot.hear /\b(oompa loompa me)\b/i, (msg) ->
-    msg.send msg.random images
-
-  createImageListPage(
-    robot,
-    '/oompa',
-    'Oompa Loompa images',
-    'A list of all the oompa loompa images:',
-    images
-  )
+    "http://i.imgur.com/V95JnR9.jpg", # Luke
+  ])
