@@ -2,7 +2,7 @@
 #   Get all your oompa loompa images
 #
 # Commands:
-#   hubot oompa loompa me - Get a random oompa loompa image
+#   fedbot oompa loompa me - Get a random oompa loompa image
 #
 ## Author:
 #   perryharlock
