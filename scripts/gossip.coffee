@@ -106,7 +106,8 @@ module.exports = (robot) ->
      "a Greggs sausage roll",
      "a slate from the Star of Kings",
      "a penis beaker",
-     "a Cuckoo's egg"
+     "a Cuckoo's egg",
+     "an Oompa Loopma costume",
   ]
 
   locations = [
