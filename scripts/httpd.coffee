@@ -21,6 +21,27 @@ spawn = require('child_process').spawn
 
 module.exports = (robot) ->
 
+  robot.router.get '/', (req, res) ->
+    routes = robot.router.routes.get.map((route) ->
+      if route.path isnt '/'
+        "<li><a href='#{route.path}'>#{route.path}</a></li>"
+    ).sort().join('')
+    res.end """
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <meta charset="utf-8"/>
+          <title>#{robot.name}</title>
+        </head>
+        <body>
+          <h1>#{robot.name}</h1>
+          <ul>
+            #{routes}
+          </ul>
+        </body>
+      </html>
+    """
+
   robot.router.get "/hubot/version", (req, res) ->
     res.end robot.version
 

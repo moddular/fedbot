@@ -9,7 +9,7 @@
 #   Sam Rios
 
 module.exports = (robot) ->
-  require('../lib/me')(robot, 'fonz', [
+  require('../lib/me-static')(robot, 'fonz', [
     'http://media.giphy.com/media/7RxDzSVhQK0Fy/giphy.gif',
     'http://media2.giphy.com/media/tITfss8cqzTO0/200.gif',
     'http://media0.giphy.com/media/Tg0tzqz7gq7As/200.gif',

@@ -5,6 +5,8 @@
 #   None
 #
 
+createImageListPage = require '../lib/http-image-list'
+
 module.exports = (robot) ->
 
   responses = [
@@ -17,3 +19,11 @@ module.exports = (robot) ->
 
   robot.hear /\b(wtf|what the (fuck|flip|frig|f\*\*(\*|k)|f))\b/i, (msg) ->
     msg.send msg.random responses
+
+  createImageListPage(
+    robot,
+    '/wtf',
+    'WTF images',
+    'A list of all the wtf images:',
+    responses
+  )

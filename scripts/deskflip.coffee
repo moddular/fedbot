@@ -2,7 +2,7 @@
 #   Delivers a random deskflipping image from tableflipgifs.tumblr.com. Uses an API key but does not require full authentication.
 #
 # Commands:
-#   deskflip - For when you're so annoyed you want to flip your desk.
+#   hubot deskflip - For when you're so annoyed you want to flip your desk.
 #
 # Author:
 #   hollsk

@@ -6,7 +6,7 @@
 #   hubot ram bomb N - Get N Rams
 
 module.exports = (robot) ->
-  require('../lib/me')(robot, 'ram', [
+  require('../lib/me-static')(robot, 'ram', [
     'http://a.gifb.in/092013/1380127740_goat_headbutt_fail.gif',
     'http://funnyasduck.net/wp-content/uploads/2013/03/funny-ram-sheep-head-butting-girl-animated-gif-pics.gif',
     'http://i.imgur.com/Hp51sUj.gif',

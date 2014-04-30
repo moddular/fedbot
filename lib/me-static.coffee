@@ -1,5 +1,6 @@
 
 _ = require 'underscore'
+createImageListPage = require './http-image-list'
 
 module.exports = (robot, name, images) ->
 
@@ -13,3 +14,12 @@ module.exports = (robot, name, images) ->
     count = msg.match[2] || 5
     bomb = _.sample images, count
     msg.send image for image in bomb
+
+  routeName = name.replace(' ', '-')
+  createImageListPage(
+    robot,
+    "/me-scripts/#{routeName}",
+    "#{robot.name} #{name} me",
+    "A list of all the images in #{name} me:",
+    images
+  )

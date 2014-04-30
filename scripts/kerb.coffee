@@ -2,8 +2,7 @@
 #   Eat Street / Kerb Traders List for the week ahead
 #
 # Commands:
-#   what's on kerb
-#   kerb
+#   hubot what's on kerb - Get a list of KERB traders for the week ahead
 #
 # Dependencies:
 #   Cheerio

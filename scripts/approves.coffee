@@ -5,6 +5,8 @@
 #   None
 #
 
+createImageListPage = require '../lib/http-image-list'
+
 module.exports = (robot) ->
 
   responses = [
@@ -31,8 +33,19 @@ module.exports = (robot) ->
     "http://clutch.mtv.com//wp-content/uploads/clutch/2012/04/tumblr_m1f4t7wzmS1r7032do1_500.gif",
     "http://clutch.mtv.com//wp-content/uploads/clutch/2012/04/tumblr_ltcxorUo1x1qm32ino1_250.gif",
     "http://clutch.mtv.com//wp-content/uploads/clutch/2012/04/tumblr_ll3oeqQXbe1qbvaudo1_500.gif",
-    "http://clutch.mtv.com//wp-content/uploads/clutch/2012/04/tumblr_m106qgTIZS1r3zat8.gif"
+    "http://clutch.mtv.com//wp-content/uploads/clutch/2012/04/tumblr_m106qgTIZS1r3zat8.gif",
+    "http://i.imgur.com/MZtvuUW.jpg",
+    "http://i.imgur.com/Mrd5Apn.jpg"
+
   ]
 
   robot.hear /\b(approv(es?|al)|endorse(s|ment)?)\b/i, (msg) ->
     msg.send msg.random responses
+
+  createImageListPage(
+    robot,
+    '/approves',
+    'Approval images',
+    'A list of all the approval images:',
+    responses
+  )

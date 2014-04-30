@@ -5,6 +5,8 @@
 #   None
 #
 
+createImageListPage = require '../lib/http-image-list'
+
 module.exports = (robot) ->
 
   images = [
@@ -25,3 +27,11 @@ module.exports = (robot) ->
 
   robot.hear /\badam (and|&) perry\b/i, (msg) ->
     msg.send predators
+
+  createImageListPage(
+    robot,
+    '/predator',
+    'Predator images',
+    'A list of all the predator images:',
+    images
+  )

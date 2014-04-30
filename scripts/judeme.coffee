@@ -7,7 +7,7 @@
 
 module.exports = (robot) ->
 
-  require('../lib/me')(robot, 'jude', [
+  require('../lib/me-static')(robot, 'jude', [
     'http://i.imgur.com/5Y3vocd.png',
     'http://i.imgur.com/ED67k6V.jpg',
     'http://i.imgur.com/KTeb28x.jpg',

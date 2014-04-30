@@ -6,7 +6,7 @@
 #   hubot pizza cat bomb N - Get N Pizza Cats
 
 module.exports = (robot) ->
-  require('../lib/me')(robot, 'pizza cat', [
+  require('../lib/me-static')(robot, 'pizza cat', [
     "http://24.media.tumblr.com/34534d89e130c539dfc143ca87e0fa1b/tumblr_muo4fciS9z1sqr3ymo1_500.gif",
     "http://collegecandy.files.wordpress.com/2013/09/pizza-cat.gif",
     "http://31.media.tumblr.com/tumblr_lz0omuWhkz1rno5r3o1_500.gif",

@@ -12,7 +12,7 @@ module.exports = (robot) ->
 
   request = require 'request'
 
-  require('../lib/me')(robot, 'fed', [
+  require('../lib/me-static')(robot, 'fed', [
 
     # Group
     'http://i.imgur.com/aZNXXDQ.jpg', # Christmas Party #1
@@ -23,6 +23,9 @@ module.exports = (robot) ->
     # Adam
     'http://i.imgur.com/bdW4hXx.jpg', # Predator
     'http://i.imgur.com/8DrBegi.jpg', # Doge
+
+    # Alex
+    'http://i.imgur.com/2g54UQM.jpg', # Hot Tub
 
     # Andrew
     'http://i.imgur.com/pPGuifS.jpg', # Pink Hair
@@ -56,6 +59,7 @@ module.exports = (robot) ->
     'http://i.imgur.com/nkQyVr4.gif', # Cheese
     'http://i.imgur.com/iggvxTH.jpg', # Blue Hair
     'http://i.imgur.com/fzpsMDJ.jpg', # Doge
+    'http://i.imgur.com/oWVz6NR.jpg', # Head-Wound
 
     # Phil
     'http://i.imgur.com/8TEzjoT.jpg', # D. Wain Portrait
@@ -64,8 +68,14 @@ module.exports = (robot) ->
     'http://i.imgur.com/873UUyQ.jpg', # Blurry Shades
     'http://i.imgur.com/1cup7HH.jpg', # Pink Hat
     'http://i.imgur.com/sxGC6Sh.jpg', # Starred up
+    'http://i.imgur.com/N1jvRz1.jpg' # 1300 stars
 
   ])
+
+  stars = [
+    'http://i.imgur.com/sxGC6Sh.jpg',
+    'http://i.imgur.com/N1jvRz1.jpg'
+  ]
 
   robot.hear /\bfried eggs?\b/i, (msg) ->
     msg.send "http://i.imgur.com/34Qq17u.jpg"
@@ -87,7 +97,10 @@ module.exports = (robot) ->
     msg.send "http://i.imgur.com/8DrBegi.jpg"
 
   robot.hear /\b13\d\d[\s\-]stars?\b/i, (msg) ->
-    msg.send 'http://i.imgur.com/sxGC6Sh.jpg'
+    msg.send msg.random stars
+
+  robot.hear /\b(hot[\s-]?tub|jacuzzi|savil+e)\b/i, (msg) ->
+    msg.send 'http://i.imgur.com/2g54UQM.jpg'
 
   robot.hear /\b1300\b/i, (msg) ->
     callback = undefined
