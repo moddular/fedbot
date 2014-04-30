@@ -28,4 +28,5 @@ module.exports = (robot) ->
     "http://i.imgur.com/V95JnR9.jpg", # Luke
     "http://distilleryimage4.ak.instagram.com/b2ea48f4ccb411e3a71c0002c954b60c_8.jpg", # Adam
     "http://distilleryimage2.ak.instagram.com/a2497c0ccca711e3a44d0002c954aa76_8.jpg", # Perry/Alex
+    "http://i.imgur.com/UnDa9xd.gif", # Perry/Adam
   ])
