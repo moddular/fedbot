@@ -99,6 +99,9 @@ module.exports = (robot) ->
   robot.hear /\b13\d\d[\s\-]stars?\b/i, (msg) ->
     msg.send msg.random stars
 
+  robot.hear /\brepo\b/i, (msg) ->
+    msg.send "http://i.imgur.com/As0OCA9.png"
+
   robot.hear /\b(hot[\s-]?tub|jacuzzi|savil+e)\b/i, (msg) ->
     msg.send 'http://i.imgur.com/2g54UQM.jpg'
 
