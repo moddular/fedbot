@@ -14,6 +14,9 @@ module.exports = (robot) ->
     '"Dale is old enough to do his mum." - Perry Harlock'
     '"Perry and Alex are the only confirmed non-jaffas here, for all we know the rest of us are firing blanks." - Phil Booth'
     '"I know a tramp in Tonbridge who will come up if I buy him food." - Perry Harlock'
+    '"I once told a teacher that She had lulled us into a false sense of security by giving us an extra weeks extension on an essay and therefore it was her fault that it was late." - Jack Watkins'
+    '"rape haha" - Glynn Phillips'
+    '"I\'ll do the small one" - Rowan Manning'
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->

@@ -25,7 +25,10 @@ module.exports = (robot) ->
   robot.hear /\bperry\b/i, (msg) ->
     if randomBetween(1, 3) is 1
       msg.send msg.random [
-        "I wish Perry wasn't leaving",
+        "Who was Perry again?",
+        "Ah, Perry. I never really liked him anyway",
+        "Perry? Never trust a man with a pierced appendage, that's what I say",
+        "Perry? Was he the Oompa Loompa?",
         "*sigh* please don't talk about Perry – it's too painful",
         "Perry? *sniff* he was my favourite...",
         "When's Perry coming back?",
