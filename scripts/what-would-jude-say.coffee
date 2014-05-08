@@ -14,6 +14,7 @@ module.exports = (robot) ->
     'Double Jack and diet please'
     'Everybody dies'
     'For future reference - please only ever use lowercase for branch names.'
+    'Green: 75%, LibDem: 25%. Although I\'m assuming I must have misread the policies for the issues where I chose LibDem, because I\'d rather sh*t in my hand than vote LibDem.'
     'Have I told you about my "low hanging fruit"?'
     'I [...] propose Friday 13th... because nothing could possibly go wrong on that date. Count me in.'
     'I almost had a little chubby on during that meeting'
