@@ -5,7 +5,7 @@ module.exports = (opts) ->
 
   opts.robot.respond meRegExp, (msg) ->
     getRandomPost msg, (url) ->
-      msg.send url
+      msg.send url + '#.gif'
 
   getRandomPost = (msg, done) ->
     url = "http://www.reddit.com/r/#{opts.subreddit}/random.json"
