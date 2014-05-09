@@ -170,7 +170,7 @@ filterQuotesByContext = (quotes, context) ->
   (quote for quote in quotes when context.test quote.keywords)
 
 buildContextRegexp = (context) ->
-  contextArray = context.toLowerCase().replace(/[^a-z0-9\s\-]+/, '').split(/\s+/)
+  contextArray = context.toLowerCase().replace(/[^a-z0-9\s\-]+/, '').trim().split(/\s+/)
   new RegExp "\\b(#{contextArray.join('|')})\\b", 'gi'
 
 module.exports = (robot) ->
