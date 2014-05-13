@@ -60,6 +60,7 @@ module.exports = (robot) ->
     'http://i.imgur.com/iggvxTH.jpg', # Blue Hair
     'http://i.imgur.com/fzpsMDJ.jpg', # Doge
     'http://i.imgur.com/oWVz6NR.jpg', # Head-Wound
+    'http://i.imgur.com/1eaSCnk.jpg', # Harlock Family
 
     # Phil
     'http://i.imgur.com/8TEzjoT.jpg', # D. Wain Portrait
@@ -99,11 +100,14 @@ module.exports = (robot) ->
   robot.hear /\b13\d\d[\s\-]stars?\b/i, (msg) ->
     msg.send msg.random stars
 
-  robot.hear /\brepo\b/i, (msg) ->
+  robot.hear /\brepo(sitory)?\b/i, (msg) ->
     msg.send "http://i.imgur.com/As0OCA9.png"
 
   robot.hear /\b(hot[\s-]?tub|jacuzzi|savil+e)\b/i, (msg) ->
     msg.send 'http://i.imgur.com/2g54UQM.jpg'
+
+  robot.hear /\bharlock+(s|\sfamily)\b/i, (msg) ->
+    msg.send "http://i.imgur.com/1eaSCnk.jpg"
 
   robot.hear /\b1300\b/i, (msg) ->
     callback = undefined
