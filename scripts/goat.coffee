@@ -52,7 +52,7 @@ module.exports = (robot) ->
     'http://media.giphy.com/media/oR4557fzS6rao/giphy.gif',
     'http://24.media.tumblr.com/13a280c1ec9ba7cdef82104350e9000d/tumblr_n3q3wynJrM1rchct6o1_500.gif',
     'http://24.media.tumblr.com/e84f4f821440604f960e2dfe92b87d3b/tumblr_mj1gd5YiTB1ruam3yo1_400.gif',
-    'http://37.media.tumblr.com/da495430333543385b6301b2e1883a46/tumblr_mupjx13dud1s1efqyo1_250.gif'.
+    'http://37.media.tumblr.com/da495430333543385b6301b2e1883a46/tumblr_mupjx13dud1s1efqyo1_250.gif',
     'http://31.media.tumblr.com/540f47b439df1fcb30eb93f2a6ab788d/tumblr_mu9et5W32s1rdd1bdo1_400.gif',
     'http://37.media.tumblr.com/04f7a36818a9fb25679665ac863c3ac4/tumblr_mnj6chWoBf1sqhn26o1_r2_250.gif',
     'http://24.media.tumblr.com/tumblr_lr6ikpuYyj1qbj4xbo1_400.gif',
