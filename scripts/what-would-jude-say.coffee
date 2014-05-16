@@ -161,6 +161,10 @@ judeQuotes = [
     text: 'Just ran out of test strips. "F*ck it", I thought "I\'ll just guess and do a large injection". Discover have run out of insulin. "F*ck it", I thought, "I\'ll just grab the spare from the fridge". Discover the spare isn\'t there. FFFFFFFFFFFS, I thought. Off home.'
     keywords: 'blood sugar injection injections insulin diabetes fridge fridges'
   }
+  {
+    text: 'I\'m gonna turn up at 10am and ask for their biggest facial'
+    keywords: 'facial facials big biggest'
+  }
 ]
 
 randomValue = require('../lib/random').randomValue
