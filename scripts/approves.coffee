@@ -36,8 +36,23 @@ module.exports = (robot) ->
     "http://clutch.mtv.com//wp-content/uploads/clutch/2012/04/tumblr_m106qgTIZS1r3zat8.gif",
     "http://i.imgur.com/MZtvuUW.jpg",
     "http://i.imgur.com/Mrd5Apn.jpg",
-    "http://i.imgur.com/NfYkHBS.gif"
-
+    "http://i.imgur.com/NfYkHBS.gif",
+    "https://camo.githubusercontent.com/11539938aed6a4c465396715e71ba6b69cc30286/687474703a2f2f7777772e7265616374696f6e676966732e636f6d2f722f776e6f642e676966",
+    "http://www.reactiongifs.com/r/ilt.gif",
+    "http://www.reactiongifs.com/r/snoop.gif",
+    "http://www.reactiongifs.com/wp-content/uploads/2014/01/thumbs_up_cat.gif",
+    "http://www.reactiongifs.com/wp-content/uploads/2013/11/LOKI_approves.gif",
+    "http://www.reactiongifs.com/wp-content/uploads/2013/09/thumbs-up.gif",
+    "http://www.reactiongifs.com/wp-content/uploads/2013/08/kiss.gif",
+    "http://www.reactiongifs.com/wp-content/uploads/2013/08/barney-yes.gif",
+    "http://www.reactiongifs.com/wp-content/uploads/2013/07/needing-approval.gif",
+    "http://www.reactiongifs.com/wp-content/uploads/2013/04/thumbs.gif",
+    "http://www.reactiongifs.com/wp-content/uploads/2013/03/thumbs-aloft.gif",
+    "http://www.reactiongifs.com/wp-content/uploads/2013/03/Larry.gif",
+    "http://www.reactiongifs.com/wp-content/uploads/2013/01/flaming_thumbs_up.gif",
+    "http://www.reactiongifs.com/wp-content/uploads/2012/08/well_done_sir.gif",
+    "http://www.reactiongifs.com/wp-content/uploads/2012/07/20120607035837_auto.gif",
+    "http://www.reactiongifs.com/wp-content/uploads/2011/09/troll_approval.gif"
   ]
 
   robot.hear /\b(approv(es?|al)|endorse(s|ment)?)\b/i, (msg) ->
