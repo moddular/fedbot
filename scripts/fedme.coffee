@@ -61,6 +61,7 @@ module.exports = (robot) ->
     'http://i.imgur.com/fzpsMDJ.jpg', # Doge
     'http://i.imgur.com/oWVz6NR.jpg', # Head-Wound
     'http://i.imgur.com/1eaSCnk.jpg', # Harlock Family
+    'http://i.imgur.com/CdDLhxl.gif', # Dancing Grandad
 
     # Phil
     'http://i.imgur.com/8TEzjoT.jpg', # D. Wain Portrait
