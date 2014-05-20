@@ -18,6 +18,7 @@ module.exports = (robot) ->
     '"rape haha" - Glynn Phillips'
     '"I\'ll do the small one" - Rowan Manning'
     '"yes, ram me rowan, ram me" - Phil Booth'
+    '"they can get in my face regardless" - Hollie Kay'
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
