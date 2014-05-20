@@ -23,6 +23,7 @@ module.exports = (robot) ->
     # Adam
     'http://i.imgur.com/bdW4hXx.jpg', # Predator
     'http://i.imgur.com/8DrBegi.jpg', # Doge
+    'http://i.imgur.com/n9U67oh.png', # Nap
 
     # Alex
     'http://i.imgur.com/2g54UQM.jpg', # Hot Tub
@@ -65,6 +66,8 @@ module.exports = (robot) ->
 
     # Phil
     'http://i.imgur.com/8TEzjoT.jpg', # D. Wain Portrait
+    'http://i.imgur.com/9NZBMMS.png', # Nap
+    'http://i.imgur.com/SlOsvRP.jpg', # Swear
 
     # Rowan
     'http://i.imgur.com/873UUyQ.jpg', # Blurry Shades
@@ -76,7 +79,12 @@ module.exports = (robot) ->
 
   stars = [
     'http://i.imgur.com/sxGC6Sh.jpg',
-    'http://i.imgur.com/N1jvRz1.jpg'
+    'http://i.imgur.com/N1jvRz1.jpg',
+  ]
+
+  naps = [
+    'http://i.imgur.com/n9U67oh.png',
+    'http://i.imgur.com/9NZBMMS.png',
   ]
 
   robot.hear /\bfried eggs?\b/i, (msg) ->
@@ -100,6 +108,9 @@ module.exports = (robot) ->
 
   robot.hear /\b13\d\d[\s\-]stars?\b/i, (msg) ->
     msg.send msg.random stars
+
+  robot.hear /\b(nap|sleep|snooze|(40|forty)[\s\-]winks|shut[\s\-]?eye|zzz+)\b/i, (msg) ->
+    msg.send msg.random naps
 
   robot.hear /\brepo(sitory)?\b/i, (msg) ->
     msg.send "http://i.imgur.com/As0OCA9.png"
