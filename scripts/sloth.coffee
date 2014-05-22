@@ -8,6 +8,7 @@
 module.exports = (robot) ->
   require('../lib/me-static')(robot, 'sloth', [
     'http://24.media.tumblr.com/c99697ade79f5fdc1f847fee82f681a1/tumblr_mrla15bRZ91sfq5p3o1_400.gif'
+    'http://forgif.me/system/image/5080/image.gif'
     'http://i.imgur.com/SSvEUgf.gif'
     'http://img.pandawhale.com/post-22527-Sloth-Switching-Branches-gif-KaAc.gif'
     'http://media.giphy.com/media/jsnACY5sBbPDa/giphy.gif'
