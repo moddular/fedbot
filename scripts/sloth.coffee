@@ -13,6 +13,6 @@ module.exports = (robot) ->
     'http://media.giphy.com/media/jsnACY5sBbPDa/giphy.gif'
     'http://media3.giphy.com/media/s4zt0MoO4BJyU/giphy.gif'
     'http://static.fjcdn.com/gifs/Deal+with+it_12e775_4191317.gif'
-    'https://i.chzbgr.com/maxW500/7348917248/h9165DA84/'
+    'https://i.chzbgr.com/maxW500/7348917248/h9165DA84/#.gif'
     'https://i.imgur.com/dhbVxtG.gif'
   ])
