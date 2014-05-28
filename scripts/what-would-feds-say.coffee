@@ -20,7 +20,8 @@ module.exports = (robot) ->
     '"I could see myself sucking on a cock" - Rowan Manning'
     '"yes, ram me rowan, ram me" - Phil Booth'
     '"they can get in my face regardless" - Hollie Kay'
-    '"I\'ve not shat myself in years, actually" - Phil Booth'
+    '"I haven\'t shat myself in years, actually" - Phil Booth'
+    '"and also fuck the oxford comma i don\'t like the look of it" - Glynn Phillips'
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
