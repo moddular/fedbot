@@ -8,7 +8,7 @@
 module.exports = (robot) ->
   robot.respond /what( is|\'s) ([a-z0-9\s\-]+)/i, (msg) ->
     q = msg.match[2].toLowerCase()
-    if q != 'on kerb' && q != 'the definition of done'
+    if !/(on kerb|the definition of done|the problems? with)/.test(q)
       q = q.replace(/\s/g, '%20')
       msg.send "http://www.lmgtfy.com?q=#{q}"
 
