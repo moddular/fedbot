@@ -165,6 +165,10 @@ judeQuotes = [
     text: 'I\'m gonna turn up at 10am and ask for their biggest facial'
     keywords: 'facial facials big biggest'
   }
+  {
+    text: 'You sound reluctant to admit the fact Dawn. You like the Stump too much. You are the Gollum of front-end development.'
+    keywords: 'dawn stump success front-end gollum'
+  }
 ]
 
 randomValue = require('../lib/random').randomValue
