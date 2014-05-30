@@ -23,6 +23,7 @@ module.exports = (robot) ->
     '"I haven\'t shat myself in years, actually" - Phil Booth'
     '"and also fuck the oxford comma i don\'t like the look of it" - Glynn Phillips'
     '"a one on one with Rowan giving me a hand is not the right thing do to" - Glynn Phillips'
+    '"Suddenly the paedophiles are looking quite normal" - Alex Kilgour'
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
