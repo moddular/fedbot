@@ -26,9 +26,7 @@ feds = [
   "Jack",
   "Jose",
   "Jude",
-  "Laura",
   "Nick",
-  "Perry",
   "Phil",
   "Rowan"
 ]
