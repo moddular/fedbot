@@ -79,6 +79,10 @@ module.exports = (robot) ->
       text: 'I\'m also an all or nothing kind of guy. If you\'re going to roger me, stick it all the way in. Don\'t tickle me round the edges.'
       name: 'Phil Booth'
     }
+    {
+      text: 'If you went up only 3 inches, you wouldn\'t be able to tell the difference.'
+      name: 'Adam Tavener'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
