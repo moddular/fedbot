@@ -75,6 +75,9 @@ module.exports = (robot) ->
       text: 'Suddenly the paedophiles are looking quite normal'
       name: 'Alex Kilgour'
     }
+    {
+      text: 'I\'m also an all or nothing kind of guy. If you\'re going to roger me, stick it all the way in. Don\'t tickle me round the edges.'
+      name: 'Phil Booth'
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
