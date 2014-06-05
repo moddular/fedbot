@@ -29,7 +29,7 @@ feds = [
   "Nick",
   "Phil",
   "Rowan"
-
+]
 
 module.exports = (robot) ->
 
