@@ -24,6 +24,7 @@ module.exports = (robot) ->
     'http://i.imgur.com/bdW4hXx.jpg', # Predator
     'http://i.imgur.com/8DrBegi.jpg', # Doge
     'http://i.imgur.com/n9U67oh.png', # Nap
+    'http://i.imgur.com/9tXA60K.jpg', # Fruity
 
     # Alex
     'http://i.imgur.com/2g54UQM.jpg', # Hot Tub
@@ -120,6 +121,9 @@ module.exports = (robot) ->
 
   robot.hear /\bharlock+(s|\sfamily)\b/i, (msg) ->
     msg.send "http://i.imgur.com/1eaSCnk.jpg"
+
+  robot.hear /\bfruity\b/i, (msg) ->
+    msg.send "http://i.imgur.com/9tXA60K.jpg"
 
   robot.hear /\b1300\b/i, (msg) ->
     callback = undefined
