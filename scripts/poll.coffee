@@ -49,6 +49,9 @@ module.exports = (robot) ->
       voteCountsArray.push {answer, count}
     voteCountsArray.sort (a, b) -> b.count - a.count
 
+  addPollAnswers = (poll, answers) ->
+    poll.answers = poll.answers.concat formatAnswers(answers)
+
   getLastPoll = ->
     robot.brain.get('lastPoll') || null
 
@@ -103,5 +106,13 @@ module.exports = (robot) ->
     if getCurrentPoll()
       endCurrentPoll()
       msg.send 'The poll has now ended!\n' + getResultsMessage(getLastPoll())
+    else
+      msg.reply 'There is no poll running.'
+
+  robot.respond /poll amend (.+)/i, (msg) ->
+    currentPoll = getCurrentPoll()
+    if currentPoll
+      addPollAnswers currentPoll, msg.match[1]
+      msg.send 'New answers added to poll (' + currentPoll.answers.join(', ') + ')'
     else
       msg.reply 'There is no poll running.'
