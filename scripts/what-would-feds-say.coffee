@@ -83,6 +83,10 @@ module.exports = (robot) ->
       text: 'If you went up only 3 inches, you wouldn\'t be able to tell the difference.'
       name: 'Adam Tavener'
     }
+    {
+      text: 'I burnt more calories getting at the edible parts than I gained from eating them.'
+      name: 'Adam Tavener'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
