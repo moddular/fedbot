@@ -87,6 +87,10 @@ module.exports = (robot) ->
       text: 'I burnt more calories getting at the edible parts than I gained from eating them.'
       name: 'Adam Tavener'
     }
+    {
+      text: 'is there a shitbit? we should get one for jude if there is'
+      name: 'Phil Booth'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
