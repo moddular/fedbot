@@ -95,6 +95,10 @@ module.exports = (robot) ->
       text: 'I\'m up for some anal action'
       name: 'Phil Booth'
     }
+    {
+      text: 'Rowan, if you legitimise this bollocks with your compliance, you will be half the man I thought you were'
+      name: 'Phil Booth'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
