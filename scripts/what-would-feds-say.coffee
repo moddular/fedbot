@@ -87,6 +87,10 @@ module.exports = (robot) ->
       text: 'I burnt more calories getting at the edible parts than I gained from eating them.'
       name: 'Adam Tavener'
     }
+    {
+      text: 'He was the one who hit him in the balls with a spanner. He always insisted that is what gave him cancer and remained resentful.'
+      name: 'Jack Watkins'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
