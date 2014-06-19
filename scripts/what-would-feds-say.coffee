@@ -88,6 +88,18 @@ module.exports = (robot) ->
       name: 'Adam Tavener'
     }
     {
+      text: 'is there a shitbit? we should get one for jude if there is'
+      name: 'Phil Booth'
+    }
+    {
+      text: 'I\'m up for some anal action'
+      name: 'Phil Booth'
+    }
+    {
+      text: 'Rowan, if you legitimise this bollocks with your compliance, you will be half the man I thought you were'
+      name: 'Phil Booth'
+    }
+    {
       text: 'He was the one who hit him in the balls with a spanner. He always insisted that is what gave him cancer and remained resentful.'
       name: 'Jack Watkins'
     }
