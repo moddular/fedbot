@@ -14,6 +14,7 @@
         "cheerio": "^0.13.1",
         "htmlparser": "~1.7",
         "hubot": "~2.6",
+        "hubot-conspire": "~1.0",
         "hubot-dogeme": "~1.0",
         "hubot-scripts": "~2.5",
         "moment": "~2.5",
