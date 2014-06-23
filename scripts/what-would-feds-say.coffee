@@ -103,8 +103,25 @@ module.exports = (robot) ->
       text: 'He was the one who hit him in the balls with a spanner. He always insisted that is what gave him cancer and remained resentful.'
       name: 'Jack Watkins'
     }
+    [
+      {
+        text: 'I dont believe you Glynn... Is it hairy?'
+        name: 'Adam Tavener'
+      }
+      {
+        text: 'Adam yeah it is. Once you get past being weirded out by that though it\'s good.'
+        name: 'Glynn Phillips'
+      }
+    ]
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
-    quote = msg.random fedQuotes
-    msg.send "“#{quote.text}” — #{quote.name}"
+    chosen = msg.random fedQuotes
+    if Array.isArray chosen
+      quoteText = []
+      quoteText.push("#{quote.name}: “#{quote.text}”") for quote in chosen
+      quoteText = quoteText.join '\n'
+    else
+      quote = chosen
+      quoteText = "“#{quote.text}” — #{quote.name}"
+    msg.send quoteText
