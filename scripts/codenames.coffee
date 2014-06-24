@@ -17,6 +17,7 @@
 rsvp = require 'rsvp'
 
 module.exports = (robot) ->
+  ###
   getJSON = (url) ->
     promise = new rsvp.Promise
     robot.http(url).get() (err, res, body) ->
@@ -36,3 +37,4 @@ module.exports = (robot) ->
       animal = msg.random(animals).title
 
       msg.reply "How about #{titlecase(prefix)}#{titlecase(animal)}?"
+  ###
