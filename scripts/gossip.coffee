@@ -33,11 +33,9 @@ module.exports = (robot) ->
 
   # someone is activitying...
   activitiesSolo = [
-    "stealing",
     "punching",
     "massaging",
     "throwing",
-    "marrying",
     "punishing",
     "grooming",
     "boning",
@@ -48,29 +46,26 @@ module.exports = (robot) ->
 
   # someone is activitying with...
   activitiesADeux = [
-    "flirting",
     "sexting",
     "dancing",
     "fighting",
     "arguing",
     "colluding",
     "plotting",
-    "cottaging"
+    "cottaging",
+    "doing unspeakable things"
   ]
 
   celebrities = [
-    "Stephen Hawking",
-    "Kim Kardashian",
-    "Roy Chubby Brown",
-    "Justin Bieber",
+    "your mum",
     "the 3x life-size model of David Hasselhoff",
     "Digital Science",
     "Professor Brian Cox",
-    "Kerry Katona",
+    "a owl",
     "the Chuckle Brothers",
     "WHO",
     "a badly-stuffed animal",
-    "Paris Hilton"
+    "a scrum master"
   ]
 
   # someone had a ... with someone
@@ -83,20 +78,19 @@ module.exports = (robot) ->
   ]
 
   excusesDueToFate = [
-    "missing doughnuts",
-    "stolen dollars",
-    "injuries sustained",
+    "not observing the correct bicycle placement rules in the garage",
     "chair bumps",
     "badly-stuffed animals",
     "shit beer",
     "too many meetings",
     "COPS tickets",
     "OOCSS",
-    "Jude on a stick"
+    "Jude on a stick",
+    "that 'et al.' thing"
   ]
 
   objects = [
-     "doughnuts",
+     "a owl",
      "shit beer",
      "photos from research journals",
      "a stuffed fox",
@@ -134,16 +128,16 @@ module.exports = (robot) ->
     dice = Math.floor(Math.random() * 6) + 1
 
     if dice is 1
-      # fed has been activitying celebrity in location
-      gossip = thisFed + " has been " + msg.random activitiesSolo
-      gossip = gossip + " " + msg.random celebrities
+      # fed inserted object into celebrity in location
+      gossip = thisFed + " inserted " + msg.random objects
+      gossip = gossip + " into " + msg.random celebrities
       gossip = gossip + " in " + msg.random locations
 
     if dice is 2
       # fed had a event (a event? a event!) with celebrity over object
       gossip = thisFed + " had a " + msg.random eventOccurrence
       gossip = gossip + " with " + msg.random celebrities
-      gossip = gossip + " over " + msg.random excusesDueToFate
+      gossip = gossip + " in " + msg.random locations
 
     if dice is 3
       # fed was activitying in location with object
@@ -152,9 +146,9 @@ module.exports = (robot) ->
       gossip = gossip + " with " + msg.random objects
 
     if dice is 4
-      # celebrity told the papers that fed was activitying object in location because of excuse
+      # celebrity told everyone that fed was activitying object in location because of excuse
       gossip = msg.random celebrities
-      gossip = gossip + " told the papers that " + thisFed + " was " + msg.random activitiesSolo
+      gossip = gossip + " told everyone that " + thisFed + " was " + msg.random activitiesSolo
       gossip = gossip + " " + msg.random objects
       gossip = gossip + " in " + msg.random locations
       gossip = gossip + " because of " + msg.random excusesDueToFate
@@ -167,8 +161,9 @@ module.exports = (robot) ->
       gossip = gossip + " with " + msg.random celebrities
 
     if dice is 6
-      # fed and celebrity were activitying with object
-      gossip = thisFed + " and " + msg.random celebrities
+      # I heard that fed and celebrity were activitying with object
+      gossip = "I heard that "
+      gossip = gossip + thisFed + " and " + msg.random celebrities
       gossip = gossip + " were "  + msg.random activitiesADeux
       gossip = gossip + " with " + msg.random objects
 
