@@ -12,9 +12,15 @@
 
 module.exports = (robot) ->
   robot.respond /(image|img)( me)? (.*)/i, (msg) ->
+    query = msg.match[3]
     if msg.message.user.name == "Jude"
       return msg.send "Sorry, Jude, I can't let you do that"
-    imageMe msg, msg.match[3], (url) ->
+
+    ## get today's animal from the brain
+    if msg.message.match /(animal of the day|aotd)/i
+      query = robot.brain.data.animalOfTheDay
+      
+    imageMe msg, query, (url) ->
       msg.send url
 
   robot.respond /nature( me)? (.*)/i, (msg) ->
