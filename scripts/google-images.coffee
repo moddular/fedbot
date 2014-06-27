@@ -19,7 +19,7 @@ module.exports = (robot) ->
     ## get today's animal from the brain
     if msg.message.match /(animal of the day|aotd)/i
       query = robot.brain.data.animalOfTheDay
-      
+
     imageMe msg, query, (url) ->
       msg.send url
 
