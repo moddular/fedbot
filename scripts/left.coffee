@@ -29,9 +29,8 @@ module.exports = (robot) ->
         "Ah, Perry. I never really liked him anyway",
         "Perry? Never trust a man with a pierced appendage, that's what I say",
         "Perry? Was he the Oompa Loompa?",
-        "*sigh* please don't talk about Perry – it's too painful",
-        "Perry? *sniff* he was my favourite...",
-        "When's Perry coming back?",
-        "I miss Perry",
-        "Oh Perry, our time together was too short"
+        "Who the hell's Perry?",
+        "What did Perry do here again?",
+        "Perry?... Oh! Short, no work to do, made innuendos? Yeah I know who you mean",
+        "Perry? Does not compute",
       ]
