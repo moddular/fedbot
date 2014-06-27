@@ -8,6 +8,8 @@
 # Author:
 #   rowanmanning
 
+randomBetween = require('../lib/random').randomBetween
+
 module.exports = (robot) ->
 
   request = require 'request'
@@ -114,7 +116,8 @@ module.exports = (robot) ->
     msg.send msg.random naps
 
   robot.hear /\brepo(sitory)?\b/i, (msg) ->
-    msg.send "http://i.imgur.com/As0OCA9.png"
+    if randomBetween(1, 3) is 1
+      msg.send "http://i.imgur.com/As0OCA9.png"
 
   robot.hear /\b(hot[\s-]?tub|jacuzzi|savil+e)\b/i, (msg) ->
     msg.send 'http://i.imgur.com/2g54UQM.jpg'
