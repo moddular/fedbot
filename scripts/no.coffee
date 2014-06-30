@@ -12,7 +12,7 @@ module.exports = (robot) ->
     'http://i.imgur.com/boNyYxO.gif'
   ]
 
-  robot.hear /\b(no\!+|noo+)\b/i, (msg) ->
+  robot.hear /\b(noo+)\b/i, (msg) ->
     msg.send msg.random responses
 
   createImageListPage(
