@@ -20,7 +20,7 @@ module.exports = (robot) ->
     "http://i.imgur.com/7sz4giy.jpg"
   ]
 
-  predators = "http://kil.gr/sandbox/secret/fedbot/predators.jpg"
+  predators = "http://i.imgur.com/XzqcdSs.jpg"
 
   robot.hear /\bpredator\b/i, (msg) ->
     msg.send msg.random images

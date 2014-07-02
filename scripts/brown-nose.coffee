@@ -7,7 +7,7 @@
 
 module.exports = (robot) ->
 
-  image = "http://kil.gr/sandbox/secret/fedbot/brown-nose.jpg"
+  image = "http://i.imgur.com/FwAW71D.jpg"
 
   robot.hear /brown[\s\-]?nos(e|er|ing)/i, (msg) ->
     msg.send image
