@@ -13,7 +13,7 @@ module.exports = (robot) ->
         result = JSON.parse(body)
 
         if result.data.children.count <= 0
-          msg.send "No terrible puns found..."
+          msg.send 'No terrible puns found...'
           return
 
         urls = [ ]

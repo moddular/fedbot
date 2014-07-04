@@ -95,7 +95,7 @@ module.exports = (robot) ->
       if users.length == 0
         msg.reply "I don't know who #{name} is"
       else if users.length > 1
-        msg.reply "I'm not sure who you mean, one of these? " + users.map((user) -> user.name).join(', ')
+        msg.reply 'I\'m not sure who you mean, one of these? ' + users.map((user) -> user.name).join(', ')
       else
         amount = formatAmount(jar.users[users[0].id] || 0)
         msg.reply "#{users[0].name} owes the swear jar #{amount}"
@@ -110,5 +110,5 @@ module.exports = (robot) ->
       user.swearAmount > 0
     )
     users = _.sortBy(users, 'swearAmount').reverse()
-    users = ("#{user.name} - #{formatAmount(user.swearAmount)}" for user in users when user.name isnt "FEDbot")
-    msg.send "Who owes money to the swear jar:\n" + users.join("\n")
+    users = ("#{user.name} - #{formatAmount(user.swearAmount)}" for user in users when user.name isnt 'FEDbot')
+    msg.send 'Who owes money to the swear jar:\n' + users.join('\n')
