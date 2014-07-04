@@ -117,6 +117,10 @@ module.exports = (robot) ->
       text: 'before I knew about the holocaust I always prefered the german soldiers in my set of toy soldiers'
       name: 'Jack Watkins'
     }
+    {
+      text: 'oh you wouldn\'t catch Hitler playing jungle music at 4 in the morning.'
+      name: 'Jack Watkins'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
