@@ -81,5 +81,5 @@ module.exports = (robot) ->
     rating.decrease msg, 1
     robot.brain.remove 'drinkLastChecked'
     robot.brain.remove 'drinkLastResponse'
-    msg.reply 'Why ask me if you're not going to take my advice? Fine.'
+    msg.reply 'Why ask me if you\'re not going to take my advice? Fine.'
     setTimeout (-> msg.send chooseOption(msg)), 100
