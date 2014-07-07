@@ -31,15 +31,14 @@ module.exports = (robot) ->
 
   responses.push(burger, fried_chicken, noodles)
 
-  robot.hear /\b(lunch)\b/i, (msg) ->
-    if randomBetween(1, 4) is 1
-      msg.send msg.random responses
+  robot.hear /\b(lunch me)\b/i, (msg) ->
+    msg.send msg.random responses
 
-  robot.hear /\b(burger|macdonalds)\b/i, (msg) ->
-    msg.send burger
+  #robot.hear /\b(burger|macdonalds)\b/i, (msg) ->
+  #  msg.send burger
 
-  robot.hear /\b(spit [\w'&]{1,4} roast|kfc)\b/i, (msg) ->
-    msg.send fried_chicken
+  #robot.hear /\b(spit [\w'&]{1,4} roast|kfc)\b/i, (msg) ->
+  #  msg.send fried_chicken
 
-  robot.hear /\b(katsu|noodles)\b/i, (msg) ->
-    msg.send noodles
+  #robot.hear /\b(katsu|noodles)\b/i, (msg) ->
+  #  msg.send noodles
