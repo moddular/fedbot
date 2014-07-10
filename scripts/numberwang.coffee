@@ -14,7 +14,7 @@ module.exports = (robot) ->
 
   robot.hear /\b\d+\b/i, (msg) ->
     if not /https?:\/\//i.test(msg.message.text)
-      if randomBetween(1, 18) is 1
+      if randomBetween(1, 25) is 1
         if isWangerNumbRound
           msg.reply "That's WangerNumb! Bad luck everyone else, you've been WangerNumbed"
           isWangerNumbRound = false
