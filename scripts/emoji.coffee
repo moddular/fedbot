@@ -7,6 +7,7 @@
 #   hubot all the emoji - Get all the emoji
 #
 
+_ = require 'underscore'
 emoji = require('../data/emoji.json')
 randomValue = require('../lib/random').randomValue
 
@@ -19,8 +20,9 @@ module.exports = (robot) ->
     msg.send getRandomEmoji()
 
   robot.respond /emoji bomb( (\d+))?/i, (msg) ->
-    count = parseInt (msg.match[2] || 5), 10
-    msg.send (getRandomEmoji() for i in [1..count]).join(' ')
+    count = msg.match[2] || 5
+    bomb = _.sample emoji, count
+    msg.send (":#{em}:" for em in bomb).join(' ')
 
   robot.respond /all the emoji\b/i, (msg) ->
-    msg.send (":#{e}:" for e in emoji).join('  ')
+    msg.send (":#{e}:" for e in emoji).join(' ')
