@@ -125,6 +125,16 @@ module.exports = (robot) ->
       text: 'You\'d make a great hooker, Phil'
       name: 'Rowan Manning'
     }
+    [
+      {
+        text: 'i was a shepherd and got told off for playing with my willy on stage\nit was the second-to-last time i ever played with my willy on stage in fronts of lots of people'
+        name: 'Phil Booth'
+      }
+      {
+        text: 'phil will you play with your willy when we perfom the big lebowski?'
+        name: 'Adam Tavener'
+      }
+    ]
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
