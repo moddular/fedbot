@@ -29,4 +29,5 @@ module.exports = (robot) ->
     'http://www.blogcdn.com/slideshows/images/slides/127/557/5/S1275575/original.gif?v=1'
     'http://www.blogcdn.com/slideshows/images/slides/127/558/0/S1275580/original.gif?v=1'
     'http://www.blogcdn.com/slideshows/images/slides/127/557/9/S1275579/original.gif?v=1'
+    'http://media2.giphy.com/media/8zDvUDkOB4Iww/giphy.gif'
   ])
