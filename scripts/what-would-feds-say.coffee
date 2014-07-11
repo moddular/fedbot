@@ -121,10 +121,16 @@ module.exports = (robot) ->
       text: 'oh you wouldn\'t catch Hitler playing jungle music at 4 in the morning.'
       name: 'Jack Watkins'
     }
-    {
-      text: 'i was a shepherd and got told off for playing with my willy on stage'
-      name: 'Phil Booth'
-    }
+    [
+      {
+        text: 'i was a shepherd and got told off for playing with my willy on stage\nit was the second-to-last time i ever played with my willy on stage in fronts of lots of people'
+        name: 'Phil Booth'
+      }
+      {
+        text: 'phil will you play with your willy when we perfom the big lebowski?'
+        name: 'Adam Tavener'
+      }
+    ]    
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
