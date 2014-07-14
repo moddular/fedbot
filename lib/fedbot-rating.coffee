@@ -13,13 +13,13 @@ module.exports = (robot) ->
   label = (msg) ->
     rating = getUser(msg).fedbotRating
     if rating <= -8
-      "hate"
+      'hate'
     else if rating >= 8
-      "love"
+      'love'
     else if rating < 0
-      "dislike"
+      'dislike'
     else if rating >= 0
-      "like"
+      'like'
 
   decrease = (msg, amount = 1) ->
     getUser(msg).fedbotRating -= amount

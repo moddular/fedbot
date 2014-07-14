@@ -16,7 +16,7 @@ module.exports = (robot) ->
         result = JSON.parse(body)
 
         if result.response.posts <= 0
-          msg.send "No deskflips found..."
+          msg.send 'No deskflips found...'
           return
 
         urls = [ ]

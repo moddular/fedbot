@@ -19,4 +19,5 @@ module.exports = (robot) ->
   robot.respond /roll (a|[1-9]\d*) (dic?e|d([1-9]\d*)s?)\b/i, (msg) ->
     count = if msg.match[1] is 'a' then 1 else parseInt(msg.match[1], 10)
     sides = if msg.match[3] then parseInt(msg.match[3], 10) else 6
-    msg.reply (roll(sides) while count--).join ', '
+    count += 1
+    msg.reply (roll(sides) while count -= 1).join ', '
