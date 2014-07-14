@@ -135,6 +135,10 @@ module.exports = (robot) ->
         name: 'Adam Tavener'
       }
     ]
+    {
+      text: 'yep, I told them my face is too big'
+      name: 'Rowan Manning'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
