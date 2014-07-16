@@ -27,6 +27,7 @@ module.exports = (robot) ->
     'http://i.imgur.com/8DrBegi.jpg' # Doge
     'http://i.imgur.com/n9U67oh.png' # Nap
     'http://i.imgur.com/9tXA60K.jpg' # Fruity
+    'http://i.imgur.com/h4LMRfz.jpg' # Pret
 
     # Alex
     'http://i.imgur.com/2g54UQM.jpg' # Hot Tub
