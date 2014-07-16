@@ -46,11 +46,11 @@ module.exports = (robot) ->
       cmd = cmd.replace /^hubot/, prefix
       cmd.replace /hubot/ig, robot.name
 
-    emit = cmds.join "\n"
+    emit = cmds.join '\n'
 
     msg.send emit
 
-  robot.router.get "/help", (req, res) ->
+  robot.router.get '/help', (req, res) ->
     cmds = robot.helpCommands().map (cmd) ->
       cmd.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
 

@@ -140,7 +140,7 @@ module.exports = (robot) ->
 
         while body.length > i
           total = total + body[i].stargazers_count
-          i++
+          i += 1
         msg.send "Come on #{msg.message.user.name} Rowan actually has #{total} stars"
 
     options =
