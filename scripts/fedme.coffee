@@ -89,6 +89,7 @@ module.exports = (robot) ->
   naps = [
     'http://i.imgur.com/n9U67oh.png'
     'http://i.imgur.com/9NZBMMS.png'
+    'http://i.imgur.com/RZvgwDr.jpg'
   ]
 
   robot.hear /\bfried eggs?\b/i, (msg) ->
