@@ -2,37 +2,18 @@
 #   Get information on the next MEATup.
 #
 # Commands:
-#   hubot when is the next MEATup? - Displays the date for the next MEATup
+#   hubot when/where is the next MEATup? - Displays the date for the next MEATup
 #
 
 moment = require 'moment'
 
 module.exports = (robot) ->
-  robot.respond /when('?s| is)( the next)? meat\s?up\??\b/i, (msg) ->
-    msg.send getNextMeatupDate(moment())
-
-getNextMeatupDate = (now) ->
-  secondTuesOfThisMonth = getSecondTuesdayOfMonth(now)
-  secondTuesOfNextMonth = getSecondTuesdayOfMonth(getFirstOfMonth(now).add('months', 1))
-  meatupDate = formatDate(
-    if now.unix() < secondTuesOfThisMonth.unix()
-    then secondTuesOfThisMonth
-    else secondTuesOfNextMonth
-  )
-  "The next MEATup will be on #{meatupDate}!"
-
-getFirstOfMonth = (date) ->
-  date.clone().date(1)
-
-getFirstTuesdayOfMonth = (date) ->
-  date = getFirstOfMonth(date)
-  if date.day() > 2
-    date.day(9)
-  else
-    date.day(2)
-
-getSecondTuesdayOfMonth = (date) ->
-  getFirstTuesdayOfMonth(date).day(9)
-
-formatDate = (date) ->
-  date.format('dddd Do MMMM')
+  robot.respond /(when|where)('?s| is)( the next)? meat\s?up\??\b/i, (msg) ->
+    msg.http('http://meatup.info/api/events.json').get() (err, res, body) ->
+      if res.statusCode == 200
+        events = JSON.parse body
+        nextEvent = events[events.length - 1]
+        nextEvent.date = moment(nextEvent.date).format('Do MMMM')
+        msg.send "The next MEATup is on the #{nextEvent.date} at #{nextEvent.venue.name}"
+      else
+        msg.send 'I don\'t know – meatup.info seems to be broken'
