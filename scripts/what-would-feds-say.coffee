@@ -143,6 +143,10 @@ module.exports = (robot) ->
       text: 'Well, if the blond young waitress bites half of my sausage I probably wouldn\'t mind'
       name: 'Jose Bolos'
     }
+    {
+      text: 'I did art A level and I can tell you with authority that is shit'
+      name: 'Nick Call'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
