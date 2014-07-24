@@ -38,6 +38,7 @@ module.exports = (robot) ->
 
     # Glynn
     'http://i.imgur.com/hO44HNU.jpg' # Broken Bunny Ears
+    'http://i.imgur.com/uDwz7nB.jpg' # Glynn Hulk
 
     # Jose
     'http://i.imgur.com/1IpgJ8j.jpg' # Thoughtful Jose
@@ -129,6 +130,9 @@ module.exports = (robot) ->
 
   robot.hear /\bfruity\b/i, (msg) ->
     msg.send 'http://i.imgur.com/9tXA60K.jpg'
+
+  robot.hear /\bglynn\s?hulk\b/, (msg) ->
+    msg.send 'http://i.imgur.com/uDwz7nB.jpg'
 
   robot.hear /\b1300\b/i, (msg) ->
     callback = undefined
