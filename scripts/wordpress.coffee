@@ -10,7 +10,7 @@ randomBetween = require('../lib/random').randomBetween
 module.exports = (robot) ->
 
   quotes = [
-    'Where's your team, Glynn?'
+    'Where\'s your team, Glynn?'
     'Where are your teammates, Glynn?'
     'Are your teammates late again for a meeting, Glynn?'
   ]
