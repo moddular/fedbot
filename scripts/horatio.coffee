@@ -21,5 +21,5 @@ module.exports = (robot) ->
     'http://stream1.gifsoup.com/view1/1336353/horatio-lunettes-o.gif'
   ]
 
-  robot.hear /\b(csi|horatio|yea+h)\b/i, (msg) ->
+  robot.hear /\b(csi|horatio|yeaa+h)\b/i, (msg) ->
     msg.send msg.random images
