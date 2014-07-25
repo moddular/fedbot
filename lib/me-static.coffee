@@ -3,6 +3,8 @@ _ = require 'underscore'
 createImageListPage = require './http-image-list'
 
 module.exports = (robot, name, images) ->
+  robot.meScriptCount ?= 0
+  robot.meScriptCount += 1
 
   meRegExp = new RegExp "#{name} me", 'i'
   bombRegExp = new RegExp "#{name} bomb( (\\d+))?", 'i'

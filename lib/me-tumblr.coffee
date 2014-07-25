@@ -3,6 +3,8 @@ Select = require('soupselect').select
 HtmlParser = require 'htmlparser'
 
 module.exports = (opts) ->
+  opts.robot.meScriptCount ?= 0
+  opts.robot.meScriptCount += 1
 
   meRegExp = new RegExp "#{opts.name} me", 'i'
 
