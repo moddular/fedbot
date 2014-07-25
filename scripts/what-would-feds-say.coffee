@@ -147,6 +147,10 @@ module.exports = (robot) ->
       text: 'I did art A level and I can tell you with authority that is shit'
       name: 'Nick Call'
     }
+    {
+      text: 'It\'s tiny'
+      name: 'Glynn Phillips'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
