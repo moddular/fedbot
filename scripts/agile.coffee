@@ -1,5 +1,5 @@
 # Description:
-#   Chuckle-Shouty
+#   Agile
 #
 # Commands:
 #   None
@@ -14,6 +14,6 @@ module.exports = (robot) ->
     'http://makeameme.org/media/created/the-sound-of-8ptjf0.jpg'
   ]
 
-  robot.hear /\b(chuckle|shouty)\b/i, (msg) ->
+  robot.hear /\b(agile|chuckle|shouty)\b/i, (msg) ->
     if randomBetween(1, 5) is 1
       msg.send msg.random images
