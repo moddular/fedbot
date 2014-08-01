@@ -117,6 +117,40 @@ module.exports = (robot) ->
       text: 'before I knew about the holocaust I always prefered the german soldiers in my set of toy soldiers'
       name: 'Jack Watkins'
     }
+    {
+      text: 'oh you wouldn\'t catch Hitler playing jungle music at 4 in the morning.'
+      name: 'Jack Watkins'
+    }
+    {
+      text: 'You\'d make a great hooker, Phil'
+      name: 'Rowan Manning'
+    }
+    [
+      {
+        text: 'i was a shepherd and got told off for playing with my willy on stage\nit was the second-to-last time i ever played with my willy on stage in fronts of lots of people'
+        name: 'Phil Booth'
+      }
+      {
+        text: 'phil will you play with your willy when we perfom the big lebowski?'
+        name: 'Adam Tavener'
+      }
+    ]
+    {
+      text: 'yep, I told them my face is too big'
+      name: 'Rowan Manning'
+    }
+    {
+      text: 'Well, if the blond young waitress bites half of my sausage I probably wouldn\'t mind'
+      name: 'Jose Bolos'
+    }
+    {
+      text: 'I did art A level and I can tell you with authority that is shit'
+      name: 'Nick Call'
+    }
+    {
+      text: 'It\'s tiny'
+      name: 'Glynn Phillips'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->

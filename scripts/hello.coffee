@@ -12,39 +12,39 @@ module.exports = (robot) ->
   responses = {
 
     love: [
-      "Hi %! It's nice of you to say hello",
-      "Oh %, you've made my day! Hello",
-      "Hey %!",
-      "*blush* Hi %"
+      'Hi %! It\'s nice of you to say hello'
+      'Oh %, you\'ve made my day! Hello'
+      'Hey %!'
+      '*blush* Hi %'
     ],
 
     like: [
-      "Hi %",
-      "Hello %",
-      "Hey %",
-      "'Sup %"
+      'Hi %'
+      'Hello %'
+      'Hey %'
+      '\'Sup %'
     ],
 
     dislike: [
-      "Whatever %",
-      "Sod off %",
-      "*yawn*",
-      "*shrugs*",
-      "Yeah. %. Hi..."
+      'Whatever %'
+      'Sod off %'
+      '*yawn*'
+      '*shrugs*'
+      'Yeah. %. Hi...'
     ],
 
     hate: [
-      "I'm not your friend, %",
-      "Piss off %",
-      "Don't talk to me please, %",
-      "%, just leave me alone!",
-      "Does anybody else thing % should just go away?"
+      'I\'m not your friend, %'
+      'Piss off %'
+      'Don\'t talk to me please, %'
+      '%, just leave me alone!'
+      'Does anybody else thing % should just go away?'
     ]
 
   }
 
-  hello = new RegExp("^(hi|hiya|hello|hey|heya) #{robot.name}", "i")
-  helloCommand = new RegExp("(hi|hiya|hello|hey|heya)(\s.*)?", "i")
+  hello = new RegExp("^(hi|hiya|hello|hey|heya) #{robot.name}", 'i')
+  helloCommand = new RegExp('(hi|hiya|hello|hey|heya)(\s.*)?', 'i')
 
   action = (msg) ->
     label = rating.label msg

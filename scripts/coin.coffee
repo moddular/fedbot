@@ -16,4 +16,5 @@ module.exports = (robot) ->
 
   robot.respond /flip (a|[1-9]\d*) coins?\b/i, (msg) ->
     count = if msg.match[1] is 'a' then 1 else parseInt msg.match[1], 10
-    msg.reply (flip() while count--).join ', '
+    count += 1
+    msg.reply (flip() while count -= 1).join ', '

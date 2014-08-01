@@ -169,6 +169,10 @@ judeQuotes = [
     text: 'You sound reluctant to admit the fact Dawn. You like the Stump too much. You are the Gollum of front-end development.'
     keywords: 'dawn stump success front-end gollum'
   }
+  {
+    text: 'If I\'m going to spunk $5 mil on an apartment (and I\'m not, ever), then I want views over something that doesn\'t look like an industrial accident.'
+    keywords: 'flat flats NY USA apartment views'
+  }
 ]
 
 randomValue = require('../lib/random').randomValue

@@ -7,9 +7,9 @@
 
 module.exports = (robot) ->
 
-  rating = require("../lib/fedbot-rating")(robot)
+  rating = require('../lib/fedbot-rating')(robot)
 
-  quantityModifiers = "(very|really|extremely|quite|enormously|incredibly|massively|definitely|pretty)"
+  quantityModifiers = '(very|really|extremely|quite|enormously|incredibly|massively|definitely|pretty)'
 
   # General bad feedback
   badFeedback = ///
@@ -36,7 +36,7 @@ module.exports = (robot) ->
   \b///i
   robot.hear badFeedback, (msg) ->
     rating.decrease msg, 1
-    msg.reply ":("
+    msg.reply ':('
 
   # General good feedback
   goodFeedback = ///
@@ -63,10 +63,10 @@ module.exports = (robot) ->
   \b///i
   robot.hear goodFeedback, (msg) ->
     rating.increase msg, 1
-    msg.reply ":)"
+    msg.reply ':)'
 
   # Shhh
-  quietWords = "(be quiet|shh+|hush|shut up|shut the [a-z]+ up)"
+  quietWords = '(be quiet|shh+|hush|shut up|shut the [a-z]+ up)'
   robot.hear ///fedbot\s#{quietWords}|#{quietWords}\sfedbot///i, (msg) ->
     rating.decrease msg, 1
     quietWord = if msg.match[1] then msg.match[1] else msg.match[2]

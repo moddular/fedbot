@@ -16,19 +16,19 @@
 _ = require 'underscore'
 
 feds = [
-  "Adam",
-  "Alex",
-  "Andrew",
-  "Dan",
-  "Dawn",
-  "Glynn",
-  "Hollie",
-  "Jack",
-  "Jose",
-  "Jude",
-  "Nick",
-  "Phil",
-  "Rowan"
+  'Adam'
+  'Alex'
+  'Andrew'
+  'Dan'
+  'Dawn'
+  'Glynn'
+  'Hollie'
+  'Jack'
+  'Jose'
+  'Jude'
+  'Nick'
+  'Phil'
+  'Rowan'
 ]
 
 module.exports = (robot) ->
@@ -44,14 +44,14 @@ module.exports = (robot) ->
       "#{pair[0]}'s code is being reviewed by #{pair[1]} today"
 
   getDateToday = ->
-    (new Date()).toISOString().split("T")[0]
+    (new Date()).toISOString().split('T')[0]
 
   getPairsForToday = ->
     today = getDateToday()
-    if robot.brain.get("lastCodeReviewGenerationDate") != today
-      robot.brain.set "lastCodeReviewGenerationDate", today
-      robot.brain.set "codeReviewTable", generatePairs()
-    robot.brain.get "codeReviewTable"
+    if robot.brain.get('lastCodeReviewGenerationDate') != today
+      robot.brain.set 'lastCodeReviewGenerationDate', today
+      robot.brain.set 'codeReviewTable', generatePairs()
+    robot.brain.get 'codeReviewTable'
 
   robot.respond /code review table/i, (msg) ->
-    msg.send (outputPair pair for pair in getPairsForToday()).join("\n")
+    msg.send (outputPair pair for pair in getPairsForToday()).join('\n')

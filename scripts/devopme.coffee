@@ -13,12 +13,12 @@ module.exports = (robot) ->
     robot.brain.data.devop_counter || = 0
 
   robot.respond /devop me/i, (msg) ->
-    msg.http("http://api.tumblr.com/v2/blog/devopsreactions.tumblr.com/posts/?api_key=QnPKLySe5CRuDzp89qYw0XtXVboNo77fHTUituK3vZUKfCUQkY")
+    msg.http('http://api.tumblr.com/v2/blog/devopsreactions.tumblr.com/posts/?api_key=QnPKLySe5CRuDzp89qYw0XtXVboNo77fHTUituK3vZUKfCUQkY')
       .get() (err, res, body) ->
         result = JSON.parse(body)
 
         if result.response.posts <= 0
-          msg.send "No reactions to display."
+          msg.send 'No reactions to display.'
           return
 
         urls = [ ]
@@ -31,7 +31,7 @@ module.exports = (robot) ->
 
             # ... then we can look for a gif to add to our message object
             for arrayPiece in bodySrcBits
-              imageSrcIndex = arrayPiece.indexOf ".gif", 0
+              imageSrcIndex = arrayPiece.indexOf '.gif', 0
               if imageSrcIndex > 0
                 urls.push({name: child.title, image: arrayPiece})
 

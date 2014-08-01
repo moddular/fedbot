@@ -13,8 +13,8 @@
 module.exports = (robot) ->
   robot.respond /(image|img)( me)? (.*)/i, (msg) ->
     query = msg.match[3]
-    if msg.message.user.name == "Jude"
-      return msg.send "Sorry, Jude, I can't let you do that"
+    if msg.message.user.name == 'Jude'
+      return msg.send 'Sorry, Jude, I can\'t let you do that'
 
     ## get today's animal from the brain
     if msg.message.match /(animal of the day|aotd)/i
@@ -24,14 +24,14 @@ module.exports = (robot) ->
       msg.send url
 
   robot.respond /nature( me)? (.*)/i, (msg) ->
-    if msg.message.user.name == "Jude"
-      return msg.send "Sorry, Jude, I can't let you do that"
+    if msg.message.user.name == 'Jude'
+      return msg.send 'Sorry, Jude, I can\'t let you do that'
     imageMe msg, msg.match[2], false, false, true, (url) ->
       msg.send url
 
   robot.respond /animate( me)? (.*)/i, (msg) ->
-    if msg.message.user.name == "Jude"
-      return msg.send "Sorry, Jude, I can't let you do that"
+    if msg.message.user.name == 'Jude'
+      return msg.send 'Sorry, Jude, I can\'t let you do that'
     imageMe msg, msg.match[2], true, (url) ->
       msg.send url
 

@@ -6,10 +6,5 @@
 #
 
 module.exports = (robot) ->
-
-  responses = [
-    "http://24.media.tumblr.com/tumblr_m0286a436Q1qfqcq8o1_500.gif"
-  ]
-
   robot.hear /\bover 9000\b/i, (msg) ->
-    msg.send msg.random responses
+    msg.send 'http://24.media.tumblr.com/tumblr_m0286a436Q1qfqcq8o1_500.gif'

@@ -20,7 +20,7 @@ module.exports = (robot) ->
 
   robot.respond /\b(what'?s on kerb\??)\b/i, (msg) ->
     getKerbWeek msg, (schedule) ->
-      msg.send "On KERB KX this week: \n" + schedule
+      msg.send 'On KERB KX this week: \n' + schedule
 
   getKerbWeek = (msg, cb) ->
     robot.http('http://www.kerbfood.com/kings-cross/')
@@ -28,7 +28,7 @@ module.exports = (robot) ->
         if err
           cb "Something went wrong, the http request failed with #{err}"
         if res.statusCode isnt 200
-          cb "Something went wrong, the response was not 200"
+          cb 'Something went wrong, the response was not 200'
         $ = Cheerio.load(body)
         rotaListItems = $(kerb_dom_selector)
         str = ''

@@ -8,8 +8,8 @@
 module.exports = (robot) ->
 
   images = [
-    "http://i.imgur.com/wyMiAsh.png",
-    "http://i.imgur.com/lWCvLtU.png"
+    'http://i.imgur.com/wyMiAsh.png'
+    'http://i.imgur.com/lWCvLtU.png'
   ]
 
   robot.hear /\bice[\s\-]?cream\b/i, (msg) ->
