@@ -128,6 +128,9 @@ module.exports = (robot) ->
   robot.hear /\bfruity\b/i, (msg) ->
     msg.send "http://i.imgur.com/9tXA60K.jpg"
 
+  robot.hear /\bno\sphil\b/i, (msg) ->
+    msg.send "http://i.imgur.com/PEgF5xz.jpg"
+
   robot.hear /\b1300\b/i, (msg) ->
     callback = undefined
     options = undefined
