@@ -97,7 +97,8 @@ module.exports = (robot) ->
     msg.send 'http://i.imgur.com/34Qq17u.jpg'
 
   robot.hear /\bcheese\b/i, (msg) ->
-    msg.send 'http://i.imgur.com/nkQyVr4.gif'
+    if randomBetween(1, 3) is 1
+      msg.send 'http://i.imgur.com/nkQyVr4.gif'
 
   robot.hear /\bbunn(y|ies)\b/i, (msg) ->
     if /\bjose\b/i.test msg.message.text
