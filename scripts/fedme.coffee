@@ -27,6 +27,7 @@ module.exports = (robot) ->
     'http://i.imgur.com/8DrBegi.jpg' # Doge
     'http://i.imgur.com/n9U67oh.png' # Nap
     'http://i.imgur.com/9tXA60K.jpg' # Fruity
+    'http://i.imgur.com/zcqxK79.gif' # Fruity 2
     'http://i.imgur.com/h4LMRfz.jpg' # Pret
 
     # Alex
@@ -93,6 +94,11 @@ module.exports = (robot) ->
     'http://i.imgur.com/RZvgwDr.jpg'
   ]
 
+  fruities = [
+    'http://i.imgur.com/9tXA60K.jpg'
+    'http://i.imgur.com/zcqxK79.gif'
+  ]
+
   robot.hear /\bfried eggs?\b/i, (msg) ->
     msg.send 'http://i.imgur.com/34Qq17u.jpg'
 
@@ -130,7 +136,7 @@ module.exports = (robot) ->
     msg.send 'http://i.imgur.com/1eaSCnk.jpg'
 
   robot.hear /\bfruity\b/i, (msg) ->
-    msg.send 'http://i.imgur.com/9tXA60K.jpg'
+    msg.send msg.random fruities
 
   robot.hear /\bglynn\s?hulk\b/i, (msg) ->
     msg.send 'http://i.imgur.com/uDwz7nB.jpg'
