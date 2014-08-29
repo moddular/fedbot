@@ -24,7 +24,7 @@ module.exports = (robot) ->
     'Oxfam'
     'WaterAid'
     'your local donkey sanctuary'
-  ]  
+  ]
 
   prefixes = [
     'Why not try'
