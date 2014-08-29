@@ -11,10 +11,18 @@ randomValue = require('../lib/random').randomValue
 randomBetween = require('../lib/random').randomBetween
 
 module.exports = (robot) ->
-  robot.respond /insult me\b/i, sendInsult
-
-sendInsult = (msg) ->
-  msg.reply generateInsult()
+  robot.respond /insult ([a-z0-9\s\-]+)/i, (msg) ->
+    who = msg.match[1]
+    if who == 'me'
+      msg.reply generateInsult()
+    else
+      users = robot.brain.usersForFuzzyName who
+      if users.length == 0
+        msg.reply "I don't know who #{who} is"
+      else if users.length > 1
+        msg.reply 'I\'m not sure who you mean, one of these? ' + users.map((user) -> user.name).join(', ')
+      else
+        msg.send users[0].name + ': ' + generateInsult()
 
 generateInsult = ->
   randomValue(insultFormats)()
