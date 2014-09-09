@@ -64,6 +64,7 @@ module.exports = (robot) ->
     'http://replygif.net/i/570.gif'
     'http://replygif.net/i/219.gif'
     'http://replygif.net/i/580.gif'
+    'http://i.imgur.com/sG0tVNX.gif'
   ]
 
   robot.hear /\b(applau(d|se)|bravo|slow clap)\b/i, (msg) ->
