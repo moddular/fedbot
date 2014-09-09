@@ -1,4 +1,6 @@
 
+getGifUrl = require './get-gif-url'
+
 module.exports = (opts) ->
   opts.robot.meScriptCount ?= 0
   opts.robot.meScriptCount += 1
@@ -14,7 +16,8 @@ module.exports = (opts) ->
     getUrlWithRedirect msg, url, (err, res, body) ->
       try
         posts = JSON.parse body
-        done posts[0].data.children[0].data.url
+        getGifUrl posts[0].data.children[0].data.url, (err, url) ->
+          done url
       catch err
         console.log err
         done()
