@@ -1,4 +1,5 @@
 [
     "hubot-conspire",
-    "hubot-dogeme"
+    "hubot-dogeme",
+    "hubot-markov"
 ]
