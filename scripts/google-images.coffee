@@ -10,11 +10,36 @@
 #   hubot benny hill me <url> - Adds Benny Hill music to the specified URL.
 #   hubot benny hill me <query> - Searches Google Images for the specified query and Benny Hill's it.
 
+# substitution queries
+wholesome = [
+  "unicorns",
+  "kittens",
+  "puppies",
+  "\"shetland pony\"",
+  "\"my little pony\"",
+  "\"sylvanian families\"",
+  "\"daniel o'donnell\"",
+  "teletubbies",
+  "\"beautiful rainbows\"",
+  "\"the sound of music julie andrews\"",
+  "\"hello kitty\"",
+  "\"care bears\"",
+  "\"successories motivational poster\"",
+  "\"inspirational quotes\"",
+  "\"daily affirmation\"",
+  "\"daily squee\"",
+  "\"mary whitehouse\"",
+  "\"code of conduct\""
+]
+
+naughty_step = [
+  "Jude",
+  "Jack Watkins"
+]
+
 module.exports = (robot) ->
   robot.respond /(image|img)( me)? (.*)/i, (msg) ->
     query = msg.match[3]
-    if msg.message.user.name == 'Jude' || msg.message.user.name == 'Jack Watkins'
-      return msg.send 'Sorry, ' + msg.message.user.name + ', I can\'t let you do that'
 
     ## get today's animal from the brain
     if msg.message.match /(animal of the day|aotd)/i
@@ -24,15 +49,13 @@ module.exports = (robot) ->
       msg.send url
 
   robot.respond /nature( me)? (.*)/i, (msg) ->
-    if msg.message.user.name == 'Jude' || msg.message.user.name == 'Jack Watkins'
-      return msg.send 'Sorry, ' + msg.message.user.name + ', I can\'t let you do that'
-    imageMe msg, msg.match[2], false, false, true, (url) ->
+    query = msg.match[2]
+    imageMe msg, query, false, false, true, (url) ->
       msg.send url
 
   robot.respond /animate( me)? (.*)/i, (msg) ->
-    if msg.message.user.name == 'Jude' || msg.message.user.name == 'Jack Watkins'
-      return msg.send 'Sorry, ' + msg.message.user.name + ', I can\'t let you do that'
-    imageMe msg, msg.match[2], true, (url) ->
+    query = msg.match[2]
+    imageMe msg, query, true, (url) ->
       msg.send url
 
   robot.respond /(?:mo?u)?sta(?:s|c)he?(?: me)? (.*)/i, (msg) ->
@@ -58,7 +81,8 @@ imageMe = (msg, query, animated, faces, nature, cb) ->
   cb = animated if typeof animated == 'function'
   cb = faces if typeof faces == 'function'
   cb = nature if typeof nature == 'function'
-  q = v: '1.0', rsz: '8', q: query, safe: 'active'
+  actual_query = if (msg.message.user.name in naughty_step) then msg.random wholesome else query
+  q = v: '1.0', rsz: '8', q: actual_query, safe: 'active'
   q.imgtype = 'animated' if typeof animated is 'boolean' and animated is true
   q.imgtype = 'face' if typeof faces is 'boolean' and faces is true
   q.as_sitesearch = 'nature.com' if typeof nature is 'boolean' and nature is true
