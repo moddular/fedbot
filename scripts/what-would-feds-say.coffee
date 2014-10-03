@@ -151,6 +151,10 @@ module.exports = (robot) ->
       text: 'It\'s tiny'
       name: 'Glynn Phillips'
     }
+    {
+      text: 'The Charles is the devtoilet of pubs'
+      name: 'Jose Bolos'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
