@@ -27,6 +27,6 @@
         "request": "~2"
     },
     "devDependencies": {
-        "coffeelint": "~1.5"
+        "coffeelint": "~1.6"
     }
 }
