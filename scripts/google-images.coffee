@@ -12,29 +12,29 @@
 
 # substitution queries
 wholesome = [
-  "unicorns",
-  "kittens",
-  "puppies",
-  "\"shetland pony\"",
-  "\"my little pony\"",
-  "\"sylvanian families\"",
-  "\"daniel o'donnell\"",
-  "teletubbies",
-  "\"beautiful rainbows\"",
-  "\"the sound of music julie andrews\"",
-  "\"hello kitty\"",
-  "\"care bears\"",
-  "\"successories motivational poster\"",
-  "\"inspirational quotes\"",
-  "\"daily affirmation\"",
-  "\"daily squee\"",
-  "\"mary whitehouse\"",
-  "\"code of conduct\""
+  'unicorns',
+  'kittens',
+  'puppies',
+  '"shetland pony"',
+  '"my little pony"',
+  '"sylvanian families"',
+  '"daniel o\'donnell"',
+  'teletubbies',
+  '"beautiful rainbows"',
+  '"the sound of music julie andrews"',
+  '"hello kitty"',
+  '"care bears"',
+  '"successories motivational poster"',
+  '"inspirational quotes"',
+  '"daily affirmation"',
+  '"daily squee"',
+  '"mary whitehouse"',
+  '"code of conduct"'
 ]
 
 naughty_step = [
-  "Jude",
-  "Jack Watkins"
+  'Jude',
+  'Jack Watkins'
 ]
 
 module.exports = (robot) ->
