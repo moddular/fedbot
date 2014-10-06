@@ -99,6 +99,11 @@ module.exports = (robot) ->
     'http://i.imgur.com/zcqxK79.gif'
   ]
 
+  noPhilClubs = [
+    'http://i.imgur.com/PEgF5xz.jpg'
+    'http://i.imgur.com/vJ0j4bv.jpg'
+  ]
+
   robot.hear /\bfried eggs?\b/i, (msg) ->
     msg.send 'http://i.imgur.com/34Qq17u.jpg'
 
@@ -141,8 +146,8 @@ module.exports = (robot) ->
   robot.hear /\bglynn\s?hulk\b/i, (msg) ->
     msg.send 'http://i.imgur.com/uDwz7nB.jpg'
 
-  robot.hear /\bno\sphil\b/i, (msg) ->
-    msg.send "http://i.imgur.com/PEgF5xz.jpg"
+  robot.hear /\bno[\s\-]phil\b/i, (msg) ->
+    msg.send msg.random noPhilClubs
 
   robot.hear /\b1300\b/i, (msg) ->
     callback = undefined
