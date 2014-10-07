@@ -5,23 +5,6 @@ randomBetween = require('../lib/random').randomBetween
 
 module.exports = (robot) ->
 
-  leavers = [
-    'Perry Harlock'
-  ]
-
-  responses = [
-    'Why, %, Why!?'
-    'There they go again, % always leaves...'
-    'I hate it when % leaves :('
-    'Come back, %, come back!'
-    'Nooooooooooo!!!! %!!'
-    'And stay out, %!'
-  ]
-
-  robot.leave (msg) ->
-    if msg.message.user.name in leavers
-      msg.send msg.random(responses).replace('%', msg.message.user.name)
-
   robot.hear /\bperry\b/i, (msg) ->
     if randomBetween(1, 3) is 1
       msg.send msg.random [
