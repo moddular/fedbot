@@ -34,3 +34,14 @@ module.exports = (robot) ->
         'Perry?... Oh! Short, no work to do, made innuendos? Yeah I know who you mean'
         'Perry? Does not compute'
       ]
+
+  robot.hear /\bdan(iel)?\b/i, (msg) ->
+    if randomBetween(1, 3) is 1
+      msg.send msg.random [
+        'I wish Dan hadn\'t left'
+        '*sigh* please don\'t talk about Dan – it\'s too painful'
+        'Dan? *sniff* he was my favourite'
+        'When\'s Dan coming back'
+        'I miss Dan'
+        'Oh Dan, our time together was too short'
+      ]
