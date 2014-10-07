@@ -27,4 +27,5 @@ module.exports = (robot) ->
         'When\'s Dan coming back'
         'I miss Dan'
         'Oh Dan, our time together was too short'
+        'Oh Dan. Somebody make a pun, quickly, I need to remember what it was like'
       ]
