@@ -33,8 +33,7 @@ wholesome = [
 ]
 
 naughty_step = [
-  'Jude',
-  'Jack Watkins'
+  'Jude'
 ]
 
 module.exports = (robot) ->
