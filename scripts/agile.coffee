@@ -15,5 +15,5 @@ module.exports = (robot) ->
   ]
 
   robot.hear /\b(agile|chuckle|shouty)\b/i, (msg) ->
-    if randomBetween(1, 5) is 1
+    if randomBetween(1, 10) is 1
       msg.send msg.random images
