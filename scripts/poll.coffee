@@ -62,6 +62,13 @@ module.exports = (robot) ->
     else
       'No results are available.'
 
+  getVotersMessage = (poll) ->
+    if poll
+      votersList = (robot.brain.userForId(id).name for id in Object.keys(poll.votes)).join('\n')
+      'The following people have voted in the poll:\n' + votersList
+    else
+      'No poll has been run'
+
   robot.respond /((?:please )?)poll me (.+)/i, (msg) ->
     if getCurrentPoll()
       msg.reply 'There is already a poll running. You must end the current poll before starting a new one.'
@@ -116,3 +123,10 @@ module.exports = (robot) ->
       msg.send 'New answers added to poll (' + currentPoll.answers.join(', ') + ')'
     else
       msg.reply 'There is no poll running.'
+
+  robot.respond /who (has )?voted/i, (msg) ->
+    currentPoll = getCurrentPoll()
+    if currentPoll
+      msg.send getVotersMessage(currentPoll)
+    else
+      msg.send getVotersMessage(getLastPoll())
