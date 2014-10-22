@@ -40,5 +40,5 @@ module.exports = (robot) ->
     msg.send message
 
   robot.hear /.*/, (msg) ->
-    if randomBetween(1, 5) is 1 and /alex/i.test(msg.message.user.name) and today.toDateString() == finishDate.toDateString()
+    if randomBetween(1, 5) is 1 and (msg.message.user.name == 'Alex Kilgour' || msg.message.user.name == 'Andrew Walker') and today.toDateString() == finishDate.toDateString()
       msg.send "#{msg.message.user.name} #{msg.random responses}"
