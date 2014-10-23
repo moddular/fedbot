@@ -14,12 +14,12 @@ roundDown = (num) ->
   res[1]
 
 responses = [
-	'shut up and get to it, you have a redesign to finish before the end of the day'
-	'that redesign wont code itself'
-	'less chat more code, you have a redesign to finish'
-	'have you considered closing campfire and getting on with that redesign'
-	'its always nice to hear from you but haven\'t you got a redesign to get on with'
-	'the clock is ticking and and you are just wasting time now' 
+  'shut up and get to it, you have a redesign to finish before the end of the day'
+  'that redesign wont code itself'
+  'less chat more code, you have a redesign to finish'
+  'have you considered closing campfire and getting on with that redesign'
+  'its always nice to hear from you but haven\'t you got a redesign to get on with'
+  'the clock is ticking and and you are just wasting time now'
 ]
 
 hour = 1000 * 60 * 60
