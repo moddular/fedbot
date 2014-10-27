@@ -155,6 +155,14 @@ module.exports = (robot) ->
       text: 'The Charles is the devtoilet of pubs'
       name: 'Jose Bolos'
     }
+    {
+      text: 'Rowan come over here and touch it, see if it feels like flesh'
+      name: 'Andrew Mee'
+    }
+    {
+      text: 'I fancy a :poop: in an altmetrics donut'
+      name: 'Hollie Kay'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
