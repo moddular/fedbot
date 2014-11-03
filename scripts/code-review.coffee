@@ -20,7 +20,6 @@ feds = [
   'Alex'
   'Andrew M'
   'Andrew W'
-  'Dan'
   'Dawn'
   'Glynn'
   'Hollie'
