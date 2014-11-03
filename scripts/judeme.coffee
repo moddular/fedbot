@@ -24,17 +24,17 @@ module.exports = (robot) ->
     'http://www.gyford.com/images/jude.jpg',
   ])
 
-  robot.hear /judehoff/i, (msg) ->
+  robot.hear /\bjudehoff\b/i, (msg) ->
     msg.send 'http://i.imgur.com/Tfq7Bi7.gif'
 
-  robot.hear /judehulk/i, (msg) ->
+  robot.hear /\bjudehulk\b/i, (msg) ->
     msg.send 'http://i.imgur.com/83ywTHA.png'
 
-  robot.hear /our glorious leader/i, (msg) ->
+  robot.hear /\bglorious leader\b/i, (msg) ->
     msg.send 'http://i.imgur.com/nj8WtWv.jpg'
 
-  robot.hear /\bdevil(ish|ishly|\b)/i, (msg) ->
+  robot.hear /\b(devil(s|ish|ishly)?)\b/i, (msg) ->
     msg.send 'http://i.imgur.com/zEEPSwd.jpg'
 
-  robot.hear /\bhench|ripped|buff|bulk up\b/i, (msg) ->
+  robot.hear /\b(hench|ripped|buff|bulk up)\b/i, (msg) ->
     msg.send 'http://i.imgur.com/MQq4jd4.png'
