@@ -163,6 +163,10 @@ module.exports = (robot) ->
       text: 'I fancy a :poop: in an altmetrics donut'
       name: 'Hollie Kay'
     }
+    {
+      text: 'I think I've eaten a lot of fly poop in my time.'
+      name: 'Jack Watkins'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
