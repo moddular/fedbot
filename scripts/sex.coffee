@@ -5,7 +5,9 @@
 #   None
 #
 
-module.exports = (robot) ->
+randomBetween = require('../lib/random').randomBetween
 
+module.exports = (robot) ->
   robot.hear /\b(sex)\b/i, (msg) ->
-    msg.send 'http://i42.tinypic.com/2e4x53o.gif'
+    if randomBetween(1, 5) == 1
+      msg.send 'http://i42.tinypic.com/2e4x53o.gif'
