@@ -164,7 +164,7 @@ module.exports = (robot) ->
       name: 'Hollie Kay'
     }
     {
-      text: 'I think I've eaten a lot of fly poop in my time.'
+      text: 'I think I\'ve eaten a lot of fly poop in my time.'
       name: 'Jack Watkins'
     }
   ]
