@@ -167,6 +167,10 @@ module.exports = (robot) ->
       text: 'I think I\'ve eaten a lot of fly poop in my time.'
       name: 'Jack Watkins'
     }
+    {
+      text: 'but it does grow fast and thick'
+      name: 'Glynn Phillips'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
