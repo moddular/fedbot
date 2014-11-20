@@ -171,6 +171,10 @@ module.exports = (robot) ->
       text: 'but it does grow fast and thick'
       name: 'Glynn Phillips'
     }
+    {
+      text: 'I wipe my balls with this'
+      name: 'Hollie Kay'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
