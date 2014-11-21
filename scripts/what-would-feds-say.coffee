@@ -175,6 +175,10 @@ module.exports = (robot) ->
       text: 'I wipe my balls with this'
       name: 'Hollie Kay'
     }
+    {
+      text: 'Never go near the arse end of anything on your wedding day'
+      name: 'Glynn Phillips'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
