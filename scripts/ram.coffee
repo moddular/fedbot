@@ -20,5 +20,6 @@ module.exports = (robot) ->
     'http://www.eonline.com/eol_images/Entire_Site/2014017/rs_360x257-140117134531-tumblr_my1pkgyKUF1t5ksxco1_400.gif',
     'http://24.media.tumblr.com/987bf8ae2afe7f2e0cdbb0f98ad6fdff/tumblr_n0jxcnYHAP1svecmko1_400.gif',
     'http://24.media.tumblr.com/ab7bb0d5342c2bbf83043dc3e3f5aaaa/tumblr_mmkq9f7CfD1rkx8jro1_400.gif',
-    'http://24.media.tumblr.com/b0a5272db4fab50fc302e5eb2264606c/tumblr_n5clhc0aia1svxaato1_500.gif'
+    'http://24.media.tumblr.com/b0a5272db4fab50fc302e5eb2264606c/tumblr_n5clhc0aia1svxaato1_500.gif',
+    'http://asset-f.soup.io/asset/8829/0432_f46d.gif'
   ])
