@@ -21,6 +21,7 @@ module.exports = (robot) ->
     'http://i1.kym-cdn.com/photos/images/original/000/214/265/1201133266390.jpg'
     'http://i0.kym-cdn.com/photos/images/original/000/173/582/Wat-boxxy.jpg'
     'http://i0.kym-cdn.com/photos/images/original/000/173/575/25810.jpg'
+    'http://cathumor.net/wp-content/uploads/2014/01/cat-humor-funny-cats-gif-2.gif'
   ]
 
   robot.hear /\b(wat)\b/i, (msg) ->
