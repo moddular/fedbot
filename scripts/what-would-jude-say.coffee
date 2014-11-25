@@ -173,6 +173,10 @@ judeQuotes = [
     text: 'If I\'m going to spunk $5 mil on an apartment (and I\'m not, ever), then I want views over something that doesn\'t look like an industrial accident.'
     keywords: 'flat flats NY USA apartment views'
   }
+  {
+    text: 'Go ahead without me, I\'m busy browsing the Hewlett Packard site.'
+    keywords: 'computer computers busy meeting browse browsing'
+  }
 ]
 
 randomValue = require('../lib/random').randomValue
