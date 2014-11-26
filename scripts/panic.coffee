@@ -20,7 +20,7 @@ module.exports = (robot) ->
     'https://warosu.org/data/tg/img/0332/46/1404751534916.gif'
   ]
 
-  robot.hear /\bpanic\b/i, (msg) ->
+  robot.hear /\b(panic|panics|panicking|panicky)\b/i, (msg) ->
     msg.send msg.random responses
 
   createImageListPage(
