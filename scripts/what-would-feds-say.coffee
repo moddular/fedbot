@@ -179,6 +179,10 @@ module.exports = (robot) ->
       text: 'Never go near the arse end of anything on your wedding day'
       name: 'Glynn Phillips'
     }
+    {
+      text: 'Because kids are hard.'
+      name: 'Alex Kilgour'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
