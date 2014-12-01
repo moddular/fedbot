@@ -183,6 +183,10 @@ module.exports = (robot) ->
       text: 'Because kids are hard.'
       name: 'Alex Kilgour'
     }
+    {
+      text: 'not as big as it looks'
+      name: 'Adam Tavener'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
