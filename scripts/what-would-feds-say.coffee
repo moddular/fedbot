@@ -187,6 +187,10 @@ module.exports = (robot) ->
       text: 'not as big as it looks'
       name: 'Adam Tavener'
     }
+    {
+      text: 'Glynn it helps if you keep it in your throat for a while'
+      name: 'Hollie Kay'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
