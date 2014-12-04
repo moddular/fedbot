@@ -191,6 +191,10 @@ module.exports = (robot) ->
       text: 'Glynn it helps if you keep it in your throat for a while'
       name: 'Hollie Kay'
     }
+    {
+      text: 'fuck dalston and fuck all of those people'
+      name: 'Hollie Kay'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
