@@ -6,7 +6,7 @@
 #   hubot feed bomb N - Get N animals stealing food images
 
 module.exports = (robot) ->
-  require('../lib/me-static')(robot, 'feed', [
+  require('./helpers/me-static')(robot, 'feed', [
     'http://www.blogcdn.com/slideshows/images/slides/127/555/7/S1275557/original.gif?v=1'
     'http://www.blogcdn.com/slideshows/images/slides/127/557/3/S1275573/original.gif?v=1'
     'http://www.blogcdn.com/slideshows/images/slides/127/556/2/S1275562/original.gif?v=1'

@@ -9,7 +9,7 @@
 
 _ = require 'underscore'
 emoji = require('../data/emoji.json')
-randomValue = require('../lib/random').randomValue
+randomValue = require('./helpers/random').randomValue
 
 module.exports = (robot) ->
 

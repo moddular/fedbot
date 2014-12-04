@@ -1,7 +1,7 @@
 # Description:
 #   Campus...
 
-randomBetween = require('../lib/random').randomBetween
+randomBetween = require('./helpers/random').randomBetween
 
 module.exports = (robot) ->
   robot.hear /\bcampus( digital|\.macmillan)\b/i, (msg) ->

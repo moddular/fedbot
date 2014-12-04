@@ -1,7 +1,7 @@
 # Description:
 #   It's a puppet!
 
-randomBetween = require('../lib/random').randomBetween
+randomBetween = require('./helpers/random').randomBetween
 
 module.exports = (robot) ->
   robot.hear /\bpuppet\b/i, (msg) ->

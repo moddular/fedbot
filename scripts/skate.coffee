@@ -6,7 +6,7 @@
 #   hubot skate bomb N - Get N skating GIFs
 
 module.exports = (robot) ->
-  require('../lib/me-static')(robot, 'skate', [
+  require('./helpers/me-static')(robot, 'skate', [
     'http://24.media.tumblr.com/tumblr_mcfno1GmXo1rpiog6o1_500.gif'
     'http://37.media.tumblr.com/b5db480daa1c5cf021320cf88ed37e5d/tumblr_mhg4c3hHP71riuhqgo1_400.gif'
     'http://cdn.gifbay.com/2013/07/truco_de_skate_fail-66460.gif'

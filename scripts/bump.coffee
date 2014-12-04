@@ -5,7 +5,7 @@
 #   hubot bump me <pr> - Bump a pull request
 #
 
-randomValue = require('../lib/random').randomValue
+randomValue = require('./helpers/random').randomValue
 
 module.exports = (robot) ->
 

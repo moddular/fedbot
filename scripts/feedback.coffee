@@ -7,7 +7,7 @@
 
 module.exports = (robot) ->
 
-  rating = require('../lib/fedbot-rating')(robot)
+  rating = require('./helpers/fedbot-rating')(robot)
 
   quantityModifiers = '(very|really|extremely|quite|enormously|incredibly|massively|definitely|pretty)'
 

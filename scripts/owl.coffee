@@ -6,7 +6,7 @@
 #   hubot owl bomb N - Get N owls
 
 module.exports = (robot) ->
-  require('../lib/me-static')(robot, 'owl', [
+  require('./helpers/me-static')(robot, 'owl', [
     'http://i.imgur.com/2Tf2F8A.gif'
     'http://i.imgur.com/8Pcq7jJ.gif'
     'http://i.imgur.com/9jWshrH.gif'

@@ -4,7 +4,7 @@
 # Author:
 #   rowanmanning (adapted from joshfrench's script)
 
-createImageListPage = require '../lib/http-image-list'
+createImageListPage = require './helpers/http-image-list'
 
 module.exports = (robot) ->
 

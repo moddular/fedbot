@@ -1,7 +1,7 @@
 # Description:
 #   People who are leaving/have left
 
-randomBetween = require('../lib/random').randomBetween
+randomBetween = require('./helpers/random').randomBetween
 
 module.exports = (robot) ->
 

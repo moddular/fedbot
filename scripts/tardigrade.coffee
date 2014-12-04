@@ -20,7 +20,7 @@ tardigrades = [
 ]
 
 module.exports = (robot) ->
-  me = require('../lib/me-static')
+  me = require('./helpers/me-static')
   me(robot, 'moss piglet', tardigrades)
   me(robot, 'tardigrade', tardigrades)
   me(robot, 'waterbear', tardigrades)

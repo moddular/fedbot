@@ -8,7 +8,7 @@
 #   rowanmanning
 
 module.exports = (robot) ->
-  require('../lib/me-reddit')({
+  require('./helpers/me-reddit')({
     robot: robot,
     name: 'gif',
     subreddit: 'gifs'

@@ -6,7 +6,7 @@
 #   hubot force push bomb N - Get N force push images
 
 module.exports = (robot) ->
-  require('../lib/me-static')(robot, 'force push', [
+  require('./helpers/me-static')(robot, 'force push', [
     'http://24.media.tumblr.com/c5c9e3f3b6fcb58ec6e3bddab96e3a3a/tumblr_ms1foiogg01qkuvcro1_400.gif'
     'http://4.bp.blogspot.com/-qsvZBinyHc8/UxD3Pup0XxI/AAAAAAAADjg/twDWGtzf6tc/s1600/tumblr_luaj77Qaoa1qzrlhgo1_400%5B1%5D.gif'
     'http://i.imgur.com/cuPWqZp.gif'

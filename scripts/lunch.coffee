@@ -8,7 +8,7 @@
 
 module.exports = (robot) ->
 
-  rating = require('../lib/fedbot-rating')(robot)
+  rating = require('./helpers/fedbot-rating')(robot)
 
   options = [
     'The King Charles'

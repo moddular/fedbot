@@ -7,7 +7,7 @@
 
 module.exports = (robot) ->
 
-  require('../lib/me-static')(robot, 'ballmer', [
+  require('./helpers/me-static')(robot, 'ballmer', [
     'http://cdn.gifbay.com/2013/09/steve_ballmer-88323.gif'
     'http://cdn1.akamai.coub.com/coub/simple/cw_gif_big/029fe852893/5ad0e2530599f309a422d/1386334973_o0l5hd_1essxamo.gif'
     'http://i.somethingawful.com/u/Viconia/Ballmer/google_tiny_pieces.gif'

@@ -8,13 +8,13 @@
 # Author:
 #   rowanmanning
 
-randomBetween = require('../lib/random').randomBetween
+randomBetween = require('./helpers/random').randomBetween
 
 module.exports = (robot) ->
 
   request = require 'request'
 
-  require('../lib/me-static')(robot, 'fed', [
+  require('./helpers/me-static')(robot, 'fed', [
 
     # Group
     'http://i.imgur.com/aZNXXDQ.jpg' # Christmas Party #1

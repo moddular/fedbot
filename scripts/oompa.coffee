@@ -9,7 +9,7 @@
 #   perryharlock
 
 module.exports = (robot) ->
-  require('../lib/me-static')(robot, 'oompa loompa', [
+  require('./helpers/me-static')(robot, 'oompa loompa', [
     'http://i.imgur.com/XrbkNVe.jpg' # Adam
     'http://i.imgur.com/JvJxPlz.jpg' # Lisa
     'http://i.imgur.com/Mrd5Apn.jpg' # Jude

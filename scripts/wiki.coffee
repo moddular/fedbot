@@ -8,7 +8,7 @@
 #   rowanmanning
 
 module.exports = (robot) ->
-  require('../lib/me-tumblr')({
+  require('./helpers/me-tumblr')({
     robot: robot,
     name: 'wiki',
     tumblr: 'tldrwikipedia.tumblr.com',

@@ -8,7 +8,7 @@
 #   rowanmanning
 
 module.exports = (robot) ->
-  me = require '../lib/me-reddit'
+  me = require './helpers/me-reddit'
   me({
     robot: robot,
     name: 'baby elephant',

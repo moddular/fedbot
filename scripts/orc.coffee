@@ -1,7 +1,7 @@
 # Description:
 #   Orcs?
 
-randomBetween = require('../lib/random').randomBetween
+randomBetween = require('./helpers/random').randomBetween
 
 module.exports = (robot) ->
   robot.hear /\b(or[ck]s?)\b/i, (msg) ->

@@ -179,7 +179,7 @@ judeQuotes = [
   }
 ]
 
-randomValue = require('../lib/random').randomValue
+randomValue = require('./helpers/random').randomValue
 
 whatWouldJudeSay = (quotes, context) ->
   quotes = filterQuotesByContext(quotes, context) if context

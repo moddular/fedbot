@@ -5,7 +5,7 @@
 #   none
 #
 
-createImageListPage = require '../lib/http-image-list'
+createImageListPage = require './helpers/http-image-list'
 
 module.exports = (robot) ->
 

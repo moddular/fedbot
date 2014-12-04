@@ -6,7 +6,7 @@
 #   hubot citrus bomb N - Get N dog citrus images
 
 module.exports = (robot) ->
-  require('../lib/me-static')(robot, 'citrus', [
+  require('./helpers/me-static')(robot, 'citrus', [
     'http://s3-ec.buzzfed.com/static/2014-05/enhanced/webdr04/8/12/anigif_enhanced-10204-1399565267-1.gif'
     'http://d24w6bsrhbeh9d.cloudfront.net/photo/aWZbBrx_460sa.gif'
     'http://24.media.tumblr.com/tumblr_mb7zp9n2I61qz581wo1_400.gif'

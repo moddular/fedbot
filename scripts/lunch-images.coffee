@@ -5,8 +5,8 @@
 #   none
 #
 
-createImageListPage = require '../lib/http-image-list'
-randomBetween = require('../lib/random').randomBetween
+createImageListPage = require './helpers/http-image-list'
+randomBetween = require('./helpers/random').randomBetween
 
 module.exports = (robot) ->
 

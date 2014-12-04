@@ -5,7 +5,7 @@
 #   hubot how long do we have to finish the redesign?
 #
 
-randomBetween = require('../lib/random').randomBetween
+randomBetween = require('./helpers/random').randomBetween
 
 roundDown = (num) ->
   full = num.toString()

@@ -7,8 +7,8 @@
 # Author:
 #   hollsk
 
-randomValue = require('../lib/random').randomValue
-randomBetween = require('../lib/random').randomBetween
+randomValue = require('./helpers/random').randomValue
+randomBetween = require('./helpers/random').randomBetween
 
 module.exports = (robot) ->
   robot.respond /bio ([a-z0-9\s\-]+)/i, (msg) ->
