@@ -195,6 +195,10 @@ module.exports = (robot) ->
       text: 'fuck dalston and fuck all of those people'
       name: 'Hollie Kay'
     }
+    {
+      text: 'I dont think I can come because its raining and I have a suede coat'
+      name: 'Jack Watkins'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
