@@ -199,6 +199,10 @@ module.exports = (robot) ->
       text: 'I dont think I can come because its raining and I have a suede coat'
       name: 'Jack Watkins'
     }
+    {
+      text: 'Gosh, that\'s big.'
+      name: 'Kathleen James'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
