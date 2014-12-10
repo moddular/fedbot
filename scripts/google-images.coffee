@@ -16,6 +16,7 @@ wholesome = [
   'kittens',
   'puppies',
   '"shetland pony"',
+  '"baby owl"',
   '"my little pony"',
   '"sylvanian families"',
   '"daniel o\'donnell"',
@@ -50,6 +51,11 @@ module.exports = (robot) ->
   robot.respond /nature( me)? (.*)/i, (msg) ->
     query = msg.match[2]
     imageMe msg, query, false, false, true, (url) ->
+      msg.send url
+
+  robot.hear /don't frighten the horses/i, (msg) ->
+    query = msg.random wholesome
+    imageMe msg, query, (url) ->
       msg.send url
 
   robot.respond /animate( me)? (.*)/i, (msg) ->
