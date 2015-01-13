@@ -202,6 +202,10 @@ module.exports = (robot) ->
     {
       text: 'Gosh, that\'s big.'
       name: 'Kathleen James'
+    },
+    {
+      text: 'I am a horrible perv'
+      name: 'Glynn Phillips'
     }
   ]
 
