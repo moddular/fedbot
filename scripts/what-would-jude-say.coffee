@@ -177,6 +177,10 @@ judeQuotes = [
     text: 'Go ahead without me, I\'m busy browsing the Hewlett Packard site.'
     keywords: 'computer computers busy meeting browse browsing'
   }
+  {
+    text: 'Don\'t get cocky motherfucker, I may be pissed, but I have 20 years of dealing with fuckers like you.'
+    keywords: 'cocky mother mum pissed years fuck fuckers management hr insubordination'
+  }
 ]
 
 randomValue = require('./helpers/random').randomValue
