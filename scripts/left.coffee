@@ -6,7 +6,7 @@ randomBetween = require('./helpers/random').randomBetween
 module.exports = (robot) ->
 
   robot.hear /\bperry\b/i, (msg) ->
-    if randomBetween(1, 3) is 1
+    if randomBetween(1, 5) is 1
       msg.send msg.random [
         'Who was Perry again?'
         'Ah, Perry. I never really liked him anyway'
@@ -19,7 +19,7 @@ module.exports = (robot) ->
       ]
 
   robot.hear /\bdan(iel)?\b/i, (msg) ->
-    if randomBetween(1, 3) is 1
+    if randomBetween(1, 5) is 1
       msg.send msg.random [
         'I wish Dan hadn\'t left'
         '*sigh* please don\'t talk about Dan – it\'s too painful'
