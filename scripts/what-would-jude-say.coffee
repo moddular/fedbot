@@ -181,6 +181,10 @@ judeQuotes = [
     text: 'Don\'t get cocky motherfucker, I may be pissed, but I have 20 years of dealing with fuckers like you.'
     keywords: 'cocky mother mum pissed years fuck fuckers management hr insubordination'
   }
+  {
+    text: '150 shades of grey? It\'s like our pre-shunter styleguide.'
+    keywords: 'book shade grey colour shunter style styleguide'
+  }
 ]
 
 randomValue = require('./helpers/random').randomValue
