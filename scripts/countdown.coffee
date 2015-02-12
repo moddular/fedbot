@@ -4,8 +4,8 @@
 # Commands:
 #   hubot count down from <seconds> - Count down
 #   hubot count down to <thing> from <seconds> - Count down to an event
-#   hubot loudly count down from <seconds> - Count down silently
-#   hubot loudly count down to <thing> from <seconds> - Count down to an event silently
+#   hubot loudly count down from <seconds> - Count down loudly
+#   hubot loudly count down to <thing> from <seconds> - Count down to an event loudly
 #
 # Author:
 #   rowanmanning
