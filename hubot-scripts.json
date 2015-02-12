@@ -5,6 +5,5 @@
     "ascii.coffee",
     "bang-bang.coffee",
     "cowsay.coffee",
-    "javascript-sandbox.coffee",
-    "redis-brain.coffee"
+    "javascript-sandbox.coffee"
 ]
