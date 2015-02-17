@@ -212,8 +212,12 @@ module.exports = (robot) ->
       name: 'Glynn Phillips'
     }
     {
-      text: 'I need to start sniffing Jansher more',
+      text: 'I need to start sniffing Jansher more'
       name: 'Andrew Mee'
+    }
+    {
+      text: 'I\'m curious about my sexuality'
+      name: 'Adam Tavener'
     }
   ]
 
