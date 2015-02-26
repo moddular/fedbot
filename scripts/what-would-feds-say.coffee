@@ -219,6 +219,10 @@ module.exports = (robot) ->
       text: 'I\'m curious about my sexuality'
       name: 'Adam Tavener'
     }
+    {
+      text: 'I *do* love you and would give you my virgin children as your playthings'
+      name: 'Kathleen James'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
