@@ -108,7 +108,7 @@ module.exports = (robot) ->
     msg.send 'http://i.imgur.com/34Qq17u.jpg'
 
   robot.hear /\bcheese\b/i, (msg) ->
-    if randomBetween(1, 3) is 1
+    if randomBetween(1, 10) is 1
       msg.send 'http://i.imgur.com/nkQyVr4.gif'
 
   robot.hear /\bbunn(y|ies)\b/i, (msg) ->
@@ -131,7 +131,7 @@ module.exports = (robot) ->
     msg.send msg.random naps
 
   robot.hear /\brepo(sitory)?\b/i, (msg) ->
-    if randomBetween(1, 3) is 1
+    if randomBetween(1, 25) is 1
       msg.send 'http://i.imgur.com/As0OCA9.png'
 
   robot.hear /\b(hot[\s-]?tub|jacuzzi|savil+e)\b/i, (msg) ->
