@@ -2,7 +2,8 @@
 #   Ask hubot how long until Phil's notice period is served
 #
 # Commands:
-#   hubot how long do we have to finish the redesign?
+#   hubot how long until phil leaves?
+#   hubot how long until i leave?
 #
 
 second = 1000
