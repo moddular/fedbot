@@ -23,7 +23,7 @@ endOfPhil = (new Date '2015-06-23T17:00:00+01:00').getTime()
   
 module.exports = (robot) ->
   robot.respond /how long until phil leaves/i, (msg) ->
-    msg.send getResponse
+    msg.send getResponse()
 
   robot.hear /how long until i leave/, (msg) ->
     if msg.message.user.name == 'Phil Booth'
