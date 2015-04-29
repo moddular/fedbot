@@ -9,10 +9,15 @@ randomValue = require('./helpers/random').randomValue
 
 module.exports = (robot) ->
 
-  robot.respond /bump me (.+)$/i, (msg) ->
-    pr = msg.match[1]
-    emoji1 = randomEmoji()
-    emoji2 = randomEmoji()
+  robot.respond /bump (me )?((:[^:]+:) )?((:[^:]+:) )?(.+)$/i, (msg) ->
+    if msg.match[3] && msg.match[5]
+      respond msg, msg.match[6], msg.match[3], msg.match[5]
+    else if msg.match[3]
+      respond msg, msg.match[6], msg.match[3], msg.match[3]
+    else
+      respond msg, msg.match[6], randomEmoji(), randomEmoji()
+
+  respond = (msg, pr, emoji1, emoji2) ->
     output = "#{emoji2} #{emoji1} BUMP #{pr} BUMP #{emoji2} #{emoji1}"
     emojiLine = ''
     for num in [0..9]
