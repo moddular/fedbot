@@ -33,8 +33,7 @@ module.exports = (robot) ->
       msg.send 'No idea, mate.'
 
 getResponse = ->
-  time = (new Date()).getTime()
-  mapTime time
+  mapTime Date.now()
 
 mapTime = (date) ->
   difference = endOfPhil - date
