@@ -38,6 +38,9 @@ getResponse = ->
 mapTime = (time) ->
   difference = endOfPhil - time
 
+  if difference < minute
+    return "He's gone!"
+
   if difference > week
     return "Well this sucks, Pb. You're stuck here for #{formatTime difference, 'week'}. :("
 
@@ -47,10 +50,7 @@ mapTime = (time) ->
   if difference > hour
     return "Delete the incriminating data, Pb! There's only #{formatTime difference, 'hour'} to go!"
 
-  if difference > minute
-    return "Start packing, Pb! Only #{formatTime difference, 'minute'} left!"
-
-  "He's gone!"
+  "Start packing, Pb! Only #{formatTime difference, 'minute'} left!"
 
 formatTime = (difference, period) ->
   periodCount = Math.round difference / periods[period]
