@@ -26,7 +26,7 @@ module.exports = (robot) ->
   robot.respond /how long until phil leaves/i, (msg) ->
     msg.send getResponse()
 
-  robot.hear /how long until i leave/, (msg) ->
+  robot.hear /how long until i leave/i, (msg) ->
     if msg.message.user.name == 'Phil Booth'
       msg.send getResonse()
     else
