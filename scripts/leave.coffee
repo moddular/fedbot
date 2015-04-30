@@ -42,7 +42,7 @@ mapTime = (time, end, name) ->
   if !end
     return 'No idea, mate.'
 
-  difference = endOfPhil - time
+  difference = end - time
 
   if difference < minute
     return "#{name}'s gone!"
