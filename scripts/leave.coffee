@@ -20,7 +20,8 @@ periods = {
   week
 }
 
-endOfPhil = (new Date '2015-06-23T17:00:00+01:00').getTime()
+ends =
+  'Phil Booth': (new Date '2015-06-23T17:00:00+01:00').getTime()
 
 nicknames =
   'Phil Booth': 'Pb'
@@ -29,18 +30,18 @@ module.exports = (robot) ->
   name = msg.message.user.name
 
   robot.respond /how long until phil leaves/i, (msg) ->
-    msg.send getResponse name
+    msg.send getResponse 'Phil Booth'
 
   robot.hear /how long until i leave/i, (msg) ->
-    if name == 'Phil Booth'
-      msg.send getResonse name
-    else
-      msg.send 'No idea, mate.'
+    msg.send getResonse msg.message.user.name
 
 getResponse = (name) ->
-  mapTime Date.now(), nicknames[name] || user
+  mapTime Date.now(), ends[name], nicknames[name] || user
 
-mapTime = (time, name) ->
+mapTime = (time, end, name) ->
+  if !end
+    return 'No idea, mate.'
+
   difference = endOfPhil - time
 
   if difference < minute
