@@ -36,7 +36,7 @@ module.exports = (robot) ->
     msg.send getResonse msg.message.user.name
 
 getResponse = (name) ->
-  mapTime Date.now(), ends[name], nicknames[name] || user
+  mapTime Date.now(), ends[name], nicknames[name] || name
 
 mapTime = (time, end, name) ->
   if !end
