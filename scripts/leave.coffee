@@ -27,8 +27,6 @@ nicknames =
   'Phil Booth': 'Pb'
 
 module.exports = (robot) ->
-  name = msg.message.user.name
-
   robot.respond /how long until phil leaves/i, (msg) ->
     msg.send getResponse 'Phil Booth'
 
