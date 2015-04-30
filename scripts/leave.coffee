@@ -1,5 +1,5 @@
 # Description:
-#   Ask hubot how long until Phil's notice period is served
+#   Ask hubot how long until someone's notice period is served
 #
 # Commands:
 #   hubot how long until phil leaves?
