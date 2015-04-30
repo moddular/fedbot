@@ -22,35 +22,40 @@ periods = {
 
 endOfPhil = (new Date '2015-06-23T17:00:00+01:00').getTime()
 
+nicknames =
+  'Phil Booth': 'Pb'
+
 module.exports = (robot) ->
+  name = msg.message.user.name
+
   robot.respond /how long until phil leaves/i, (msg) ->
-    msg.send getResponse()
+    msg.send getResponse name
 
   robot.hear /how long until i leave/i, (msg) ->
-    if msg.message.user.name == 'Phil Booth'
-      msg.send getResonse()
+    if name == 'Phil Booth'
+      msg.send getResonse name
     else
       msg.send 'No idea, mate.'
 
-getResponse = ->
-  mapTime Date.now()
+getResponse = (name) ->
+  mapTime Date.now(), nicknames[name] || user
 
-mapTime = (time) ->
+mapTime = (time, name) ->
   difference = endOfPhil - time
 
   if difference < minute
-    return "He's gone!"
+    return "#{name}'s gone!"
 
   if difference > week
-    return "Well this sucks, Pb. You're stuck here for #{formatTime difference, 'week'}. :("
+    return "Well this sucks, #{name}. You're stuck here for #{formatTime difference, 'week'}. :("
 
   if difference > day
-    return "Put your feet up, Pb! You're officially chilling for #{formatTime difference, 'day'}!"
+    return "Put your feet up, #{name}! You're officially chilling for #{formatTime difference, 'day'}!"
 
   if difference > hour
-    return "Delete the incriminating data, Pb! There's only #{formatTime difference, 'hour'} to go!"
+    return "Delete the incriminating data, #{name}! There's only #{formatTime difference, 'hour'} to go!"
 
-  "Start packing, Pb! Only #{formatTime difference, 'minute'} left!"
+  "Start packing, #{name}! Only #{formatTime difference, 'minute'} left!"
 
 formatTime = (difference, period) ->
   periodCount = Math.round difference / periods[period]
