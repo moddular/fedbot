@@ -35,22 +35,22 @@ module.exports = (robot) ->
 getResponse = ->
   mapTime Date.now()
 
-mapTime = (date) ->
-  difference = endOfPhil - date
+mapTime = (time) ->
+  difference = endOfPhil - time
 
-  if difference <= minute
-    return "He's gone!"
+  if difference > week
+    return "Well this sucks, Pb. You're stuck here for #{formatTime difference, 'week'}. :("
 
-  if difference < hour
-    return "Start packing, Pb! Only #{formatTime difference, 'minute'} left!"
-
-  if difference < day
-    return "Delete the incriminating data, Pb! There's only #{formatTime difference, 'hour'} to go!"
-
-  if difference < week
+  if difference > day
     return "Put your feet up, Pb! You're officially chilling for #{formatTime difference, 'day'}!"
 
-  return "Well this sucks, Pb. You're stuck here for #{formatTime difference, 'week'}. :("
+  if difference > hour
+    return "Delete the incriminating data, Pb! There's only #{formatTime difference, 'hour'} to go!"
+
+  if difference > minute
+    return "Start packing, Pb! Only #{formatTime difference, 'minute'} left!"
+
+  "He's gone!"
 
 formatTime = (difference, period) ->
   periodCount = Math.round difference / periods[period]
