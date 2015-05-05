@@ -5,6 +5,7 @@
 #   hubot cakelog - Displays the last 3 Cakelogs
 #   hubot cakelog X - Displays the last X Cakelogs
 #   hubot cakelog leaderboard - Displays the Cakelog leaderboard
+#   hubot is there cake? - Get whether there's cake today
 #
 
 moment = require 'moment'
@@ -22,6 +23,9 @@ module.exports = (robot) ->
   robot.respond /cakelog leaderboard$/i, (msg) ->
     listLeaders msg
 
+  robot.respond /is there cake/i, (msg) ->
+    isThereCake msg, getTodaysDate()
+
   listCakelogs = (msg, count) ->
     callApi msg, 'cakelogs', (cakelogs) ->
       if !cakelogs
@@ -36,8 +40,26 @@ module.exports = (robot) ->
       else
         msg.send 'Cakelog Leaderboard:\n' + people.sort(soryByCakelogCount).slice(0, 3).map((person) -> "#{person.name}: #{person.cakelogs.length} Cakelogs").join('\n')
 
+  isThereCake = (msg, date) ->
+    callApi msg, 'cakelogs', (cakelogs) ->
+      if !cakelogs
+        msg.send CAKELOG_ERROR
+      else
+        todaysCake = null
+        for cakelog in cakelogs
+          if cakelog.date == date
+            todaysCake = cakelog
+            break
+        if todaysCake
+          msg.send "Yes, there's cake from #{todaysCake.person.name}!\n#{todaysCake.description}\n[" + todaysCake.tags.join(', ') + ']'
+        else
+          msg.send 'OMG there\'s no cake :scream:'
+
   soryByCakelogCount = (a, b) ->
     b.cakelogs.length - a.cakelogs.length
+
+  getTodaysDate = ->
+    (new Date()).toISOString().split('T')[0]
 
   callApi = (msg, endpoint, done) ->
     msg.http("http://thefeds.github.io/cakelog/api/#{endpoint}.json").get() (err, res, body) ->
