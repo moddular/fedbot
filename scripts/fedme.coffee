@@ -164,7 +164,7 @@ module.exports = (robot) ->
         msg.send "Come on #{msg.message.user.name} Rowan actually has #{total} stars"
 
     options =
-      url: 'https://api.github.com/users/rowanmanning/repos'
+      url: 'https://api.github.com/users/rowanmanning/repos?per_page=100'
       headers:
         'User-Agent': 'request'
 
