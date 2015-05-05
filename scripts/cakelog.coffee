@@ -2,7 +2,7 @@
 #   Get information about the Cakelog.
 #
 # Commands:
-#   hubot cakelog - Displays the last 5 Cakelogs
+#   hubot cakelog - Displays the last 3 Cakelogs
 #   hubot cakelog X - Displays the last X Cakelogs
 #   hubot cakelog leaderboard - Displays the Cakelog leaderboard
 #
@@ -14,7 +14,7 @@ module.exports = (robot) ->
   CAKELOG_ERROR = 'The Cakelog is down!'
 
   robot.respond /cakelogs?$/i, (msg) ->
-    listCakelogs msg, 5
+    listCakelogs msg, 3
 
   robot.respond /cakelogs? (\d+)$/i, (msg) ->
     listCakelogs msg, msg.match[1]
