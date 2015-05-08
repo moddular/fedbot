@@ -223,6 +223,10 @@ module.exports = (robot) ->
       text: 'I *do* love you and would give you my virgin children as your playthings'
       name: 'Kathleen James'
     }
+    {
+      text: 'One day after a conservative election victory and already the trains are screwed. This country is going to the dogs.'
+      name: 'Alex Kilgour'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
