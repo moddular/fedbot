@@ -1,1 +1,1 @@
-web: bin/fedbot -a campfire -n FEDbot
+web: bin/fedbot -a slack -n FEDbot
