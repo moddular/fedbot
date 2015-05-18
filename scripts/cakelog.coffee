@@ -31,7 +31,10 @@ module.exports = (robot) ->
       if !cakelogs
         msg.send CAKELOG_ERROR
       else
-        msg.send cakelogs.slice(0, count).map((cakelog) -> "*#{cakelog.date}: #{cakelog.person.name} brought cake in!*\n#{cakelog.description}\n_" + cakelog.tags.join(', ') + '_').join('\n\n')
+        msg.send cakelogs.slice(0, count).map((cakelog) ->
+          tags = (if cakelog.tags.length then '`' + cakelog.tags.join('` `') + '`' else '')
+          "*#{cakelog.date}: #{cakelog.person.name} brought cake in!*\n#{cakelog.description}\n#{tags}"
+        ).join('\n\n')
 
   listLeaders = (msg) ->
     callApi msg, 'people', (people) ->
@@ -51,7 +54,8 @@ module.exports = (robot) ->
             todaysCake = cakelog
             break
         if todaysCake
-          msg.send "Yes, there's cake from #{todaysCake.person.name}!\n#{todaysCake.description}\n_" + todaysCake.tags.join(', ') + '_'
+          tags = (if todaysCake.tags.length then '`' + todaysCake.tags.join('` `') + '`' else '')
+          msg.send "Yes, there's cake from #{todaysCake.person.name}!\n#{todaysCake.description}\n#{tags}"
         else
           msg.send 'OMG there\'s no cake :scream:'
 
