@@ -31,14 +31,14 @@ module.exports = (robot) ->
       if !cakelogs
         msg.send CAKELOG_ERROR
       else
-        msg.send 'Cakelogs:\n\n' + cakelogs.slice(0, count).map((cakelog) -> "#{cakelog.date}: #{cakelog.person.name} brought cake in!\n#{cakelog.description}\n[" + cakelog.tags.join(', ') + ']').join('\n\n')
+        msg.send cakelogs.slice(0, count).map((cakelog) -> "*#{cakelog.date}: #{cakelog.person.name} brought cake in!*\n#{cakelog.description}\n_" + cakelog.tags.join(', ') + '_').join('\n\n')
 
   listLeaders = (msg) ->
     callApi msg, 'people', (people) ->
       if !people
         msg.send CAKELOG_ERROR
       else
-        msg.send 'Cakelog Leaderboard:\n' + people.sort(soryByCakelogCount).slice(0, 3).map((person) -> "#{person.name}: #{person.cakelogs.length} Cakelogs").join('\n')
+        msg.send people.sort(soryByCakelogCount).slice(0, 3).map((person) -> "*#{person.name}:* #{person.cakelogs.length} Cakelogs").join('\n')
 
   isThereCake = (msg, date) ->
     callApi msg, 'cakelogs', (cakelogs) ->
@@ -51,7 +51,7 @@ module.exports = (robot) ->
             todaysCake = cakelog
             break
         if todaysCake
-          msg.send "Yes, there's cake from #{todaysCake.person.name}!\n#{todaysCake.description}\n[" + todaysCake.tags.join(', ') + ']'
+          msg.send "Yes, there's cake from #{todaysCake.person.name}!\n#{todaysCake.description}\n_" + todaysCake.tags.join(', ') + '_'
         else
           msg.send 'OMG there\'s no cake :scream:'
 
