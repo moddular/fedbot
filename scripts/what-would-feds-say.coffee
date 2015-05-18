@@ -227,6 +227,10 @@ module.exports = (robot) ->
       text: 'One day after a conservative election victory and already the trains are screwed. This country is going to the dogs.'
       name: 'Alex Kilgour'
     }
+    {
+      text: 'I HOPE HE GETS GOUT AND THEN GANGRENE ON HIS GOUT.'
+      name: 'Hollie Kay'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
