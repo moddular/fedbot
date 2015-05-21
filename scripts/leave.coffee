@@ -22,7 +22,7 @@ periods = {
 }
 
 ends =
-  'pb': (new Date '2015-06-23T16:30:00+01:00').getTime(),
+  'pb': (new Date '2015-06-23T16:30:00+01:00').getTime()
   'andrewmee': (new Date '2015-09-09T17:30:00+01:00').getTime()
 
 nicknames =
@@ -36,7 +36,7 @@ module.exports = (robot) ->
   robot.respond /how long until phil leaves/i, (msg) ->
     msg.send getResponse 'pb'
 
-  robot.respond /how long until (.*) leaves/i, (msg) ->
+  robot.respond /how long until (\w+) leaves/i, (msg) ->
     name = msg.match[1]
     msg.send getResponse name
 
