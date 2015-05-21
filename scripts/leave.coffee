@@ -3,6 +3,7 @@
 #
 # Commands:
 #   hubot how long until phil leaves?
+#   hubot how long until andrewmee leaves?
 #   hubot how long until i leave?
 #
 
@@ -21,17 +22,23 @@ periods = {
 }
 
 ends =
-  'pb': (new Date '2015-06-23T16:30:00+01:00').getTime()
+  'pb': (new Date '2015-06-23T16:30:00+01:00').getTime(),
+  'andrewmee': (new Date '2015-09-09T17:30:00+01:00').getTime()
 
 nicknames =
   'tavvy': 'Professor'
   'glynnphillips': 'Glynnis'
   'pb': 'Pb'
   'rowanmanning': 'Ro-Ro'
+  'andrewmee': 'Mee'
 
 module.exports = (robot) ->
   robot.respond /how long until phil leaves/i, (msg) ->
     msg.send getResponse 'pb'
+    
+  robot.respond /how long until (.*) leaves/i, (msg) ->
+    name = msg.match[1]
+    msg.send getResponse name
 
   robot.hear /how long until i leave/i, (msg) ->
     msg.send getResponse msg.message.user.name
