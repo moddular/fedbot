@@ -3,7 +3,7 @@
 #
 # Commands:
 #   hubot how long until phil leaves?
-#   hubot how long until mee leaves?
+#   hubot how long until andrewmee leaves?
 #   hubot how long until i leave?
 #
 
