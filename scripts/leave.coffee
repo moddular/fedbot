@@ -21,14 +21,17 @@ periods = {
 }
 
 ends =
-  'Phil Booth': (new Date '2015-06-23T17:00:00+01:00').getTime()
+  'pb': (new Date '2015-06-23T16:30:00+01:00').getTime()
 
 nicknames =
-  'Phil Booth': 'Pb'
+  'tavvy': 'Professor'
+  'glynnphillips': 'Glynnis'
+  'pb': 'Pb'
+  'rowanmanning': 'Ro-Ro'
 
 module.exports = (robot) ->
   robot.respond /how long until phil leaves/i, (msg) ->
-    msg.send getResponse 'Phil Booth'
+    msg.send getResponse 'pb'
 
   robot.hear /how long until i leave/i, (msg) ->
     msg.send getResponse msg.message.user.name
@@ -38,7 +41,7 @@ getResponse = (name) ->
 
 mapTime = (time, end, name) ->
   if !end
-    return 'No idea, mate.'
+    return "No idea, #{name}."
 
   difference = end - time
 
