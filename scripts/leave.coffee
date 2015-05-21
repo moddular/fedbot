@@ -35,7 +35,7 @@ nicknames =
 module.exports = (robot) ->
   robot.respond /how long until phil leaves/i, (msg) ->
     msg.send getResponse 'pb'
-    
+
   robot.respond /how long until (.*) leaves/i, (msg) ->
     name = msg.match[1]
     msg.send getResponse name
