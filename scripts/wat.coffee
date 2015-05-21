@@ -6,6 +6,7 @@
 #
 
 createImageListPage = require './helpers/http-image-list'
+randomBetween = require('./helpers/random').randomBetween
 
 module.exports = (robot) ->
 
@@ -25,7 +26,8 @@ module.exports = (robot) ->
   ]
 
   robot.hear /\b(wat)\b/i, (msg) ->
-    msg.send msg.random responses
+    if randomBetween(1, 3) is 1
+      msg.send msg.random responses
 
   createImageListPage(
     robot,

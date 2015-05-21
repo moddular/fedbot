@@ -5,6 +5,8 @@
 #   None
 #
 
+randomBetween = require('./helpers/random').randomBetween
+
 module.exports = (robot) ->
 
   images = [
@@ -13,4 +15,5 @@ module.exports = (robot) ->
   ]
 
   robot.hear /\bice[\s\-]?cream\b/i, (msg) ->
-    msg.send msg.random images
+    if randomBetween(1, 5) is 1
+      msg.send msg.random images

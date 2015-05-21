@@ -5,7 +5,9 @@
 #   None
 #
 
-module.exports = (robot) ->
+randomBetween = require('./helpers/random').randomBetween
 
+module.exports = (robot) ->
   robot.hear /\b(trousers|pants)\b/i, (msg) ->
-    msg.send "Where are your #{msg.match[1]}, Glynn?"
+    if randomBetween(1, 10) is 1
+      msg.send "Where are your #{msg.match[1]}, Glynn?"
