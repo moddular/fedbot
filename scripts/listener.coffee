@@ -26,4 +26,5 @@ module.exports = (robot) ->
     output = []
     for name in Object.keys(probabilities)
       output.push("#{name}: 1 in #{probabilities[name]}")
+    output.sort()
     msg.send output.join('\n')
