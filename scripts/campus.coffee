@@ -1,9 +1,8 @@
 # Description:
 #   Campus...
 
-randomBetween = require('./helpers/random').randomBetween
-
-module.exports = (robot) ->
-  robot.hear /\bcampus( digital|\.macmillan)\b/i, (msg) ->
-    if randomBetween(1, 50) is 1
-      msg.send 'http://i.imgur.com/oMBWa7L.gif'
+module.exports = require('./helpers/listener').create
+  name: 'campus'
+  pattern: /\bcampus( digital|\.macmillan)\b/i
+  response: 'http://i.imgur.com/oMBWa7L.gif'
+  defaultProbability: 50

@@ -1,13 +1,8 @@
 # Description:
 #   Where is Rowan's coat?
-#
-# Commands:
-#   None
-#
 
-randomBetween = require('./helpers/random').randomBetween
-
-module.exports = (robot) ->
-  robot.hear /\b(coat|jacket)\b/i, (msg) ->
-    if randomBetween(1, 10) is 1
-      msg.send "Where is your #{msg.match[1]}, Rowan?"
+module.exports = require('./helpers/listener').create
+  name: 'coat'
+  pattern: /\b(coat|jacket)\b/i
+  response: 'Where is your coat, Rowan?'
+  defaultProbability: 10

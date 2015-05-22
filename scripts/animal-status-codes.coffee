@@ -1,8 +1,5 @@
 # Description:
 #   Animal status codes
-#
-# Commands:
-#   None
 
 randomBetween = require('./helpers/random').randomBetween
 

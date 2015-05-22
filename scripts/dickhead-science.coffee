@@ -1,13 +1,8 @@
 # Description:
 #   Dickhead Science
-#
-# Commands:
-#   None
-#
 
-randomBetween = require('./helpers/random').randomBetween
-
-module.exports = (robot) ->
-  robot.hear /\b(digital science|ds)\b/i, (msg) ->
-    if randomBetween(1, 5) is 1
-      msg.send 'http://i.imgur.com/g2kGGLS.png'
+module.exports = require('./helpers/listener').create
+  name: 'dickhead-science'
+  pattern: /\b(digital science|ds)\b/i
+  response: 'http://i.imgur.com/g2kGGLS.png'
+  defaultProbability: 5

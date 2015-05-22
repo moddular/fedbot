@@ -1,15 +1,10 @@
 # Description:
 #   Who's Charles?
-#
-# Commands:
-#   None
-#
 
-randomBetween = require('./helpers/random').randomBetween
-
-module.exports = (robot) ->
-
-  responses = [
+module.exports = require('./helpers/listener').create
+  name: 'charles'
+  pattern: /\bcharles\b/i
+  response: [
     'Who\'s Charles?'
     'Who the hell is Charles?'
     'Who is Charles?'
@@ -18,7 +13,4 @@ module.exports = (robot) ->
     'I\'m not sure who Charles is'
     'Yes, but does anybody know who Charles is?'
   ]
-
-  robot.hear /\bcharles\b/i, (msg) ->
-    if randomBetween(1, 20) is 1
-      msg.send msg.random responses
+  defaultProbability: 20
