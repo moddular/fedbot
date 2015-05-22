@@ -10,7 +10,9 @@ listener =
   create: (options) ->
     (robot) ->
       robot.hear options.pattern, (msg) ->
-        probability = listener.getProbability(robot, options.name, options.defaultProbability || 1)
+        if listener.getProbability(robot, options.name, null) == null
+          listener.setProbability(robot, options.name, options.defaultProbability || 1)
+        probability = listener.getProbability(robot, options.name)
         if randomBetween(1, probability) is 1
           if Array.isArray(options.response)
             msg.send randomValue(options.response)
