@@ -33,22 +33,22 @@ nicknames =
   'andrewmee': 'Mee'
 
 module.exports = (robot) ->
-  robot.respond /how long until phil leaves/i, (msg) ->
-    msg.send getResponse 'pb'
-
   robot.respond /how long until (\w+) leaves/i, (msg) ->
     name = msg.match[1]
-    msg.send getResponse name
+    msg.send getResponse name, msg.message.user.name
 
   robot.hear /how long until i leave/i, (msg) ->
     msg.send getResponse msg.message.user.name
 
-getResponse = (name) ->
-  mapTime Date.now(), ends[name], nicknames[name] || name
+getResponse = (name, user) ->
+  mapTime Date.now(), ends[name], getName name, getName user
 
-mapTime = (time, end, name) ->
+getName = [name] ->
+  nicknames[name] || name
+
+mapTime = (time, end, name, user) ->
   if !end
-    return "No idea, #{name}."
+    return "No idea, #{user || name}."
 
   difference = end - time
 
