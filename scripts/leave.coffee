@@ -43,7 +43,7 @@ module.exports = (robot) ->
 getResponse = (name, user) ->
   mapTime Date.now(), ends[name], getName name, getName user
 
-getName = [name] ->
+getName = (name) ->
   nicknames[name] || name
 
 mapTime = (time, end, name, user) ->
