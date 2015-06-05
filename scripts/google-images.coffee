@@ -98,7 +98,7 @@ imageMe = (msg, query, animated, faces, nature, cb) ->
       images = images.responseData?.results
       if images?.length > 0
         image  = msg.random images
-        cb "#{image.unescapedUrl}#.png"
+        cb image.unescapedUrl
 
 getBennyHillUrl = (gif) ->
   gif = encodeURIComponent gif
