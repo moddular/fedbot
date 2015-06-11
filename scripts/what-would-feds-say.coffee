@@ -231,6 +231,10 @@ module.exports = (robot) ->
       text: 'I HOPE HE GETS GOUT AND THEN GANGRENE ON HIS GOUT.'
       name: 'Hollie Kay'
     }
+    {
+      text: 'Do you want me to come over and release you?'
+      name: 'Nick Call'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
