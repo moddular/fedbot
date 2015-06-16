@@ -239,6 +239,10 @@ module.exports = (robot) ->
       text: 'I\'m sweating like management receiving Phil\'s exit questions'
       name: 'Glynn Phillips'
     }
+    {
+      text: 'hiding next to one of your team-mates huge ones'
+      name: 'Andrew Mee'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
