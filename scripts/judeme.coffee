@@ -22,6 +22,7 @@ module.exports = (robot) ->
     'http://i.imgur.com/9MSYTha.jpg',
     'http://i.imgur.com/vAE71jW.jpg',
     'http://i.imgur.com/6ZLq9GY.png',
+    'http://i.imgur.com/RV5u0VZ.gif',
     'http://www.gyford.com/images/jude.jpg',
   ])
 
@@ -42,3 +43,6 @@ module.exports = (robot) ->
 
   robot.hear /\bjudy robinson\b/i, (msg) ->
     msg.send 'http://i.imgur.com/6ZLq9GY.png'
+
+  robot.hear /\b(pok[eé]jude|i choose you)\b/i, (msg) ->
+    msg.send 'http://i.imgur.com/RV5u0VZ.gif'
