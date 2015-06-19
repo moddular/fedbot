@@ -243,6 +243,10 @@ module.exports = (robot) ->
       text: 'hiding next to one of your team-mates huge ones'
       name: 'Andrew Mee'
     }
+    {
+      text: 'Oh god, I\'m deep in that hole now'
+      name: 'Nick Call'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
