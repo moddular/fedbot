@@ -247,6 +247,22 @@ module.exports = (robot) ->
       text: 'Oh god, I\'m deep in that hole now'
       name: 'Nick Call'
     }
+    {
+      text: 'yeah..I\'ve had to go round and tease their nuts out'
+      name: 'Perry Harlock'
+    }
+    {
+      text: 'You wait til you\'ve had squirrels burying their nuts deeply in your back garden'
+      name: 'Perry Harlock'
+    }
+    {
+      text: 'codeclimate can go and fuck itself with a rusty poll'
+      name: 'Rowan Manning'
+    }
+    {
+      text: 'I\'ll be in the metro by the end of the week, "to the woman on the 18:06 from Kings X, you smell like dead worms"'
+      name: 'Hollie Kay'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
