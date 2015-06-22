@@ -185,6 +185,10 @@ judeQuotes = [
     text: '150 shades of grey? It\'s like our pre-shunter styleguide.'
     keywords: 'book shade grey colour shunter style styleguide'
   }
+  {
+    text: 'you have to attack on every front. Worms, plus beer, plus emptying and refilling your beer traps on a daily basis, for perpetuity, until the day you fucking die. That\'s your future.'
+    keywords: 'worms beer traps vermin death dying'
+  }
 ]
 
 randomValue = require('./helpers/random').randomValue
