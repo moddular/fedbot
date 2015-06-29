@@ -11,7 +11,7 @@ module.exports = (robot) ->
   Select = require('soupselect').select
   HtmlParser = require 'htmlparser'
 
-  robot.hear /\$?THE[_ ]BUSINESS/i, (msg) ->
+  robot.hear /\$THE_BUSINESS/, (msg) ->
     getRandomImage msg, (url) ->
       msg.send url if url
 
