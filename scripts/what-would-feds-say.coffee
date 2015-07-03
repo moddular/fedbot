@@ -264,7 +264,7 @@ module.exports = (robot) ->
       name: 'Hollie Kay'
     }
     {
-      text: 'I don't mind a bit of head. Honestly'
+      text: 'I don\'t mind a bit of head. Honestly'
       name: 'Alex Kilgour'
     }
   ]
