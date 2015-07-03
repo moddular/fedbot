@@ -263,6 +263,10 @@ module.exports = (robot) ->
       text: 'I\'ll be in the metro by the end of the week, "to the woman on the 18:06 from Kings X, you smell like dead worms"'
       name: 'Hollie Kay'
     }
+    {
+      text: 'I don't mind a bit of head. Honestly'
+      name: 'Alex Kilgour'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
