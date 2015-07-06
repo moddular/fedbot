@@ -267,6 +267,10 @@ module.exports = (robot) ->
       text: 'I don\'t mind a bit of head. Honestly'
       name: 'Alex Kilgour'
     }
+    {
+      text: 'Hollie you\’re missing some extremely good slamming'
+      name: 'Jose Bolos'
+    }
   ]
 
   robot.hear /what would feds say|wwfs/i, (msg) ->
