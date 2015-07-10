@@ -1,6 +1,7 @@
 [
-    "hubot-conspire",
-    "hubot-dogeme",
-    "hubot-markov",
-    "hubot-redis-brain"
+	"hubot-diagnostics",
+	"hubot-google-images",
+	"hubot-help",
+	"hubot-heroku-keepalive",
+	"hubot-redis-brain"
 ]
