@@ -12,6 +12,6 @@ function initScript (robot) {
 	robot.respond(/crab me/i, giveACrab);
 }
 
-function giveACrab (message) {
-	message.send(':crab:');
+function giveACrab (response) {
+	response.send(':crab:');
 }

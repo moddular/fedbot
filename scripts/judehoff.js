@@ -12,6 +12,6 @@ function initScript (robot) {
 	robot.hear(/\bjudehoff\b/i, showTheHoff);
 }
 
-function showTheHoff (message) {
-	message.send('http://i.imgur.com/Tfq7Bi7.gif');
+function showTheHoff (response) {
+	response.send('http://i.imgur.com/Tfq7Bi7.gif');
 }
