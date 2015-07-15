@@ -4,7 +4,9 @@
 		"before": true,
 		"beforeEach": true,
 		"describe": true,
-		"it": true
+		"it": true,
+		"robotHear": true,
+		"robotRespond": true
 	},
 	"globalstrict": true,
 	"latedef": "nofunc",
