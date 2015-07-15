@@ -6,12 +6,4 @@
 
 'use strict';
 
-module.exports = initScript;
-
-function initScript (robot) {
-	robot.respond(/crab me/i, giveACrab);
-}
-
-function giveACrab (response) {
-	response.send(':crab:');
-}
+module.exports = robotRespond(/crab me/i, ':crab:');
