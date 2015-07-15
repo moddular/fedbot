@@ -18,7 +18,6 @@
 	"disallowTrailingComma": true,
 	"disallowTrailingWhitespace": true,
 	"disallowYodaConditions": true,
-	"maximumLineLength": 100,
 	"requireBlocksOnNewline": true,
 	"requireCamelCaseOrUpperCaseIdentifiers": true,
 	"requireCapitalizedConstructors": true,
