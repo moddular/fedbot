@@ -10,14 +10,14 @@
 	},
 
 	"dependencies": {
-		"hubot": "^2.13.2",
+		"hubot": "^2",
 		"hubot-diagnostics": "0.0.1",
-		"hubot-google-images": "^0.1.5",
-		"hubot-help": "^0.1.1",
+		"hubot-google-images": "~0.1",
+		"hubot-help": "~0.1",
 		"hubot-heroku-keepalive": "0.0.4",
 		"hubot-pugme": "~0.1",
 		"hubot-redis-brain": "0.0.3",
-		"hubot-slack": "^3.3.0"
+		"hubot-slack": "^3"
 	},
 	"devDependencies": {
 		"jscs": "^1",
