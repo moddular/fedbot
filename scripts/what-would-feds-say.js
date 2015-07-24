@@ -4,6 +4,8 @@
 // Commands:
 //   hubot what would FEDs say? - Get a random FED quote
 
+'use strict';
+
 var quotes = [
 	{
 		text: 'Mustache is the biggest pile of steaming turd I have ever had the pleasure of using.',
