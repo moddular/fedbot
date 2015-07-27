@@ -8,6 +8,7 @@
 
 module.exports = robotRespond(/goat me/i, [
 	':goat:',
+	'http://i.imgur.com/9aYdqBg.gif',
 	'http://i.imgur.com/fgUmFyA.gif',
 	'http://i.imgur.com/JEgjEBL.gif',
 	'http://media.giphy.com/media/qpmA24MOavdGU/giphy.gif',
