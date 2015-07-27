@@ -44,23 +44,62 @@ function swearJar (robot) {
 function logSwears (robot, response) {
 	if (Array.isArray(response.match)) {
 		incrementUserSwears(robot, response.message.user.id, response.match);
+		robot.brain.set('lastSwear', response.message.text);
 	}
 }
 
 function getSwearJar (robot, response) {
-	response.send('There\'s £' + getJarValue(robot) + ' in the swear jar');
+	var text = 'There\'s £' + getJarValue(robot) + ' in the swear jar';
+	var lastSwear = robot.brain.get('lastSwear');
+	robot.emit('slack-attachment', {
+		message: {
+			room: response.message.room
+		},
+		content: {
+			fallback: text,
+			title: text,
+			text: '“' + lastSwear + '”',
+			color: '#9b7c41'
+		}
+	});
 }
 
 function getSwearJarByName (robot, response) {
-	response.send(getJarValueByName(robot).map(function (row) {
-		return '*' + row.user + '*: £' + row.value;
-	}).join('\n'));
+	var data = getJarValueByName(robot);
+	var text = data.map(function (row) {
+		return row.title + ': _£' + row.value + '_';
+	}).join('\n');
+	robot.emit('slack-attachment', {
+		message: {
+			room: response.message.room
+		},
+		content: {
+			fallback: text,
+			title: 'How much everybody owes the swear jar:',
+			text: text,
+			color: '#9b7c41',
+			mrkdwn_in: ['text']
+		}
+	});
 }
 
 function getSwearJarByWord (robot, response) {
-	response.send(getJarValueByWord(robot).map(function (row) {
-		return '*' + row.word + '*: ' + row.value;
-	}).join('\n'));
+	var data = getJarValueByWord(robot);
+	var text = data.map(function (row) {
+		return row.title + ': _' + row.value + '_';
+	}).join('\n');
+	robot.emit('slack-attachment', {
+		message: {
+			room: response.message.room
+		},
+		content: {
+			fallback: text,
+			title: 'Which swear words you lot like to use:',
+			text: text,
+			color: '#9b7c41',
+			mrkdwn_in: ['text']
+		}
+	});
 }
 
 function loadSwearJar (robot) {
@@ -107,7 +146,7 @@ function getJarValueByName (robot) {
 			totalForUser += jar[uid][word];
 		});
 		records.push({
-			user: user.name,
+			title: (user.real_name || user.name),
 			value: totalForUser
 		});
 	});
@@ -126,7 +165,7 @@ function getJarValueByWord (robot) {
 	});
 	var records = Object.keys(words).map(function (word) {
 		return {
-			word: word,
+			title: word,
 			value: words[word]
 		};
 	});
