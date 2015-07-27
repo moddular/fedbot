@@ -10,6 +10,7 @@
 	},
 
 	"dependencies": {
+		"cheerio": "~0.19",
 		"hubot": "^2",
 		"hubot-diagnostics": "0.0.1",
 		"hubot-google-images": "~0.1",
@@ -17,7 +18,8 @@
 		"hubot-heroku-keepalive": "0.0.4",
 		"hubot-pugme": "~0.1",
 		"hubot-redis-brain": "0.0.3",
-		"hubot-slack": "^3"
+		"hubot-slack": "^3",
+		"request": "~2.60"
 	},
 	"devDependencies": {
 		"jscs": "^1",
