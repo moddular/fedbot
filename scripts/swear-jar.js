@@ -36,9 +36,9 @@ var swears = new RegExp('(' + [
 
 function swearJar (robot) {
 	robot.hear(swears, logSwears.bind(null, robot));
-	robot.respond(/swear ?jar$/i, getSwearJar.bind(null, robot));
-	robot.respond(/swear ?jar by (name|person|user)$/i, getSwearJarByName.bind(null, robot));
-	robot.respond(/swear ?jar by (swear|swearword|word)$/i, getSwearJarByWord.bind(null, robot));
+	robot.respond(/swear[ -]?jar$/i, getSwearJar.bind(null, robot));
+	robot.respond(/swear[ -]?jar by (name|person|user)$/i, getSwearJarByName.bind(null, robot));
+	robot.respond(/swear[ -]?jar by (swear|swearword|word)$/i, getSwearJarByWord.bind(null, robot));
 }
 
 function logSwears (robot, response) {
