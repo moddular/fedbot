@@ -30,7 +30,8 @@ var swears = new RegExp('(' + [
 	'damn',
 	'crap(ped|ping|per|py|s)?',
 	'sod(ding|s)?',
-	'bugger(ed|y|s)?'
+	'bugger(ed|y|s)?',
+	'judehoff'
 ].join('|') + ')', 'ig');
 
 function swearJar (robot) {
