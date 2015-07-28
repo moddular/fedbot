@@ -278,6 +278,10 @@ var quotes = [
 	{
 		text: 'You just give it to him and he sucks it dry',
 		name: 'Alex Kilgour (referring to his son)'
+	},
+	{
+		text: 'I can\'t imagine many things worse than sitting in the bath listening to panpipes with a scented candle, while a tsunami of shit, piss, blood, and amniotic fluid roars out of my partner\'s vagina',
+		name: 'Hollie Kay'
 	}
 ];
 
