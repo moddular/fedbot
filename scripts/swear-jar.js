@@ -10,7 +10,7 @@
 
 module.exports = swearJar;
 
-var swears = new RegExp('(' + [
+var swears = new RegExp('\\b(' + [
 	'(mother ?)?fuck(ing|er|ed|s)?',
 	'shit(e|ting|ter|ty|test|s)?',
 	'piss(ing|er|ed|s)?',
@@ -24,7 +24,7 @@ var swears = new RegExp('(' + [
 	'twat(ting|ted)',
 	'dick(s|heads?)?',
 	'cock(ing|s)?',
-	'asses?',
+	'ass(es)?',
 	'arses?',
 	'bastard(ing|s)?',
 	'damn',
@@ -32,7 +32,7 @@ var swears = new RegExp('(' + [
 	'sod(ding|s)?',
 	'bugger(ed|y|s)?',
 	'judehoff'
-].join('|') + ')', 'ig');
+].join('|') + ')\\b', 'ig');
 
 function swearJar (robot) {
 	robot.hear(swears, logSwears.bind(null, robot));
