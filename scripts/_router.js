@@ -10,6 +10,7 @@ function router (robot) {
 
 	// Set some default view data
 	app.locals.robotName = robot.name;
+	app.locals.year = (new Date()).getFullYear();
 
 	// View configuration
 	app.engine('dust', consolidate.dust);
