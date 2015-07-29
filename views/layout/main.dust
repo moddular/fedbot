@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8"/>
+	<title>{+title}{robotName}{/title}</title>
+
+</head>
+<body>
+
+	<div role="banner">
+		{>"partial/header"/}
+	</div>
+
+	<div role="main">
+		{+content/}
+	</div>
+
+	<div role="banner">
+		{>"partial/footer"/}
+	</div>
+
+</body>
+</html>

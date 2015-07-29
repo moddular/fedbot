@@ -1,0 +1,9 @@
+{>"layout/main"/}
+
+{<title}
+	Welcome to {robotName}
+{/title}
+
+{<content}
+	<p>Hello World!</p>
+{/content}

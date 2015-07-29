@@ -1,0 +1,5 @@
+
+<ul role="navigation">
+	<li><a href="/">Home</a></li>
+	<li><a href="/{robotName}/help">Help</a></li>
+</ul>
