@@ -1,0 +1,13 @@
+{>"layout/main"/}
+
+{<title}
+	{robotName} Help
+{/title}
+
+{<content}
+	<ul>
+		{#commands}
+			<li>{.}</li>
+		{/commands}
+	</ul>
+{/content}
